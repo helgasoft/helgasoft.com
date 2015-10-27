@@ -1,0 +1,20 @@
+BODY
+{
+    SCROLLBAR-FACE-COLOR: #FF9933;
+    SCROLLBAR-SHADOW-COLOR: #FFFFFF;
+    SCROLLBAR-ARROW-COLOR: #FFFFFF;
+    SCROLLBAR-BASE-COLOR: #666666;
+    scrollbar-color: #666666;
+    scrollbar-dark-shadow-color: #666666;
+}
+.links{text-decoration: none} 
+A:link{color:#333333}
+A:visited{color:#333333}
+A:active{color:#333333}
+A:hover{color:#FF9933} 
+.title{font-family: Verdana, Arial, Helvetica, san-serif; color:#003366; font-weight: normal; font-size:11px; line-height:0.26in; text-decoration:none;}
+.header{font-family: Verdana, Arial, Helvetica, san-serif; color:#003366; font-weight: bold; font-size:11px; text-decoration:none;}
+.content{font-family: Verdana, Arial, Helvetica, san-serif; color:#333333; font-style: normal; font-weight: normal; font-size:11px; line-height:0.20in; text-decoration:none;}
+.content_left{font-family: Verdana, Arial, Helvetica, san-serif; color:#333333; font-style: normal; font-weight: normal; font-size:10px; line-height:0.20in; text-decoration:none;}
+.content_copyright{font-family: Verdana, Arial, Helvetica, san-serif; color:#333333; font-style: normal; font-weight: normal; font-size:9px; line-height:0.20in; text-decoration:none;}
+.darker{ background:#EEEEEE;}
