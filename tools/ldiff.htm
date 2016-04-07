@@ -3,16 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>List Compare</title>
+  <title>Compare Lists</title>
   <style>
+	body {
+    		font: normal 16px Calibri, Verdana, Arial, sans-serif;
+	}
 	.txt {font-size:small}
   </style>
   <script>
-	function compir() {
+function compir() {
 	//http://stackoverflow.com/questions/21987909/difference-between-two-array-of-objects-in-javascript
 
 	var result1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
 	var result2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
+
+	// trim all string elements
+	//result1.map(function(s) { return String.prototype.trim.apply(s); });
+	//result2.map(function(s) { return String.prototype.trim.apply(s); });
+
+	if (document.getElementById("nodup").checked) {
+		//remove duplicates first
+		result1 = result1.filter(function(item, pos, self) {
+		    return self.indexOf(item) == pos;
+		})
+		result2 = result2.filter(function(item, pos, self) {
+		    return self.indexOf(item) == pos;
+		})
+	}
 	
 	//Find values that are in result1 but not in result2
 	var uniqueResultOne = result1.filter(function(obj) {
@@ -20,7 +37,7 @@
 	        return obj == obj2;
 	    });
 	});
-	
+
 	//Find values that are in result2 but not in result1
 	var uniqueResultTwo = result2.filter(function(obj) {
 	    return !result1.some(function(obj2) {
@@ -28,42 +45,65 @@
 	    });
 	});
 	
+	//Find values that are both in result2 and result1
+	var commonResult = result2.filter(function(obj) {
+	    return result1.some(function(obj2) {
+	        return obj == obj2;
+	    });
+	});
+	
 	document.getElementById("uniq1").value = uniqueResultOne.join('\n');
 	document.getElementById("uniq2").value = uniqueResultTwo.join('\n');
+	document.getElementById("common").value = commonResult.join('\n');
+	leni(document.getElementById("uniq1"), 'lbl3');
+	leni(document.getElementById("uniq2"), 'lbl4');
+	leni(document.getElementById("common"), 'lbl5');
 
 	//Combine the two arrays of unique entries
 	//var result = uniqueResultOne.concat(uniqueResultTwo);
 	//document.getElementById("lblMsg").innerHTML = result.toString();
+}
+function leni(me,lbl) {
+	var text = document.getElementById(me.id).value;
+	if (text.length == 0) {
+		document.getElementById(lbl).innerText = '(none)';
+		return;
 	}
+	var rows = text.split("\n").length;
+	document.getElementById(lbl).innerText = '(' + rows + ' items)';
+}
   </script>
 </head>
 <body>
 
     <div align="center">
-        <h3>List Compare</h3>
+        <h3>Compare Lists</h3>
     </div>
 
     <p>
     <table border='0'>
-    <tr><td colspan=3><div class='txt'>Paste one-per-line words in both boxes, then Submit</div></td>
-	<td colspan=2><div class='txt'>Output lists will have unique words (duplicates removed)</div></td></tr>
-    <tr>
-        <td align="right">First List</td>
-        <td><textarea ID="TextBox1" height="80px" width="300px"></textarea></td>
-        <td>&nbsp;</td>
-        <td align="right">First Unique</td>
-        <td><textarea ID="uniq1" height="80px" width="300px"></textarea></td>
+    <tr><td colspan=3>Paste one-per-line items in both boxes, then Submit</td>
+	<td colspan=2>Unique items</td>
+        <td rowspan=3 style="width:340px;text-align:center;">
+		Common to both<br /><label id="lbl5" class='txt'></label>
+		<br /><textarea ID="common" rows=9 cols=20></textarea></td>
 	</tr>
-    <tr><td align="right">Second List</td>
-        <td><textarea ID="TextBox2" height="80px" width="300px"></textarea></td>
-        <td>
-       		<div style="width:400px;text-align:center"><input type='button' style="width:100px;" value="Submit" onclick='compir()' /></div>
+    <tr>
+        <td align="right">First List<br /><label id="lbl1" class='txt'></label></td>
+        <td><textarea ID="TextBox1" rows=4 cols=20 onchange="leni(this,'lbl1')" tabindex=1></textarea></td>
+        <td rowspan='2' valign='center'>
+       		<div style="width:200px;text-align:center">
+			<div class='txt'><input type="checkbox" id='nodup' value='nodup' /> delete duplicates</div>
+			<input type='button' style="width:90px;" value="Submit" onclick='compir()' tabindex=3/>
+		</div>
 	</td>
-        <td align="right">Second Unique</td>
-        <td><textarea ID="uniq2" height="80px" width="300px"></textarea></td>
+        <td align="right">First Unique<br /><label id="lbl3" class='txt'></label></td>
+        <td><textarea ID="uniq1"  rows=4 cols=20></textarea></td>
+    <tr><td align="right">Second List<br /><label id="lbl2" class='txt'></label></td>
+        <td><textarea ID="TextBox2" rows=4 cols=20 onchange="leni(this,'lbl2')" tabindex=2></textarea></td>
+        <td align="right">Second Unique<br /><label id="lbl4" class='txt'></label></td>
+        <td><textarea ID="uniq2"  rows=4 cols=20></textarea></td>
     </tr></table>
     </p>
-    <p />
-    <asp:Label ID="lblMsg" Text="" ForeColor="DarkViolet" Font-Size="12px" Font-Names="Arial" />
 </body>
 </html>

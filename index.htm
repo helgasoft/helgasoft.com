@@ -3,10 +3,10 @@
 <head>
 <title>Helgasoft - expert software and database solutions</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta name="description" content="Expert Software Outsourcing in C#, WPF, ASP.NET, SQL Server, Oracle, Access">
-<meta name="KEYWORDS" content="C#, XAML, Silverlight, ASP.NET, ASP, SQL expert, SQL Server, Oracle, outsourcing, project manager, 
-VB contract, contractor, application programming, database development, database optimization, database troubleshooting, contract programming, software integration, software migration,  
-software design, data modeling, JavaScript, DHTML, XML application, web software, internet software, intranet application">
+<meta name="description" content="Expert Software Outsourcing in C#, WPF, ASP.NET, SQL Server">
+<meta name="KEYWORDS" content="C#, R language, XAML, Silverlight, ASP.NET, SQL expert, SQL Server, LINQ, outsourcing, project manager, 
+contractor, application programming, database development, database optimization, database troubleshooting, contract programming, software integration, software migration,  
+software design, data modeling, JavaScript, DHTML, XML application, web software, internet software">
 <meta name="ROBOTS" content="INDEX,FOLLOW,NOARCHIVE">
 <meta name="pragma" content="no-cache">
 
@@ -37,9 +37,53 @@ function MM_swapImage() { //v3.0
 }
 //-->
 </script>
+              <script language="JavaScript" type="text/javascript">
+
+var variableslide = new Array();
+variableslide[0]=['images/visualc.png', '', ''];
+variableslide[1]=['images/wpf.png', '', ''];
+variableslide[2]=['images/xaml.jpg', '', ''];
+variableslide[3]=['images/sql-server.png', '', ''];
+variableslide[4]=['images/aspnet.gif', '', ''];
+variableslide[5]=['images/mvc.png', '', ''];
+variableslide[6]=['images/jsphp.png', '', ''];
+variableslide[7]=['images/rlogo.png', '', ''];
+
+var slidedelay=3000
+
+for (i=0;i<variableslide.length;i++){
+	var cacheimage=new Image()
+	cacheimage.src=variableslide[i][0]
+}
+
+var currentslide=0;
+
+function rotateimages() {
+	crossrotateobj = document.getElementById("slidedom");
+	contentcontainer='<center>';
+	if (variableslide[currentslide][1]!="")
+		contentcontainer+='<a href="'+variableslide[currentslide][1]+'">';
+	contentcontainer+='<img src="'+variableslide[currentslide][0]+'" border="0" vspace="3">';
+	if (variableslide[currentslide][1]!="")
+		contentcontainer+='</a>';
+	contentcontainer+='</center>';
+	if (variableslide[currentslide][2]!="")
+		contentcontainer+=variableslide[currentslide][2];
+
+	crossrotateobj.innerHTML=contentcontainer;
+	if (currentslide==variableslide.length-1) currentslide=0;
+	else currentslide++;
+	setTimeout("rotateimages()",slidedelay);
+}
+
+window.onload = function() {
+	MM_preloadImages('images/btn_home_down.jpg','images/btn_about_down.jpg','images/btn_services_down.jpg','images/btn_portfolio_down.jpg','images/btn_contact_down.jpg');
+	rotateimages();
+}
+</script>
 </head>
 
-<body bgcolor="#999999" onload="MM_preloadImages('images/btn_home_down.jpg','images/btn_about_down.jpg','images/btn_services_down.jpg','images/btn_portfolio_down.jpg','images/btn_contact_down.jpg')">
+<body bgcolor="#999999">
 <table width="762" height="111" border="0" align="center" cellpadding="0" cellspacing="0" background="images/helgasoft_logo_home.jpg">
   <tr> 
     <td> 
@@ -121,72 +165,8 @@ function MM_swapImage() { //v3.0
       <table width="221" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr> 
           <td><div align="center">
-              <script language="JavaScript1.2" type="text/javascript">
 
-var variableslide=new Array()
-variableslide[3]=['images/xaml.jpg', '', '']
-variableslide[4]=['images/sql-server.png', '', '']
-variableslide[5]=['images/jsphp.png', '', '']
-variableslide[6]=['images/aspnet.gif', '', '']
-variableslide[7]=['images/mvc.png', '', '']
-variableslide[2]=['images/slight.png', '', '']
-variableslide[1]=['images/wpf.png', '', '']
-variableslide[0]=['images/visualc.png', '', '']
-
-var slidewidth='221px' 
-var slideheight='120px' 
-var slidebgcolor='#FFFFFF'
-
-var slidedelay=3000
-
-var ie=document.all
-var dom=document.getElementById
-
-for (i=0;i<variableslide.length;i++){
-var cacheimage=new Image()
-cacheimage.src=variableslide[i][0]
-}
-
-var currentslide=0
-
-function rotateimages(){
-contentcontainer='<center>'
-if (variableslide[currentslide][1]!="")
-contentcontainer+='<a href="'+variableslide[currentslide][1]+'">'
-contentcontainer+='<img src="'+variableslide[currentslide][0]+'" border="0" vspace="3">'
-if (variableslide[currentslide][1]!="")
-contentcontainer+='</a>'
-contentcontainer+='</center>'
-if (variableslide[currentslide][2]!="")
-contentcontainer+=variableslide[currentslide][2]
-
-if (document.layers){
-crossrotateobj.document.write(contentcontainer)
-crossrotateobj.document.close()
-}
-else if (ie||dom)
-crossrotateobj.innerHTML=contentcontainer
-if (currentslide==variableslide.length-1) currentslide=0
-else currentslide++
-setTimeout("rotateimages()",slidedelay)
-}
-
-if (ie||dom)
-document.write('<div id="slidedom" style="width:'+slidewidth+';height:'+slideheight+'; background-color:'+slidebgcolor+'"></div>')
-
-function start_slider(){
-crossrotateobj=dom? document.getElementById("slidedom") : ie? document.all.slidedom : document.slidensmain.document.slidenssub
-if (document.layers)
-document.slidensmain.visibility="show"
-rotateimages()
-}
-
-if (ie||dom)
-start_slider()
-else if (document.layers)
-window.onload=start_slider
-
-</script>
+		<div id="slidedom" style="width:221px;height:120px; background-color:#FFFFFF"></div>
             </div></td>
         </tr>
       </table>
@@ -194,7 +174,7 @@ window.onload=start_slider
   </tr>
 </table>
 
-	<table width="762" height="100" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bottom_about.jpg">
+<table width="762" height="100" border="0" align="center" cellpadding="0" cellspacing="0" background="images/bottom_about.jpg">
 	  <tr>
    		 <td valign="top"><table width="762" height="19" border="0" cellpadding="0" cellspacing="0">
 	  <tr>
@@ -211,13 +191,6 @@ window.onload=start_slider
         <tr> 
           <td valign="top" align="center">
 <!--webbot bot="HTMLMarkup" startspan alt="Site Meter" -->
-<script type="text/javascript" language="JavaScript">var site="sm2Helgasoft"</script>
-<script type="text/javascript" language="JavaScript1.2" src="http://sm2.sitemeter.com/js/counter.js?site=sm2Helgasoft">
-</script>
-<noscript>
-<a href="http://sm2.sitemeter.com/stats.asp?site=sm2Helgasoft" target="_top">
-<img src="http://sm2.sitemeter.com/meter.asp?site=sm2Helgasoft" alt="Site Meter" border="0"/></a>
-</noscript>
 <!--webbot bot="HTMLMarkup" endspan -->
               </td>
         </tr>
