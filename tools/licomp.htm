@@ -1,0 +1,166 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Compare Lists</title>
+  <style>
+	body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }
+	td { vertical-align:top; }
+	table {
+	    border-collapse: separate;
+	    border-spacing: 10px;
+	}
+	.txt {font-size:small}
+	.rslt {
+	    display: table-cell;
+	    border: solid #55A 1px;
+	    border-style: solid none none none;
+	    /* background-color:#AAF; */
+	}
+	button:active { border: solid #F55 2px; background:#FBB;}
+  </style>
+  <script type="text/javascript">
+//var save1, save2;
+function sorta() {
+	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
+	var list2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
+	list1.sort();
+	list2.sort();
+	document.getElementById("TextBox1").value = list1.join("\n");
+	document.getElementById("TextBox2").value = list2.join("\n");
+}
+function deldup(me) {
+	var save1, save2;
+//	if (me.value.indexOf("delete")==0) {
+		save1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
+		save2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
+		list1 = save1.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+		list2 = save2.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+		document.getElementById("TextBox1").value = list1.join("\n");
+		document.getElementById("TextBox2").value = list2.join("\n");
+//	} 
+//	else {
+//		document.getElementById("TextBox1").value = save1.join("\n");
+//		document.getElementById("TextBox2").value = save2.join("\n");
+//		save1 = save2 = null;
+//	}
+	leni('TextBox1', 'lbl1');
+	leni('TextBox2', 'lbl2');
+	//me.value = save1==null ? "delete duplicates" : "get original lists";
+}
+function compir() {
+	// TODO: processing msg for long lists
+	//http://stackoverflow.com/questions/21987909/difference-between-two-array-of-objects-in-javascript
+	var startTime = Date.now();
+	var timer = document.getElementById("timer");
+
+	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
+	var list2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
+	var dup1, dup2;
+	
+	//Find values that are in list1 but not in list2
+	var uniqueResultOne = list1.filter(function(obj) {
+	    return !list2.some(function(obj2) {
+	        return obj == obj2;
+	    });
+	});
+
+	//Find values that are in list2 but not in list1
+	var uniqueResultTwo = list2.filter(function(obj) {
+	    return !list1.some(function(obj2) {
+	        return obj == obj2;
+	    });
+	});
+	document.getElementById('uniq1').value = uniqueResultOne.join('\n');
+	document.getElementById('uniq2').value = uniqueResultTwo.join('\n');
+	leni('uniq1', 'lbl3');
+	leni('uniq2', 'lbl4');
+
+	//find duplicates
+	dup1 = list1.filter(function(item, pos, self) {
+	    return self.indexOf(item) != pos;
+	})
+	dup2 = list2.filter(function(item, pos, self) {
+	    return self.indexOf(item) != pos;
+	})
+	document.getElementById('dupl1').value = dup1.join('\n');
+	document.getElementById('dupl2').value = dup2.join('\n');
+	leni('dupl1', 'lbl6');
+	leni('dupl2', 'lbl7');
+	
+	//Find values that are both in list2 and list1
+	var commonResult = list2.filter(function(obj) {
+	    return list1.some(function(obj2) {
+	        return obj == obj2;
+	    });
+	});
+	
+	document.getElementById('common').value = commonResult.join('\n');
+	leni('common', 'lbl5');
+
+	leni('TextBox1', 'lbl1');
+	leni('TextBox2', 'lbl2');
+
+   	var ms = Date.now() - startTime; //, min = (ms/1000/60) << 0, sec = (ms/1000) % 60;
+	var sec = Math.floor(ms / 1000);
+	var min = Math.floor(sec / 60);
+	sec = sec - (min * 60);
+	timer.innerText = "Finished in " + min + ":" + sec + " (min:sec)";
+}
+function leni(meid,lbl) {
+	var text = typeof(meid)=="string" ? document.getElementById(meid).value : document.getElementById(meid.id).value;
+	if (text.length == 0) {
+		document.getElementById(lbl).innerText = '(none)';
+		return;
+	}
+	var rows = text.split("\n").length;
+	document.getElementById(lbl).innerText = rows + ' items'; 
+}
+  </script>
+</head>
+<body>
+
+    <div style="text-align:center"><h3 style="display:inline;margin-right:30px">Compare Lists</h3> <div class='txt' style="display:inline;"></div></div>
+
+<table border='0'>
+  <tr>
+	<td>&nbsp;</td>
+	<td colspan=3>Paste items in boxes, one item per line, then hit Compare </td></tr>
+  <tr>
+	<td><b>Input Lists</b></td>
+        <td>First  <br /><textarea id="TextBox1" rows=4 cols=20 onchange="leni(this,'lbl1')" tabindex=1></textarea><br /><label id="lbl1" class='txt'></label></td>
+        <td>Second  <br /><textarea id="TextBox2" rows=4 cols=20 onchange="leni(this,'lbl2')" tabindex=2></textarea><br /><label id="lbl2" class='txt'></label></td>
+	<td style="vertical-align:bottom">
+       		<div style="width:200px;text-align:center">
+		<button onclick="sorta()" style="width:44px;" >sort</button>
+		<button onclick='deldup(this)' style="width:124px;" >delete duplicates</button> <p />
+		<button onclick='compir()' style="width:90px;" tabindex=3 >Compare</button>
+		<br /><div id="timer" class="txt"></div>
+		</div>
+	</td>
+	</tr>
+  <tr>
+	<td>&nbsp;</td>
+	<td colspan=3 class="rslt"></tr>
+  <tr>
+	<td><b>Unique</b> </td>
+        <td><textarea id="uniq1" rows=4 cols=20></textarea><br /><label id="lbl3" class='txt'></label></td>
+        <td><textarea id="uniq2" rows=4 cols=20></textarea><br /><label id="lbl4" class='txt'></label></td></tr>
+  <tr>
+	<td><b>Duplicate</b> </td>
+        <td><textarea id="dupl1" rows=4 cols=20></textarea><br /><label id="lbl6" class='txt'></label></td>
+        <td><textarea id="dupl2" rows=4 cols=20></textarea><br /><label id="lbl7" class='txt'></label></td>
+	</tr>
+  <tr>
+	<td><b>Common</b>
+        <td colspan=2>
+		<div  style="text-align:center"><textarea id="common" rows=9 cols=20></textarea><br /><label id="lbl5" class='txt'></label></div></td>
+	</tr>
+</table>
+
+<p><b>Note</b>:  Firefox or IE recommended, Chrome is slow.<br />
+Time estimates for 80K lists - Firefox: 6-7 minutes, IE: 9 min, Chrome: much more.<br />
+When button is <span style='color:#FF5555'>red</span>, browser is still working, please do not interrupt.<br />
+If prompted by browser, select <i>Continue</i> or <i>Wait</i> for processing to complete.
+</p>
+</body>
+</html>
