@@ -17,9 +17,23 @@
 	    /* background-color:#AAF; */
 	}
 	button:active { border: solid #F55 2px; background:#FBB;}
+	table.CoreTable
+	{
+	    border-collapse: collapse;
+	    width: 90%;
+	    text-align: center;
+	}
+	textarea { 
+	    resize:both; max-height:500px; min-height:100px; 
+	    /* border: none; */
+	    width: 100%;
+	    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+	       -moz-box-sizing: border-box; /* FF1+ */
+	            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+	}
   </style>
   <script type="text/javascript">
-// Copyright © 2016  Helgasoft.com   All Rights Reserved
+// Copyright ©  Helgasoft.com   All Rights Reserved
 function sorta() {
 	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
 	var list2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
@@ -31,27 +45,19 @@ function sorta() {
 }
 function deldup(me) {
 	var startTime = Date.now();
-	var save1, save2;	// were global
-//	if (me.value.indexOf("delete")==0) {
-		save1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
-		save2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
-		list1 = save1.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
-		list2 = save2.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
-		document.getElementById("TextBox1").value = list1.join("\n");
-		document.getElementById("TextBox2").value = list2.join("\n");
-//	} 
-//	else {
-//		document.getElementById("TextBox1").value = save1.join("\n");
-//		document.getElementById("TextBox2").value = save2.join("\n");
-//		save1 = save2 = null;
-//	}
+	var save1, save2;
+	save1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
+	save2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
+	list1 = save1.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+	list2 = save2.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+	document.getElementById("TextBox1").value = list1.join("\n");
+	document.getElementById("TextBox2").value = list2.join("\n");
 	leni('TextBox1', 'lbl1');
 	leni('TextBox2', 'lbl2');
-	//me.value = save1==null ? "delete duplicates" : "get original lists";
 	elapsed(startTime);
 }
 function compir() {
-	// TODO: processing msg for long lists
+	// TODO: 'processing..' msg for long lists
 	var startTime = Date.now();
 
 	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
@@ -124,48 +130,49 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 </head>
 <body>
 
-    <div style="text-align:center"><h3 style="display:inline;margin-right:30px">Compare Lists</h3> <div class='txt' style="display:inline;"></div></div>
+    <div style="text-align:center"><h3 style="display:inline;margin-right:30px">Compare Lists</h3> 
+	<div class='txt' style="display:inline;"></div></div>
 
-<table border='0'>
-<!--  <tr>-->
-<!--	<td>&nbsp;</td>-->
-<!--	<td colspan=3>Paste items in boxes, one item per line, then hit Compare </td></tr>-->
+<table border='0' class="CoreTable">
   <tr>
-	<td><b>Input Lists</b></td>
-        <td>First  <br /><textarea id="TextBox1" rows=4 cols=20 onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea><br /><label id="lbl1" class='txt'></label></td>
-        <td>Second  <br /><textarea id="TextBox2" rows=4 cols=20 onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea><br /><label id="lbl2" class='txt'></label></td>
-	<td style="vertical-align:bottom">
-       		<div style="width:200px;text-align:center">
+	<td width="14%"><b>Input Lists</b></td>
+        <td width="43%">First  <br /><textarea id="TextBox1" onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea><br /><label id="lbl1" class='txt'></label></td>
+        <td>Second  <br /><textarea id="TextBox2" onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea><br /><label id="lbl2" class='txt'></label></td>
+    	</tr>
+  <tr>
+	<td>&nbsp;</td>
+	<td colspan=2 style="text-align:center; padding:10;">
 		<button onclick="sorta()" style="width:44px;" >sort</button>
-		<button onclick='deldup(this)' style="width:124px;" >delete duplicates</button> <p />
-		<button onclick='compir()' style="width:90px;" tabindex=3 >Compare</button>
+		<button onclick='deldup(this)' style="width:124px;" >delete duplicates</button> &nbsp; &nbsp;
+		<button onclick='compir()' style="width:90px;" tabindex=3 ><b>Compare</b></button>
 		<br /><div id="timer" class="txt"></div>
-		</div>
 	</td>
 	</tr>
   <tr>
 	<td>&nbsp;</td>
-	<td colspan=3 class="rslt"></tr>
+	<td colspan=2 class="rslt"></tr>
   <tr>
 	<td><b>Unique</b> </td>
-        <td><textarea id="uniq1" rows=4 cols=20></textarea><br /><label id="lbl3" class='txt'></label></td>
-        <td><textarea id="uniq2" rows=4 cols=20></textarea><br /><label id="lbl4" class='txt'></label></td></tr>
+        <td><textarea id="uniq1"></textarea><br /><label id="lbl3" class='txt'></label></td>
+        <td><textarea id="uniq2"></textarea><br /><label id="lbl4" class='txt'></label></td></tr>
   <tr>
 	<td><b>Duplicate</b> </td>
-        <td><textarea id="dupl1" rows=4 cols=20></textarea><br /><label id="lbl6" class='txt'></label></td>
-        <td><textarea id="dupl2" rows=4 cols=20></textarea><br /><label id="lbl7" class='txt'></label></td>
+        <td><textarea id="dupl1"></textarea><br /><label id="lbl6" class='txt'></label></td>
+        <td><textarea id="dupl2"></textarea><br /><label id="lbl7" class='txt'></label></td>
 	</tr>
   <tr>
 	<td><b>Common</b>
         <td colspan=2>
-		<div  style="text-align:center"><textarea id="common" rows=9 cols=20></textarea><br /><label id="lbl5" class='txt'></label></div></td>
+		<div style="text-align:center"><textarea id="common" style="width:50% !important"></textarea><br /><label id="lbl5" class='txt'></label></div></td>
 	</tr>
 </table>
 
-<p><b>Note</b>:  Browser Firefox or IE recommended, Chrome is slower.<br />
+<p>&nbsp;<br />
+<b>Note</b>:  Firefox or MS Edge browser recommended, Chrome is slower.<br />
 Time estimate for 80K lists on Intel i5 processor is 7-8 minutes.<br />
-When button is <span style='color:#FF5555'>red</span>, browser is still working, please do not interrupt.<br />
+While Compare button is <span style='color:#FF5555'>red</span>, browser is still working, please do not interrupt.<br />
 If prompted by browser, select <i>Continue</i> or <i>Wait</i> for processing to complete.
 </p>
+
 </body>
 </html>
