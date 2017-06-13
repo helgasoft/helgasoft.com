@@ -1,37 +1,17 @@
-<html>
+<html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <title>Compare Lists</title>
-  <style>
-	body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }
-	td { vertical-align:top; }
-	table {
-	    border-collapse: separate;
-	    border-spacing: 10px;
-	}
-	.txt {font-size:small}
-	.rslt {
-	    display: table-cell;
-	    border: solid #55A 1px;
-	    border-style: solid none none none;
-	    /* background-color:#AAF; */
-	}
-	button:active { border: solid #F55 2px; background:#FBB;}
-	table.CoreTable
-	{
-	    border-collapse: collapse;
-	    width: 90%;
-	    text-align: center;
-	}
-	textarea { 
-	    resize:both; max-height:500px; min-height:100px; 
-	    /* border: none; */
-	    width: 100%;
-	    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
-	       -moz-box-sizing: border-box; /* FF1+ */
-	            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
-	}
-  </style>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Helgasoft - software solutions</title>
+    		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+		<meta name="description" content="Compare Lists Online">
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="../css/skin/night-purple.css">
   <script type="text/javascript">
 // Copyright ©  Helgasoft.com   All Rights Reserved
 function sorta() {
@@ -111,7 +91,7 @@ function compir() {
 function leni(meid,lbl) {
 	var text = typeof(meid)=="string" ? document.getElementById(meid).value : document.getElementById(meid.id).value;
 	if (text.length == 0) {
-		document.getElementById(lbl).innerText = '(none)';
+		document.getElementById(lbl).innerText = 'none';
 		return;
 	}
 	var rows = text.split("\n").length;
@@ -127,24 +107,88 @@ function elapsed(st) {
 }
 function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) return ("-0" + Math.abs(n)); return n; }
   </script>
-</head>
-<body>
+ <style>
+	body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }
+	td { vertical-align:top; }
+	table {
+	    border-collapse: separate;
+	    border-spacing: 10px;
+	}
+	.txt {font-size:small}
+	.rslt {
+	    display: table-cell;
+	    border: solid #55A 1px;
+	    border-style: solid none none none;
+	    /* background-color:#AAF; */
+	}
+	button { margin-right: 20px; }
+	button:active { border: solid #F55 2px; background:#FBB;}
+	table.CoreTable
+	{
+	    border-collapse: collapse;
+	    width: 90%;
+	    text-align: center;
+	}
+	textarea { 
+	    resize:both; max-height:500px; min-height:100px; 
+	    /* border: none; */
+	    width: 94%;
+	    margin: 8px;
+	    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+	       -moz-box-sizing: border-box; /* FF1+ */
+	            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+	}
+	p { margin: 30px; }
+	span { border-radius: 10px !important; }
 
-    <div style="text-align:center"><h3 style="display:inline;margin-right:30px">Compare Lists</h3> 
-	<div class='txt' style="display:inline;"></div></div>
+  </style>
+
+</head>
+
+<body>
+        
+	<!--========== BEGIN HEADER ==========-->
+	<header id="header" class="header-main" style='height:98px;'>
+	
+	<!-- Begin Navbar -->
+	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+	  <div class="container">
+	
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand page-scroll" href="../index.html">Helgasoft</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+	<!-- End Navbar -->
+	
+	</header>
+	<!-- ========= END HEADER =========-->
+
+
+<div style="text-align:center">
+	<h5 style="display:inline;margin-right:30px">Compare Lists</h5> 
+</div>
 
 <table border='0' class="CoreTable">
   <tr>
 	<td width="14%"><b>Input Lists</b></td>
-        <td width="43%">First  <br /><textarea id="TextBox1" onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea><br /><label id="lbl1" class='txt'></label></td>
-        <td>Second  <br /><textarea id="TextBox2" onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea><br /><label id="lbl2" class='txt'></label></td>
+        <td width="43%">First  <br /><textarea id="TextBox1" onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea>
+		<br /><span id="lbl1" class='badge'></span></td>
+        <td>Second  <br /><textarea id="TextBox2" onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea>
+		<br /><span id="lbl2" class='badge'></span></td>
     	</tr>
   <tr>
 	<td>&nbsp;</td>
 	<td colspan=2 style="text-align:center; padding:10;">
-		<button onclick="sorta()" style="width:44px;" >sort</button>
-		<button onclick='deldup(this)' style="width:124px;" >delete duplicates</button> &nbsp; &nbsp;
-		<button onclick='compir()' style="width:90px;" tabindex=3 ><b>Compare</b></button>
+		<button onclick="sorta()" >sort</button>
+		<button onclick='deldup(this)' >delete duplicates</button>
+		<button onclick='compir()' tabindex=3 ><b>Compare</b></button>
 		<br /><div id="timer" class="txt"></div>
 	</td>
 	</tr>
@@ -153,17 +197,18 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 	<td colspan=2 class="rslt"></tr>
   <tr>
 	<td><b>Unique</b> </td>
-        <td><textarea id="uniq1"></textarea><br /><label id="lbl3" class='txt'></label></td>
-        <td><textarea id="uniq2"></textarea><br /><label id="lbl4" class='txt'></label></td></tr>
+        <td><textarea id="uniq1"></textarea><br /><span id="lbl3" class='badge'></span></td>
+        <td><textarea id="uniq2"></textarea><br /><span id="lbl4" class='badge'></span></td></tr>
   <tr>
 	<td><b>Duplicate</b> </td>
-        <td><textarea id="dupl1"></textarea><br /><label id="lbl6" class='txt'></label></td>
-        <td><textarea id="dupl2"></textarea><br /><label id="lbl7" class='txt'></label></td>
+        <td><textarea id="dupl1"></textarea><br /><span id="lbl6" class='badge'></span></td>
+        <td><textarea id="dupl2"></textarea><br /><span id="lbl7" class='badge'></span></td>
 	</tr>
   <tr>
 	<td><b>Common</b>
         <td colspan=2>
-		<div style="text-align:center"><textarea id="common" style="width:50% !important"></textarea><br /><label id="lbl5" class='txt'></label></div></td>
+		<div style="text-align:center"><textarea id="common" style="width:50% !important"></textarea><br />
+		<span id="lbl5" class='badge'></span></div></td>
 	</tr>
 </table>
 
