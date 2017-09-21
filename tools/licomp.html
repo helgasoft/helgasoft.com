@@ -108,7 +108,7 @@ function elapsed(st) {
 function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) return ("-0" + Math.abs(n)); return n; }
   </script>
  <style>
-	body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }
+	/* body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }  */
 	td { vertical-align:top; }
 	table {
 	    border-collapse: separate;
@@ -162,6 +162,9 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	        <ul class="nav navbar-nav navbar-right">
+	            <li><a class="page-scroll" href="../#resources-section">Back</a></li>
+		</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
 	</nav>
@@ -215,8 +218,8 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 <p>&nbsp;<br />
 <b>Note</b>:  Firefox or MS Edge browser recommended, Chrome is slower.<br />
 Time estimate for 80K lists on Intel i5 processor is 7-8 minutes.<br />
-While Compare button is <span style='color:#FF5555'>red</span>, browser is still working, please do not interrupt.<br />
-If prompted by browser, select <i>Continue</i> or <i>Wait</i> for processing to complete.
+Please do not interrupt when Compare button is <span style='color:#FF5555'>red</span>, browser is still working.<br />
+If prompted, select <i>Continue</i> or <i>Wait</i> for processing to complete.
 </p>
 
 </body>
