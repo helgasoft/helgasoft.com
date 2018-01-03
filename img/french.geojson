@@ -1,0 +1,2621 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "1001 Pharmacies",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382428ff3935425ca91516/size_5_1001pharmaciesjpg.jpg",
+        "Sector": "@HealthTech| @Retail",
+        "Employees": "28",
+        "Tranche": "21 - 40",
+        "Description": "1001Pharmacies.com is a marketplace dedicated to the online sale of health / beauty products. We are intermediaries between Internet users and French pharmacies for online sales.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "Parc Eureka 256 r Thor, 34000 MONTPELLIER",
+        "Company_Website": "http://www.1001pharmacies.com/",
+        "Job_Offers": "http://www.welcometothejungle.co/companies/1001pharmacies",
+        "lon": "3.916297",
+        "lat": "43.61839"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.916297,
+          43.61839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "2CRSI",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a142f7801e2a7577ff347bf/size_3_picture.png",
+        "Sector": "@Data @AI| @Iot @Manufacturing",
+        "Employees": "50",
+        "Tranche": "41 - 100",
+        "Description": "2CRSI designs and manufactures storage systems and servers for high-performance computing (HPC). 2CRSI is a new class of hardware vendor that does true differentiation, providing innovation and optimization for performance, density and efficiency. 2CRSI is present in Europe, North America and Middle East. We are IT industry players. Our customers are Major manufacturers, hosting & Internet service providers, software vendors as well as universities.",
+        "Location": "LORnTECH",
+        "Adresse": "32 rue Jacobi Netter - 67200 Strasbourg",
+        "Company_Website": "https://2crsi.com/",
+        "Job_Offers": "https://2crsi.fr/job/",
+        "lon": "7.709076",
+        "lat": "48.586501"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.709076,
+          48.586501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "AB Tasty",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382470ff393541b1a9151f/size_5_abtastyjpg.jpg",
+        "Sector": "@AdTech",
+        "Employees": "115",
+        "Tranche": "101 - 200",
+        "Description": "AB Tasty is an all-in-one CRO platform: it helps marketers optimize their websites and increase conversion rates through A/B testing, personalization and user engagement.",
+        "Location": "Paris",
+        "Adresse": "3 Impasse de la Planchette, 75003 Paris",
+        "Company_Website": "http://www.abtasty.com/us/",
+        "Job_Offers": "http://jobs.abtasty.com/",
+        "lon": "2.355458",
+        "lat": "48.868332"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.355458,
+          48.868332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Adikteev",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382468ff3935425ca9151e/size_5_adikteevjpg.jpg",
+        "Sector": "@Retail| @Data @AI| @AdTech",
+        "Employees": "80",
+        "Tranche": "41 - 100",
+        "Description": "Adikteev is the first digital one-stop-shop marketing platform, driven by our machine learning technology, offering three main solutions: desktop qualified traffic generation, tailor-made branding mobile advertising experiences, mobile app user acquisition & re-engagement",
+        "Location": "Paris",
+        "Adresse": "35 Avenue de l`Opéra, 75002 Paris",
+        "Company_Website": "http://www.adikteev.com/",
+        "Job_Offers": "http://jobs.adikteev.com/",
+        "lon": "2.333267",
+        "lat": "48.867955"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.333267,
+          48.867955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Adomik",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382529ff393542eba91531/size_5_adomikjpg.jpg",
+        "Sector": "@AdTech",
+        "Employees": "48",
+        "Tranche": "41 - 100",
+        "Description": "Adomik organizes publisher trading data from all monetization partners to simplify the operations of yield management and increase revenue.",
+        "Location": "Paris",
+        "Adresse": "4 Bis Rue Saint-Sauveur, 75002 Paris",
+        "Company_Website": "http://www.adomik.com/",
+        "Job_Offers": "https://adomik.workable.com/",
+        "lon": "2.349954",
+        "lat": "48.865865"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.349954,
+          48.865865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Advalo",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382522ff393541b1a91534/size_5_advalojpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "27",
+        "Tranche": "21 - 40",
+        "Description": "Advalo drives more revenue for retailers by transforming how they engage their customers throughout their lifecycle. By leveraging all their marketing data, Advalo allows the retailers to adapt to the unique life stages and behaviors of individual consumers and engage with them in a way that is individually effective.",
+        "Location": "French Tech Rennes St-Malo",
+        "Adresse": "2 rue de la Mabilais",
+        "Company_Website": "http://www.advalo.com",
+        "Job_Offers": "http://www.advalo.com/contact",
+        "lon": "-1.694304",
+        "lat": "48.106752"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.694304,
+          48.106752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Adveez",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938251aff393541b1a91530/size_5_adveezjpg.jpg",
+        "Sector": "@HealthTech| @CleanTech @Mobility| @IoT @Manufacturing",
+        "Employees": "33",
+        "Tranche": "21 - 40",
+        "Description": "ADVEEZ delivers hardware, platforms, and analytics for advanced monitoring of assets and users.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "12 Rue Michel Labrousse, 31100 Toulouse",
+        "Company_Website": "http://www.adveez.fr/",
+        "Job_Offers": "http://www.adveez.fr/",
+        "lon": "1.389021",
+        "lat": "43.568097"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.389021,
+          43.568097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Advicenne",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a14395501e2a7113c593ed8/size_3_picture.png",
+        "Sector": "@HealthTech",
+        "Employees": "20",
+        "Tranche": "1 - 20",
+        "Description": "Advicenne is a pharmaceutical company developing pediatric-friendly therapeutics for the treatment of orphan renal and neurological diseases. Our lead product ADV7103 has shown positive results in a pivotal phase III study in children and adults with distal Renal Tubular Acidosis (dRTA). ADV7103 is also expected to enter into a pivotal Phase II/III clinical trial for the treatment of Cystinuria, an inherited renal tubulopathy, in 2018. US trials for both indications will start in 2018. We also have a portfolio of clinical and pre-clinical products targeting critical needs in nephrology and neurology in collaboration with Key Opinion Leaders.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "2, rue Briçonnet F-30 000 Nîmes",
+        "Company_Website": "http://advicenne.com/",
+        "Job_Offers": "http://advicenne.com/",
+        "lon": "4.361418",
+        "lat": "43.833213"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.361418,
+          43.833213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Adyoulike",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964f2beff393557f86cfbbd/size_5_adyoulike.png",
+        "Sector": "@AdTech| @EdTech @Entertain",
+        "Employees": "75",
+        "Tranche": "41 - 100",
+        "Description": "Description coming soon",
+        "Location": "Paris",
+        "Adresse": "26 RUE RICHER - 75009 PARIS",
+        "Company_Website": "https://www.adyoulike.com/",
+        "Job_Offers": "https://www.adyoulike.com/",
+        "lon": "2.345602",
+        "lat": "48.874076"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.345602,
+          48.874076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Agriconomie",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382421ff3935420fa91518/size_5_agriconomiejpg.jpg",
+        "Sector": "@Retail| @FoodTech",
+        "Employees": "62",
+        "Tranche": "41 - 100",
+        "Description": "Agriconomie is the first and only marketplace entirely dedicated to agricultural supplies, allowing:| - farmers to buy everything they need for their daily tasks directly online at a competitive price| - physical suppliers to get online at zero cost, and immediately benefit from our significant audience (over 100K per month) to increase orders and revenue.",
+        "Location": "Other",
+        "Adresse": "11 Route Nationale 4, 51320 COOLE",
+        "Company_Website": "http://www.agriconomie.com",
+        "Job_Offers": "https://www.agriconomie.com/recrutement",
+        "lon": "4.38986",
+        "lat": "48.740377"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.38986,
+          48.740377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Alcméon",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964fef1ff39355e6bdc6fc6/size_5_alcmeon.png",
+        "Sector": "@Data @AI",
+        "Employees": "11",
+        "Tranche": "1 - 20",
+        "Description": "Alcméon is a cloud-based SaaS platform that seamlessly combines AI and human intervention to help leading B2C brands turbocharge their customer engagement and customer care on social networks & instant messaging. It has a unique proprietary suggestion technology and 3 levels of automation (Quick Replies, Plug your Bots, Auto Response). Alcméon has among its clients leading international brands like Voyages-sncf, Orange, Galeries Lafayette, etc.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://alcmeon.com/3/fr/",
+        "Job_Offers": "http://alcmeon.com/3/fr/jobetstages.html",
+        "lon": "5.703555",
+        "lat": "45.18376"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.703555,
+          45.18376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Apizee",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382513ff393541b1a9152c/size_5_apizeejpg.jpg",
+        "Sector": "@HealthTech| @EdTech @Entertain| @FinTech| @Security @Privacy| @Retail",
+        "Employees": "21",
+        "Tranche": "21 - 40",
+        "Description": "Apizee`s SaaS platform enables easy roll-out of real-time customer engagement, visual assistance, telemedicine, and enterprise collaboration services. Based on WebRTC, a disruptive telecom technology that provides a friction-less web-based video experience, Apizee`s solutions and APIs are leveraged by industry and software players such as Crédit Agricole, Safran, Enedis, ExxonMobil, Barclays and Renault.",
+        "Location": "French Tech Brest+",
+        "Adresse": "4 Rue Ampère 22300 LANNION",
+        "Company_Website": "http://www.apizee.com",
+        "Job_Offers": "https://apizee.fr/recrutement/",
+        "lon": "-3.464641",
+        "lat": "48.755511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.464641,
+          48.755511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Artefact",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938249bff393542eba9151d/size_5_artefaxjpg.jpg",
+        "Sector": "@Retail| @Data @AI| @AdTech",
+        "Employees": "120",
+        "Tranche": "101 - 200",
+        "Description": "Artefact is the digital one-stop shop blending consultants, techies and creatives around one shared purpose: guiding brands into the AI era. From strategy to ops and delivery, we help you grow the 21st century way.",
+        "Location": "Paris",
+        "Adresse": "16, passage Jouffroy 75009 PARIS",
+        "Company_Website": "http://www.artefact.is",
+        "Job_Offers": "http://www.welcometothejungle.co/companies/artefact",
+        "lon": "2.342",
+        "lat": "48.871976"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.342,
+          48.871976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Attestation Légale",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964fefcff3935489a98ddfb/size_5_attestationlegale.png",
+        "Sector": "@LegalTech",
+        "Employees": "63",
+        "Tranche": "41 - 100",
+        "Description": "Attestation Légale, the professional social network connecting businesses. Connecting businesses means streamlining their everyday operation and securing their relationships with simplified, reliable management of their administrative documents. Our goal is to help you cut costs, manage risk and strengthen your corporate image.",
+        "Location": "Lyon French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.attestationlegale.fr/",
+        "Job_Offers": "https://www.attestationlegale.fr/page/rejoignez-nous",
+        "lon": "4.854018",
+        "lat": "45.76272"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.854018,
+          45.76272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Avis vérifiés",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382381ff393541a7a9150e/size_5_avisverificsjpg.jpg",
+        "Sector": "@Retail| @Data @AI",
+        "Employees": "55",
+        "Tranche": "41 - 100",
+        "Description": "Net Reviews created a trustworthy and independent web solution, verified-reviews.com in the US; `opiniones-verificadas.com ` in Spain; ` avis-verifies.com ` in France etc. enabling online retailers to collect and display genuine customer reviews. The solution increases e-buyers` trust and improves online retailers` quality and visibility, thereby fostering online sales growth.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "18 AV ROBERT SCHUMAN| 13002 MARSEILLE",
+        "Company_Website": "https://www.avis-verifies.com/v2/",
+        "Job_Offers": "https://www.avis-verifies.com/index.php?page=mod_recrutement",
+        "lon": "5.366101",
+        "lat": "43.300911"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.366101,
+          43.300911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Awox",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938250cff393541b1a91528/size_5_awoxjpg.jpg",
+        "Sector": "@IoT @Manufacturing",
+        "Employees": "78",
+        "Tranche": "41 - 100",
+        "Description": "AwoX is a smart home leader, providing both audio and lighting products, either white label or under Cabasse brand and AwoX brands.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "101 Place Pierre Duhem, 34000 Montpellier",
+        "Company_Website": "http://www.awox.com/en/",
+        "Job_Offers": "http://www.awox.com/en/corporate/carriere/",
+        "lon": "3.914564",
+        "lat": "43.606886"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.914564,
+          43.606886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Biotech Dental",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382461ff393541b1a9151a/size_5_biotechdentaljpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "350",
+        "Tranche": "200+",
+        "Description": "Since its creation in 1987, Biotech Dental has been committed to develop a strong relationship of trust with dental surgeons and dental technicians. Together we devise and develop product ranges even more tailored to the challenges of the future. We bring together customers’ expectations, innovation and technology.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "305 Allées de Craponne, 13300 Salon-de-Provence",
+        "Company_Website": "http://www.biotechdental.com",
+        "Job_Offers": "http://www.biotechdental.com",
+        "lon": "5.100087",
+        "lat": "43.635114"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.100087,
+          43.635114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Blade",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a43b267ff393544de043d0f/size_3_picture.png",
+        "Sector": "@EdTech @Entertain",
+        "Employees": "62",
+        "Tranche": "41 - 100",
+        "Description": "Blade developed a new type of PC with a simple vision: In the future, computer power should be allocated smartly. Our vision is to free people from the constraints of physical hardware by giving them access to a powerful cloud-based computer, accessible on any device. Shadow targets the most demanding PC users: gamers. Our goal is to meet their expectations to prove that our technology can fulfill every PC need.",
+        "Location": "Paris",
+        "Adresse": "38 rue du Sentier, 75002 Paris",
+        "Company_Website": "https://shadow.tech/int/",
+        "Job_Offers": "https://www.welcometothejungle.co/companies/blade",
+        "lon": "2.346829",
+        "lat": "48.87063"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.346829,
+          48.87063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Boa Concept",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59676acf01e2a77838ae68c9/size_5_boaconcept.png",
+        "Sector": "@Data @AI| @Iot @Manufacturing",
+        "Employees": "30",
+        "Tranche": "21 - 40",
+        "Description": "Boa Concept, specialist in smart modular conveyor, provides innovative solutions for order picking, packaging and production in light and heavy loads. The company focuses on customer relationship by being initiator of new ideas and proposing innovative solutions. Its slogan: SMART SOLUTION FOR SMART HANDLING, illustrates its skills as integrator of global solutions.",
+        "Location": "Lyon French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.boaconcept.com",
+        "Job_Offers": "www.boaconcept.com",
+        "lon": "4.415679",
+        "lat": "45.46227"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.415679,
+          45.46227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Brico Privé",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382505ff393541b1a91524/size_5_bricoprivejpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "127",
+        "Tranche": "101 - 200",
+        "Description": "Bricoprive is the first Private Sale website dedicated to DIY, Garden and Home equipment, that offers brand name products with discounts up to 80%.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "9 RUE DE KOUROU| 31240 L` UNION",
+        "Company_Website": "http://www.bricoprive.com",
+        "Job_Offers": "http://www.bricoprive.com/content/11-nous-recrutons-",
+        "lon": "1.495118",
+        "lat": "43.638559"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.495118,
+          43.638559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Bureaux à partager",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824f7ff39354282a9151e/size_5_bureauxapartagerjpg.jpg",
+        "Sector": "@Retail| @CleanTech @Mobility| @RealEstate",
+        "Employees": "45",
+        "Tranche": "41 - 100",
+        "Description": "BAP’s mission is to connect professionals seeking to share their office space. The leader in the French market sharing economy, and a rising power in the U.S (Share Your Office), BAP seeks to launch a new way of working which, beyond optimizing finances, will energize the workplace.",
+        "Location": "Paris",
+        "Adresse": "21 Place de la République, 75003 Paris",
+        "Company_Website": "https://www.bureauxapartager.com/",
+        "Job_Offers": "http://www.welcometothejungle.co/companies/bureaux-a-partager",
+        "lon": "2.362219",
+        "lat": "48.867672"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.362219,
+          48.867672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Cailabs",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382419ff3935420fa91513/size_5_cailabsjpg.jpg",
+        "Sector": "@IoT @Manufacturing",
+        "Employees": "24",
+        "Tranche": "21 - 40",
+        "Description": "The leading optical technology to increase the capacity of optical fibers. Shaping the light to shape the future of optical communications.",
+        "Location": "French Tech Rennes St-Malo",
+        "Adresse": "8 rue du 7e d’Artillerie, 35000, Rennes",
+        "Company_Website": "http://www.cailabs.com",
+        "Job_Offers": "http://www.cailabs.com/careers/",
+        "lon": "-1.681186",
+        "lat": "48.10275"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.681186,
+          48.10275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Captain Contrat",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824ecff39354282a9151a/size_5_captaincontratjpg.jpg",
+        "Sector": "@Security @Privacy| @LegalTech",
+        "Employees": "33",
+        "Tranche": "21 - 40",
+        "Description": "Captain Contrat is a legal platform for SMBs based on a high performing lawyers’ marketplace. We built innovation digital tools for lawyers to help them being more productive and affordable for SMBs.",
+        "Location": "Paris",
+        "Adresse": "12 rue du saint fiacre, 75002 Paris",
+        "Company_Website": "https://www.captaincontrat.com",
+        "Job_Offers": "https://www.captaincontrat.com/job",
+        "lon": "2.345923",
+        "lat": "48.870098"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.345923,
+          48.870098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Clic Emotion",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824daff39354282a91512/size_5_clicemotionjpg.jpg",
+        "Sector": "@EdTech @Entertain",
+        "Employees": "9",
+        "Tranche": "1 -20",
+        "Description": "We are innovative product and software designers dedicated to the world of event and leisure by the mean of photography.| Our expertise in the field of photography allows us to anticipate our customers needs as the market evolves.| Our products are primarily functional, self-service and interactive terminals, and concepts that meets a new customers demand.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "28 RUE DU CODRON 66680 CANOHES",
+        "Company_Website": "http://www.CLIC-EMOTION.COM",
+        "Job_Offers": "http://www.CLIC-EMOTION.COM",
+        "lon": "2.82351",
+        "lat": "42.653001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.82351,
+          42.653001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Clic2Buy",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824e5ff39354282a91516/size_5_clic2buyjpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "16",
+        "Tranche": "1 -20",
+        "Description": "Clic2Buy enables brands to add a `Buy Now` button on all its communication, redirecting to the| retailers selling the products. It allows brands to have e-commerce features with minimum constraints.| Used by L’Oréal, Unilever, Pepsico, TCL, P&G among 430 brands.",
+        "Location": "French Tech Lille",
+        "Adresse": "165 Avenue de Bretagne, 59000 Lille",
+        "Company_Website": "http://www.clic2buy.com/",
+        "Job_Offers": "http://www.clic2buy.com/",
+        "lon": "3.021316",
+        "lat": "50.632711"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.021316,
+          50.632711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Content Square",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824d0ff39354282a9150e/size_5_contentsquarejpg.jpg",
+        "Sector": "@Retail| @AdTech",
+        "Employees": "201",
+        "Tranche": "200+",
+        "Description": "ContentSquare is a user experience analytics and optimization platform that helps businesses understand how and why users are interacting with their app, mobile and web sites. We compute billions of touch and mouse movements and transform this knowledge into profitable actions that increase engagement, reduce operational costs and maximize conversion rates.",
+        "Location": "Paris",
+        "Adresse": "50 Avenue Montaigne, 75008 Paris",
+        "Company_Website": "http://www.contentsquare.com/",
+        "Job_Offers": "https://www.contentsquare.com/careers/",
+        "lon": "2.308289",
+        "lat": "48.867879"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.308289,
+          48.867879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Cooptalis",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382309ff3935420fa9150b/size_5_cooptalisjpg.jpg",
+        "Sector": "@HR",
+        "Employees": "290",
+        "Tranche": "200+",
+        "Description": "Cooptalis assists companies with their talent acquisitions and candidates with their mobility projects, all around the world.",
+        "Location": "French Tech Lille",
+        "Adresse": "34 avenue de la Marne 59700 Marcq en Baroeul",
+        "Company_Website": "http://www.cooptalis.com",
+        "Job_Offers": "http://www.cooptalis.com",
+        "lon": "3.104503",
+        "lat": "50.668867"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.104503,
+          50.668867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Cosmo Tech",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff12ff39355e6bdc6fce/size_5_cosmotech.png",
+        "Sector": "@Data @AI",
+        "Employees": "74",
+        "Tranche": "41 - 100",
+        "Description": "Cosmo Tech is a global technology company that helps the C-suite make optimal decisions. Through our unique methodology, we model and then simulate complex scenarios to accurately predict the outcome of events even if those events have never happened before.",
+        "Location": "Lyon French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenoble",
+        "Company_Website": "https://cosmotech.com/",
+        "Job_Offers": "https://cosmotech.com/about/join-us/",
+        "lon": "4.826442",
+        "lat": "45.72767"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.826442,
+          45.72767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "CybelAngel",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff1dff39355e6bdc6fd2/size_5_cybelangel.png",
+        "Sector": "@Security @Privacy",
+        "Employees": "34",
+        "Tranche": "21 - 40",
+        "Description": "We offer a service of data leaks detection on the Internet. We monitor the Dark Web and the Internet of Things to identify threats that could affect our customers.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.cybelangel.com/",
+        "Job_Offers": "https://www.cybelangel.com/jobs/",
+        "lon": "5.703555",
+        "lat": "45.18376"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.703555,
+          45.18376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Dagoma",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59f8b39aff393544679f2ce3/size_3_picture.png",
+        "Sector": "@IoT @Manufacturing| @EdTech @Entertain| @Retail",
+        "Employees": "58",
+        "Tranche": "41 - 100",
+        "Description": "Dagoma aims to democratize 3D printing and give a new meaning to consumption by designing, manufacturing and selling Made In France 3D printers. The flagship product is the NEVA : the most accessible and easy to use 3D printer on the market. Its secret: Dagoma creates its 3D printers with its own printers!",
+        "Location": "Paris",
+        "Adresse": "35 rue Greneta, 75002 Paris",
+        "Company_Website": "https://dagoma.fr/",
+        "Job_Offers": "https://dagoma.fr/",
+        "lon": "2.350073",
+        "lat": "48.865133"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.350073,
+          48.865133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Dedienne Santé",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824c5ff393542eba9152d/size_5_dediennesantcjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "90",
+        "Tranche": "41 - 100",
+        "Description": "Design and manufacture of implantable medical devices dedicated to orthopedic surgery.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "217 Rue Charles Nungesser, 34130 Mauguio",
+        "Company_Website": "http://www.dedienne-sante.com",
+        "Job_Offers": "http://www.dedienne-sante.com",
+        "lon": "3.937215",
+        "lat": "43.586853"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.937215,
+          43.586853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Delairtech",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824bbff393542eba91529/size_5_delairtechjpg.jpg",
+        "Sector": "@IoT @Manufacturing| @Retail",
+        "Employees": "99",
+        "Tranche": "41 - 100",
+        "Description": "Headquartered in France and California, Delair-Tech is a global leader in commercial drone solutions, enabling leading industries to transform aerial imagery into actionable business intelligence. Specialized in drone manufacturing and aerial data processing, we offer end-to-end UAV solutions, including hardware, software and services. Core industry markets: Geospatial, Agriculture, Transportation, Power&Utilities, Oil&Gas, Security&Defense, Emergency. ",
+        "Location": "French Tech Toulouse",
+        "Adresse": "676 rue Max Planck 31670 Labège",
+        "Company_Website": "http://www.delair-tech.com/",
+        "Job_Offers": "http://www.delair-tech.com/job-opportunities/",
+        "lon": "1.508858",
+        "lat": "43.553999"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.508858,
+          43.553999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Digitemis",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824b4ff393542eba91525/size_5_digitemisjpg.jpg",
+        "Sector": "@Security @Privacy| @IoT @Manufacturing",
+        "Employees": "18",
+        "Tranche": "1 -20",
+        "Description": "Cybersecurity services and tool to help corporates to secure Information Technology and protect privacy",
+        "Location": "Nantes Tech",
+        "Adresse": "LA NOUE 85140 LA MERLATIERE",
+        "Company_Website": "http://www.digitemis.com",
+        "Job_Offers": "https://www.digitemis.com/digitemis-recrutement/",
+        "lon": "-1.279524",
+        "lat": "46.754641"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.279524,
+          46.754641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Drivy",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59e0cd2e01e2a71f826d6475/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "92",
+        "Tranche": "41 - 100",
+        "Description": "Created in 2010, Drivy is the leading car rental marketplace in Europe, enabling a growing community of 1,5 million users to rent one of the 45,000 private individuals` cars available on the platform, within walking distance of home and whenever they need one, while helping car owners to cover their costs. Drivy provides a full mobile experience to its users, from booking a car to check-in and check-out. Drivy operates in France, Germany, Spain, Austria and Belgium, and in the UK. More than 2 million rental days happened since Drivy was launched.",
+        "Location": "Paris",
+        "Adresse": "35 rue Greneta, 75002 Paris",
+        "Company_Website": "http://www.drivy.com/",
+        "Job_Offers": "http://www.drivy.com/jobs",
+        "lon": "2.350073",
+        "lat": "48.865133"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.350073,
+          48.865133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "EasyRecrue",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382377ff393541a7a9150a/size_5_easyrecruejpg.jpg",
+        "Sector": "@HR| @EdTech @Entertain",
+        "Employees": "38",
+        "Tranche": "21 - 40",
+        "Description": "The European leader in live and pre-recorded video interviewing, EASYRECRUE develops and| markets innovative Software-as-a-Service recruitment solutions.| Our teams support HR users with their recruitment issues and setting up innovative projects on a daily basis.| We are currently working with over 350 customers in Europe, including Valeo, AccorHotels, Carrefour,| and Voyage-privée.com.",
+        "Location": "Paris",
+        "Adresse": "3bis rue de la Chaussée d`Antin, 75009 Paris",
+        "Company_Website": "http://www.easyrecrue.com",
+        "Job_Offers": "http://www.jobs.net/jobs/easyrecrue/fr/",
+        "lon": "2.333722",
+        "lat": "48.871373"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.333722,
+          48.871373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Ector",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff28ff39355f52dc6fdc/size_5_ector.png",
+        "Sector": "@Other",
+        "Employees": "18",
+        "Tranche": "1 - 20",
+        "Description": "Servicing a number of airports and railway stations since 2013, Ector is the first and most established valet parking company in France.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.ectorparking.com/",
+        "Job_Offers": "http://www.ectorparking.com/a-propos/jobs/",
+        "lon": "5.703555",
+        "lat": "45.18376"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.703555,
+          45.18376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Energiency",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "19",
+        "Tranche": "1-20",
+        "Description": "Turning raw manufacturing data from the internet of things into new energy saving opportunities thanks to data science and artificial intelligence.",
+        "Location": "Paris",
+        "Adresse": "2 rue de la Mabilais 35000 Rennes",
+        "Company_Website": "http://www.energiency.com",
+        "Job_Offers": "http://www.energiency.com/super-businessdeveloppeur-industrie-data-energie/",
+        "lon": "-1.694304",
+        "lat": "48.106752"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.694304,
+          48.106752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Enoptea",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a3bcf2801e2a77d54c81506/size_3_picture.png",
+        "Sector": "@FinTech| @CleanTech @Mobility",
+        "Employees": "9",
+        "Tranche": "1 - 20",
+        "Description": "We are ENOPTEA, experts in energy budget optimization (electricity, gas). We offer a SaaS solution for multi-site professionals that allows them to truly own their energy contracts and pay the right price for their consumption: collect and manage invoices, optimize and renegotiate contracts in a centralized, simplified and automated way. Our solution is proven to reduce costs by up to 20% whilst maintaining continuous energy supply.",
+        "Location": "Lyon French Tech",
+        "Adresse": "3 place Louis Pradel 69001 Lyon",
+        "Company_Website": "http://www.enoptea.fr/",
+        "Job_Offers": "http://www.enoptea.fr/offre-d-emploi/",
+        "lon": "4.837161",
+        "lat": "45.767861"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.837161,
+          45.767861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Eove",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824a9ff39354282a9150a/size_5_eovejpg.jpg",
+        "Sector": "@HealthTech| @IoT @Manufacturing",
+        "Employees": "27",
+        "Tranche": "21 - 40",
+        "Description": "EOVE is an innovative company specialized in design and manufacturing of homecare pulmonary ventilators for critical patient.| EOVE own today the smallest and the lightest pulmonary ventilator, which increase significantly patient mobility. This device is also connected and allows getting full patient real time observance from everywhere.",
+        "Location": "French Tech Bordeaux",
+        "Adresse": "4 rue jules Ferry Immeuble Newton 64000 Pau",
+        "Company_Website": "http://www.eove.fr",
+        "Job_Offers": "http://eove.fr/cms/lentreprise/carrieres/",
+        "lon": "-0.365844",
+        "lat": "43.319739"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.365844,
+          43.319739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "ePack Hygiene",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a43a0d001e2a777cc2082eb/size_3_picture.png",
+        "Sector": "@FoodTech",
+        "Employees": "71",
+        "Tranche": "41 - 100",
+        "Description": "CHR Numérique designs and develops innovative digital solutions in the field of commercial and collective catering to simplify the daily lives of these professionals governed by European regulations in the field of food safety.",
+        "Location": "French Tech Brest+",
+        "Adresse": "60, avenue Baron Lacrosse 29850 Gouesnou",
+        "Company_Website": "http://epack-hygiene.fr/contact/?lang=en",
+        "Job_Offers": "http://epack-hygiene.fr/contact/?lang=en",
+        "lon": "-4.453614",
+        "lat": "48.432346"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.453614,
+          48.432346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Evaneos",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff2fff39355f52dc6fe0/size_5_evaneos.png",
+        "Sector": "@Travel",
+        "Employees": "x",
+        "Tranche": "1 - 20",
+        "Description": "Evaneos Travel is the first online platform connecting travellers directly with ‘the local experts,’ 800 hand-picked, on-site travel agents in over 150 destinations across the globe. As one of the leading online travel players in Europe, Evaneos Travel allows holidaymakers to create tailor-made trips directly and securely through local travel agencies, and this platform is set to revolutionise the way travellers book their discovery and adventure holidays.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.evaneos.com/",
+        "Job_Offers": "http://www.evaneos.com/evaneos/recrutement/",
+        "lon": "2.331215",
+        "lat": "48.87547"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.331215,
+          48.87547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Famoco",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff3aff39355f52dc6fe4/size_5_famoco.png",
+        "Sector": "@Security @Privacy",
+        "Employees": "70",
+        "Tranche": "41 - 100",
+        "Description": "FAMOCO is the leader in Android professional terminals. FAMOCO was created in 2010 and is designated for markets in transport, payment, logistics, access control and equipment for field workers. Thanks to its range of secure and remotely administered terminals, the company has developed the first Android-based solution that can be adapted to all markets and requirements.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.famoco.com/",
+        "Job_Offers": "https://www.famoco.com/careers/",
+        "lon": "2.288524",
+        "lat": "48.87075"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.288524,
+          48.87075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "ForCity",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff42ff39355f52dc6fe8/size_5_forcity.png",
+        "Sector": "@Other",
+        "Employees": "76",
+        "Tranche": "41 - 100",
+        "Description": "Using 4D simulation to support decision making. If you manage a business unit which impacts a city over time, chances are you are constantly confronted with the unexpected, the unpredictable. ForCity offers a suite of sector-specific applications allowing governments and private sector to plan and optimize their future in urban areas by playing out infinite amounts of scenarios over a long time frame.",
+        "Location": "Lyon French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.forcity.com/en/",
+        "Job_Offers": "http://www.forcity.com/category/carrieres/",
+        "lon": "4.858475",
+        "lat": "45.76354"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.858475,
+          45.76354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Fraudbuster",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938236cff3935425ca91506/size_5_fraudbusterjpg.jpg",
+        "Sector": "@Security @Privacy",
+        "Employees": "34",
+        "Tranche": "21 - 40",
+        "Description": "FraudBuster offers a fraud detection solution relying on the real-time analysis of subscribers’ behaviour. Our “big data” software is designed internally, and FraudBuster operates the service end-to-end. More than 80 operators in Africa, Middle-East and Asia have conducted campaigns against fraud thanks to the efficiency of the FraudBuster service.",
+        "Location": "Paris",
+        "Adresse": "6 AVENUE MORANE SAULNIER| 78140 VÉLIZY VILLACOUBLAY",
+        "Company_Website": "http://www.fraudbuster.mobi/",
+        "Job_Offers": "http://www.fraudbuster.mobi/",
+        "lon": "2.211343",
+        "lat": "48.781889"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.211343,
+          48.781889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Green Creative",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff4aff39355f52dc6fec/size_5_greencreative.png",
+        "Sector": "@Other",
+        "Employees": "23",
+        "Tranche": "21 - 40",
+        "Description": "Description coming soon.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.green-creative.com/en/",
+        "Job_Offers": "http://www.green-creative.com/recrutement",
+        "lon": "2.496068",
+        "lat": "48.76496"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.496068,
+          48.76496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "GuestToGuest",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59f8553aff39350c653780f0/size_3_picture.png",
+        "Sector": "@Travel",
+        "Employees": "100",
+        "Tranche": "41 - 100",
+        "Description": "Founded in 2011, GuestToGuest offers reciprocal and non-reciprocal home exchanges between individuals. This online platform connects members who want to organize home exchanges for their weekend trips or holidays. Registration is free, and each member can offer one or more accommodations to exchange. Each home is evaluated with a point system (GuestPoints) that the member transfers to their host. Our acquisition in 2017 of U.S.-based international home swapping company HomeExchange.com marks a turning point in the travel industry as we join together to create the world leader of the home swapping market with more than 400,000 homes in our collective inventory.",
+        "Location": "Paris",
+        "Adresse": "45 rue de Chabrol, 75010 Paris",
+        "Company_Website": "https://www.guesttoguest.com/en/",
+        "Job_Offers": "https://www.welcometothejungle.co/companies/guesttoguest",
+        "lon": "2.352764",
+        "lat": "48.876867"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352764,
+          48.876867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Habiteo",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59676ad601e2a77838ae68cd/size_5_habiteo.png",
+        "Sector": "@RealEstate",
+        "Employees": "53",
+        "Tranche": "41 - 100",
+        "Description": "Habiteo revolutionizes the property development industry by offering a sales and marketing platform that digitalizes and speeds up the entire sales sales cycle. Buyers are able to project themselves in their future purchase (apartment, office...) through 3D modeling and virtual tours by having all the information they need.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.habiteo.com/",
+        "Job_Offers": "https://page.habiteo.com/recrutement/",
+        "lon": "2.347796",
+        "lat": "48.87143"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.347796,
+          48.87143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "HalioDx",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382365ff3935425ca91502/size_5_haliodxjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "111",
+        "Tranche": "101 - 200",
+        "Description": "HalioDx is a immuno-oncology diagnostic company providing oncologists with first-in-class Immune-based diagnostic products and services to guide cancer care.| Immunoscore Colon is positioned as diagnostic standard for prognostic and tomorrow`s predictive information and is commercialized worldwide.| HalioDX works with Pharma companies to demonstrate clinical utility of its assays in various cancer indications.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "163 Avenue de Luminy, 13009 Marseille",
+        "Company_Website": "http://www.haliodx.com",
+        "Job_Offers": "http://www.haliodx.com/contact/careers/",
+        "lon": "5.439622",
+        "lat": "43.235558"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.439622,
+          43.235558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Horse Pilot",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593824a2ff393542eba91521/size_5_horsepilotjpg.jpg",
+        "Sector": "@Retail| @Sports",
+        "Employees": "13",
+        "Tranche": "1 -20",
+        "Description": "Develop, produce and distribute technical clothing for riders.| Brand promise: Horse Pilot is the ultimate riding experience in all conditions, all the time.",
+        "Location": "French Tech Lille",
+        "Adresse": "Zone Innova Park – 450 route de Gruson – 59 830| CYSOING",
+        "Company_Website": "http://www.horsepilot.com",
+        "Job_Offers": "http://www.horsepilot.com",
+        "lon": "3.213086",
+        "lat": "50.575336"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.213086,
+          50.575336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "IDECSI",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff54ff3935489a98ddff/size_5_idecsi.png",
+        "Sector": "@Security @Privacy",
+        "Employees": "22",
+        "Tranche": "21 - 40",
+        "Description": "Our mission: develop highly effective, advanced email security solutions that are easy to implement, use and maintain for all sensitive business applications.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.idecsi.com/home",
+        "Job_Offers": "http://www.idecsi.com/home",
+        "lon": "2.303871",
+        "lat": "48.87207"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.303871,
+          48.87207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Imeon Energy",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938235eff393541a7a91506/size_5_imeonenergyjpg.jpg",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "10",
+        "Tranche": "1 -20",
+        "Description": "IMEON ENERGY develops intelligent inverters dedicated to photovoltaic installations in self-consumption. It allows simultaneous use of several sources of energy (photovoltaic / battery / public network) to mitigate the fluctuation of solar production and ensure a constant supply of energy to the equipped site. IMEON now integrates true embedded intelligence. IMEON thus become the nerve center of a photovoltaic installation.",
+        "Location": "French Tech Brest+",
+        "Adresse": "10 Rue Amiral romain Desfossés – 29200 Brest",
+        "Company_Website": "http://www.imeon-energy.com",
+        "Job_Offers": "http://www.imeon-energy.com",
+        "lon": "-4.48235",
+        "lat": "48.425337"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.48235,
+          48.425337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Ineat Conseil",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382356ff3935420fa9150f/size_5_ineatjpg.jpg",
+        "Sector": "@Retail| @Data @AI| @AdTech",
+        "Employees": "140",
+        "Tranche": "101 - 200",
+        "Description": "At the heart of digital transformation and disruptive service innovation, INEAT Group supports clients in the design and implementation of digital solutions (e-commerce, mobile, Web, CMS, IoT, etc.). What truly sets us at INEAT Group apart is our dual-value approach : technology and marketing expertise combine to deliver an exceptional customer experience.",
+        "Location": "French Tech Lille",
+        "Adresse": "2 Allée de la Haye du temple – 59160 Lomme",
+        "Company_Website": "http://www.ineat-group.com",
+        "Job_Offers": "http://www.ineat-group.com/candidate.html",
+        "lon": "3.019801",
+        "lat": "50.631433"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.019801,
+          50.631433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Intercloud",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff5cff39355f52dc6ff0/size_5_intercloud.png",
+        "Sector": "@Security @Privacy",
+        "Employees": "66",
+        "Tranche": "41 - 100",
+        "Description": "The InterCloud Platform is a service-oriented platform that allows enterprises to take control over the delivery of their cloud applications. It natively supports multiple cloud providers and various connectivity models. Leveraging InterCloud Platform, enterprises solve security, performance and flexibility issues as they embark on their cloud journey.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.intercloud.com/",
+        "Job_Offers": "https://www.intercloud.com/about_careers",
+        "lon": "2.352744",
+        "lat": "48.86592"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352744,
+          48.86592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Inventy",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938234fff393541b1a91516/size_5_inventyjpg.jpg",
+        "Sector": "@Security @Privacy",
+        "Employees": "130",
+        "Tranche": "101 - 200",
+        "Description": "Inventy helps large companies make their SAP® solutions fast, safe and cost-effective. By combining predictive analytics and support in decision-making, our Big Data platform, PERFORMER FOR SAP® (the first for continuous improvement of SAP® solutions) factually proves the use and added value of SAP® solutions allowing companies to measure and plan the best scenarios. Thanks to its expertise and its capacity to innovate, Inventy achieved 2000% growth in 5 years.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "LE DRAKKAR Bat D, 2405 Route des Dolines, 06560",
+        "Company_Website": "http://www.inventy.com/fr",
+        "Job_Offers": "http://www.inventy.com/fr/panel-fr-carriere",
+        "lon": "7.048253",
+        "lat": "43.62535"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.048253,
+          43.62535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Isotropix",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382493ff393542eba91519/size_5_isotropixjpg.jpg",
+        "Sector": "@EdTech @Entertain",
+        "Employees": "38",
+        "Tranche": "21 - 40",
+        "Description": "Isotropix develops Clarisse, an innovative 3D graphics software dedicated to render high-end images for feature films and TV. Clarisse revolutionary paradigm shift increases productivity by 10 allowing CG artists to work interactively on their final images with an unprecedented level of detail!",
+        "Location": "French Tech Montpellier",
+        "Adresse": "1 Place Francis Ponge, 34000 Montpellier",
+        "Company_Website": "http://www.isotropix.com/",
+        "Job_Offers": "http://www.isotropix.com/company/jobs-at-isotropix",
+        "lon": "3.884585",
+        "lat": "43.609357"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.884585,
+          43.609357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Lemon Way",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382348ff393541b1a91512/size_5_lemonwayjpg.jpg",
+        "Sector": "@FinTech",
+        "Employees": "80",
+        "Tranche": "41 - 100",
+        "Description": "Through its API, Lemon Way offers you state-of-the-art payment technology. Beyond their technological expertise, Lemon Way also offers a multitude of complementary regulation and management services. 3 million customer accounts opened in Europe via 1,000 platforms.",
+        "Location": "Paris",
+        "Adresse": "14 RUE DE LA BEAUNE 93100 MONTREUIL SOUS BOIS",
+        "Company_Website": "http://lemonway.fr",
+        "Job_Offers": "https://www.lemonway.com/fr/recrutement/",
+        "lon": "2.436444",
+        "lat": "48.86198"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.436444,
+          48.86198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Ludilabel",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382412ff3935425ca91512/size_5_ludilabeljpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "14",
+        "Tranche": "1 -20",
+        "Description": "Ludilabel is an online shop selling personalized name labels to tag clothes and items of children and elderlies to help supervisory staff identify their belongings.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "26 Rue de la Colombette, 31000 Toulouse",
+        "Company_Website": "http://www.ludilabel.fr",
+        "Job_Offers": "https://ludilabel.welcomekit.co/",
+        "lon": "1.451983",
+        "lat": "43.604568"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.451983,
+          43.604568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "M Target",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382485ff393542eba91511/size_5_mtargetjpg.jpg",
+        "Sector": "@Retail| @AdTech",
+        "Employees": "42",
+        "Tranche": "41 - 100",
+        "Description": "M Target provides its customers (big accounts & SMBs) with multichannel mobile tools.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "44 L OCCITANE| 31670 LABEGE",
+        "Company_Website": "http://www.mtarget.fr",
+        "Job_Offers": "http://www.mtarget.fr",
+        "lon": "1.501289",
+        "lat": "43.550853"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.501289,
+          43.550853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Mapping Control",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59676ade01e2a778dbae69c6/size_5_mappingcontrol.png",
+        "Sector": "@IoT @Manufacturing",
+        "Employees": "49",
+        "Tranche": "41 - 100",
+        "Description": "Specialist of the connected vehicle, Mapping Control proposes to companies and public authorities, the services of embarked on-line data processing allowing to generate real savings on vehicle fleets. To meet the expectations and specificities of every company, Mapping Control offers a range of modular and evolutive services: Vehicle Tracking, Mobility, Fleet Management, Private Use Management, Driving Analysis, Carshare, Protection, Data Exchange. Our 2000 customers, representing 60 000 connected vehicles, processed everyday Mapping Control technology reduce the global cost of running their automobile fleet.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.mappingcontrol.com/?lang=en",
+        "Job_Offers": "http://www.mappingcontrol.com/?-espace-de-recrutement-",
+        "lon": "5.413710",
+        "lat": "43.50658"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.41371,
+          43.50658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Matooma",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938245aff3935420fa9151d/size_5_matoomajpg.jpg",
+        "Sector": "@IoT @Manufacturing",
+        "Employees": "35",
+        "Tranche": "21 - 40",
+        "Description": "Founded in 2012, Matooma is a Machine to Machine company that provides a universal SIM cards connectivity solution and a management platform: M2MManager. The company connects more than 200 000 devices all around the world. Thanks to a full range of dedicated and centralized services, Matooma simplifies deployments and speeds productivity of every IoT projects.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "Immeuble Le Liner ZAC de l’aéroport Entrée 2 SIS 2630, Avenue Georges Frêche, 34470 Pérols",
+        "Company_Website": "https://www.matooma.com/en",
+        "Job_Offers": "https://www.matooma.com/en/company/join-us",
+        "lon": "3.93616",
+        "lat": "43.578453"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.93616,
+          43.578453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Mazeberry",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938248cff393542eba91515/size_5_mazeberryjpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "30",
+        "Tranche": "21 - 40",
+        "Description": "Mazeberry is a technology company that provides web advertisers with a total control over their marketing spend. Founded in 2011, the company has since then received many awards distinguishing its R&D efforts towards building its innovative eponymous solution: the Mazeberry Solution.",
+        "Location": "French Tech Lille",
+        "Adresse": "40 Rue de l`Abbé Lemire, 59110 La Madeleine",
+        "Company_Website": "http://www.mazeberry.com",
+        "Job_Offers": "https://www.mazeberry.com/job/",
+        "lon": "3.076049",
+        "lat": "50.652966"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.076049,
+          50.652966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Median Technologies",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382404ff393541a7a91546/size_5_mediantechnologyjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "120",
+        "Tranche": "101 - 200",
+        "Description": "Median Technologies provides innovative imaging solutions and services for the analysis and management of medical images. Median enables the diagnostic and follow up of diseases in clinical trials and patient care. Through its iBiopsy® imaging platform, Median leverages the power of Imaging Phenomics to provide insights into novel therapies and treatment strategies for patients.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "1800 Route des Crêtes - Les Deux Arcs Batiment B, 06560 Valbonne",
+        "Company_Website": "http://www.mediantechnologies.com",
+        "Job_Offers": "https://mediantechnologies.mua.hrdepartment.com/hr/ats/JobSearch/index?change_user_language=1",
+        "lon": "7.041903",
+        "lat": "43.628412"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.041903,
+          43.628412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Mediaveille",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823f2ff393541a7a9153e/size_5_mediaveillejpg.jpg",
+        "Sector": "@AdTech| @EdTech @Entertain",
+        "Employees": "100",
+        "Tranche": "41 - 100",
+        "Description": "Mediaveille is a consulting agency specialized in digital strategy. We enable our clients to take advantage of the full potential offered by the Internet (web + mobile) to develop their businesses. Mediaveille is a certified Google Partner Premier employing a team of 100 experts in 8 fields of digital communication : Digital Strategy, SEO, Online Marketing, Web Ergonomics/Design, Business Intelligence, Data Analytics, Social Media, and Training.",
+        "Location": "French Tech Rennes St-Malo",
+        "Adresse": "10 PARC DE BROCELIANDE 35760 SAINT GREGOIRE",
+        "Company_Website": "http://www.mediaveille.com/",
+        "Job_Offers": "http://www.mediaveille.com/agence-mv/carriere-recrutement/",
+        "lon": "-1.687742",
+        "lat": "48.160161"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.687742,
+          48.160161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Medincell",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823eaff393541a7a9153a/size_5_medincelljpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "90",
+        "Tranche": "41 - 100",
+        "Description": "In order to service this truly global market, MedinCell is dedicated to delivering revolutionary medical treatments technologies to the global community, regardless of local economic conditions. We are empowering our partners to develop the next generation of best in class medicines that combine low manufacturing cost, potent ecological and compliance-related benefits.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "3 rue des frères lumière 34830 Jacou",
+        "Company_Website": "http://www.medincell.com",
+        "Job_Offers": "http://www.medincell.com/careers/",
+        "lon": "3.900807",
+        "lat": "43.657721"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.900807,
+          43.657721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "MisterFly",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a05d2f501e2a732464fdef2/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility| @Retail",
+        "Employees": "100",
+        "Tranche": "41 - 100",
+        "Description": "Founded in 2011, GuestToGuest offers reciprocal and non-reciprocal home exchanges between individuals. This online platform connects members who want to organize home exchanges for their weekend trips or holidays. Registration is free, and each member can offer one or more accommodations to exchange. Each home is evaluated with a point system (GuestPoints) that the member transfers to their host. Our acquisition in 2017 of U.S.-based international home swapping company HomeExchange.com marks a turning point in the travel industry as we join together to create the world leader of the home swapping market with more than 400,000 homes in our collective inventory.",
+        "Location": "Paris",
+        "Adresse": "25 rue de Ponthieu, 75008 Paris",
+        "Company_Website": "https://www.misterfly.com",
+        "Job_Offers": "https://www.misterfly.com",
+        "lon": "2.309014",
+        "lat": "48.870766"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.309014,
+          48.870766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Morning",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382340ff393541b1a9150e/size_5_morningjpg.jpg",
+        "Sector": "@EdTech @Entertain| @Retail",
+        "Employees": "13",
+        "Tranche": "1 -20",
+        "Description": "Morning publishes innovative board games: from sourcing to international distribution passing by development, illustration and promotion of the games, we handle the entire value chain of our products. We also accompany small publishers who don`t have sufficient resources to promote and commercialise their games, the `Studios`.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "17 r Gén Lionel Marmier, 31300 TOULOUSE",
+        "Company_Website": "http://www.morning.us",
+        "Job_Offers": "https://morning.us/pages/jobs",
+        "lon": "1.389683",
+        "lat": "43.601806"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.389683,
+          43.601806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Moulinot",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff6eff39355e6bdc6fd6/size_5_moulinot.png",
+        "Sector": "@Other",
+        "Employees": "26",
+        "Tranche": "21 - 40",
+        "Description": "Founded by a restaurateur, Moulinot Compost & Biogas is a social responsible company, specialized in the food waste (biowaste). Moulinot developed an innovative process of vermicomposting which allows the production of a high-fashion compost.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenoble",
+        "Company_Website": "http://www.moulinot.fr/moulinot/home",
+        "Job_Offers": "http://www.moulinot.fr/moulinot/home",
+        "lon": "5.703555",
+        "lat": "45.18376"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.703555,
+          45.18376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Mozoo",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382452ff393541a7a91556/size_5_mozoojpg.jpg",
+        "Sector": "@AdTech",
+        "Employees": "110",
+        "Tranche": "101 - 200",
+        "Description": "Mozoo is the first premium rich media and video ad-exchange on mobile in the world. Since 2010, the Paris born company has specialised in the creation of engaging mobile ads that respect user experience. Mozoo’s integrated global creative studio designs and produces rich media formats and innovative videos perfectly suited to smartphone navigation.",
+        "Location": "Paris",
+        "Adresse": "98 Boulevard Victor Hugo, 92110 Clichy",
+        "Company_Website": "http://mozoo.com/",
+        "Job_Offers": "http://www.mozoo.com/careers/",
+        "lon": "2.318504",
+        "lat": "48.901016"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.318504,
+          48.901016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "My Flying Box",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff78ff39355e6bdc6fda/size_5_myflyingbox.png",
+        "Sector": "@Retail",
+        "Employees": "10",
+        "Tranche": "1 - 20",
+        "Description": "Offer to professionals in need of a shipping (e-merchant, e-marketplace, e-retailer, e-provide) one-stop-shipping solution to the best prices available. My Flying Box is relentlessly looking for the best express shipping partners all over the world in order to find what’s on top out there (DHL, UPS, Fedex, Aramex, Colissimo, Chronopost, Bpost).",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.myflyingbox.com/en",
+        "Job_Offers": "https://www.myflyingbox.com/en",
+        "lon": "7.202515",
+        "lat": "43.68342"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.202515,
+          43.68342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Naïo Technologies",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a0ac165ff39356f85a1a07d/size_4_picture.png",
+        "Sector": "@CleanTech @Mobility| @Data @AI| @FoodTech",
+        "Employees": "25",
+        "Tranche": "21 - 40",
+        "Description": "Founded in Toulouse in 2011, Naïo Technologies develops and markets robots for agriculture and viticulture. Our robots assist farmers in their daily tasks in order to relieve their workload and increase profitability while reducing impact on the environment. Naïo Technologies aims to make modern technology accessible to all farmers and agricultural businesses. The entire range of Naïo Technologies robots is dedicated to healthy and productive agriculture in full respect of the environment.",
+        "Location": "French Tech Toulouse",
+        "Adresse": "45 rue de Chabrol, 75010 Paris",
+        "Company_Website": "https://www.naio-technologies.com/en/",
+        "Job_Offers": "https://www.naio-technologies.com/offres-demploi/",
+        "lon": "2.352764",
+        "lat": "48.876867"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352764,
+          48.876867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Navya",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a05d10b01e2a745f928b18e/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "150",
+        "Tranche": "101 - 200",
+        "Description": "Created in 2014, the French company NAVYA is the specialist in the autonomous vehicle market. NAVYA assists cities and private sites around the world in improving their transport offer with its autonomous, driverless and electric solutions. At the cutting edge of technology, NAVYA propose a AUTONOMS range, composed of AUTONOM SHUTTLE, which has transported 200 000 passengers around the world and AUTONOM CAB, the new mobility solution.",
+        "Location": "Lyon French Tech",
+        "Adresse": "1, rue du Docteur Pierre Fleury-Papillon, 69100 VILLEURBANNE, FRANCE",
+        "Company_Website": "https://navya.tech/en/",
+        "Job_Offers": "https://navya.tech/en/career/",
+        "lon": "4.883218",
+        "lat": "45.764462"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.883218,
+          45.764462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Net Acheteur",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823e0ff393541a7a91536/size_5_netacheteursjpg.jpg",
+        "Sector": "@Retail| @RealEstate",
+        "Employees": "10",
+        "Tranche": "1 -20",
+        "Description": "We are a collaborative and digital platform dedicated to real estate buyers and properties hunters. Its aim is to simplify the purchasing process through an innovative customer experience, from the future owner or investors point of view. It  is built upon the combination of the benefits from a digital platform (like Uber) and an essential human relationship, through a nationwide independent properties hunters network.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "Cap Omega – rond point Benjamin Franklin 34960 Montpellier cedex 2",
+        "Company_Website": "http://www.net-acheteur.com",
+        "Job_Offers": "https://www.net-acheteur.com/landing/devenir-chasseur-immobilier-france",
+        "lon": "3.914677",
+        "lat": "43.618546"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.914677,
+          43.618546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Netatmo",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59dcebcfff39356b6727d9f0/size_3_picture.png",
+        "Sector": "@Iot @Manufacturing| @Data @AI| @RealEstate",
+        "Employees": "200",
+        "Tranche": "200+",
+        "Description": "Netatmo is a revolutionary smart home company, developing groundbreaking, intuitive and beautifully-designed connected consumer electronics. Truly smart, Netatmo’s innovative products provide a seamless experience that helps users create a safer, healthier and more comfortable home. Netatmo carefully designs the mechanics, electronics and embedded software of all its products to the highest standards. Netatmo also creates the mobile and web applications that fully realise their potential.",
+        "Location": "Paris",
+        "Adresse": "93 rue Nationale 92100 Boulogne-Billancourt",
+        "Company_Website": "https://www.netatmo.com/en-GB/site/",
+        "Job_Offers": "https://www.netatmo.com/en-GB/company/careers",
+        "lon": "2.239558",
+        "lat": "48.829758"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.239558,
+          48.829758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Nexenture",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938240bff393541a7a9154a/size_5_nexenturejpg.jpg",
+        "Sector": "@EdTech @Entertain| @HR",
+        "Employees": "15",
+        "Tranche": "1 -20",
+        "Description": "Nexenture is a B2B startup specializing in collaborative work.| Our raison d`être is to value the commitment of all employees to the service of the company, through simple, useful digital solutions. Valuing engagement means highlighting and distinguishing committed employees and transforming this commitment into value for the company.| In only a few years Nexenture has become a strategic partner of prestigious companies in their digital transformation.",
+        "Location": "Lyon French Tech",
+        "Adresse": "21 Rue Longue, 69001 Lyon",
+        "Company_Website": "http://www.nexenture.fr",
+        "Job_Offers": "http://www.nexenture.fr",
+        "lon": "4.833664",
+        "lat": "45.765493"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.833664,
+          45.765493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Obiz",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a43d73101e2a74417091455/size_3_picture.png",
+        "Sector": "@EdTech @Entertain| @Sports| @Retail",
+        "Employees": "30",
+        "Tranche": "21 - 40",
+        "Description": "Obiz is an innovative marketing company, delivering turnkey ethical loyalty programs to its clients, large corporations, and their customers. For them, Obiz provides web and mobile access to get exclusive benefits from more than 40,000 proximity partners in sport, leisure and well-being fields. Partners are independent, next door companies, local shops and outlets. At the core of Obiz Concept is the willingness to take no commission whatsoever from partners for their transactions with beneficiaries.",
+        "Location": "Lyon French Tech",
+        "Adresse": "6 avenue Sidoine-Apollinaire, 69009 Lyon",
+        "Company_Website": "https://obiz.fr/",
+        "Job_Offers": "https://www.welcometothejungle.co/companies/obiz-concept",
+        "lon": "4.794599",
+        "lat": "45.774341"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.794599,
+          45.774341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Open Classrooms",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a340be201e2a77ee5c018a3/size_3_picture.png",
+        "Sector": "@EdTech @Entertain",
+        "Employees": "55",
+        "Tranche": "41 - 100",
+        "Description": "OpenClassrooms is a global online education platform with 3 million users and more than 30 diplomas available fully online on the most sought-after skills on the job market.",
+        "Location": "Paris",
+        "Adresse": "7 Cité Paradis 75010 Paris",
+        "Company_Website": "https://openclassrooms.com/",
+        "Job_Offers": "http://jobs.openclassrooms.com/",
+        "lon": "2.350552",
+        "lat": "48.874727"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.350552,
+          48.874727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Opera Energie",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff82ff3935489a98de03/size_5_operaenergie.png",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "36",
+        "Tranche": "21 - 40",
+        "Description": "Opéra Energie is the pioneer of energy brokerage for companies in France. Thanks to its innovative energy analysis and comparison solution, Opéra Energie enables its customers to optimize their natural gas and electricity purchases. Founded in 2014, Opera Energie has dealt with more than 4000 companies, thus becoming the leader in energy brokerage in France.",
+        "Location": "Paris",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenoble",
+        "Company_Website": "http://opera-energie.com/",
+        "Job_Offers": "http://opera-energie.com/recrutements/",
+        "lon": "4.848269",
+        "lat": "45.76736"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.848269,
+          45.76736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "OSE Immunotherapeutics",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382332ff39354282a91506/size_5_oseimmunotherapeuticsjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "20",
+        "Tranche": "1 -20",
+        "Description": "OSE Immunotherapeutics is a biotechnology company dedicated to the development of innovative immunotherapies acting on effector and suppressor cells to stimulate or inhibit the immune response and to restore immune disorders in immuno-oncology, autoimmune diseases and transplantation.",
+        "Location": "Nantes Tech",
+        "Adresse": "22 Boulevard Benoni Goullin, 44200 Nantes",
+        "Company_Website": "http://ose-immuno.com/",
+        "Job_Offers": "http://ose-immuno.com/",
+        "lon": "-1.551826",
+        "lat": "47.201825"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.551826,
+          47.201825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Outremer Yatching",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823d8ff393541a7a91532/size_5_outremerjpg.jpg",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "98",
+        "Tranche": "41 - 100",
+        "Description": "Design and production of long distance cruising catamarans",
+        "Location": "French Tech Montpellier",
+        "Adresse": "726 Avenue Robert Fages, 34280 La Grande-Motte",
+        "Company_Website": "http://www.catamaran-outremer.com",
+        "Job_Offers": "http://www.catamaran-outremer.com",
+        "lon": "4.075268",
+        "lat": "43.559584"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.075268,
+          43.559584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Private Sport Shop",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823ceff393541a7a9152e/size_5_privatesportshopjpg.jpg",
+        "Sector": "@Retail| @Sports",
+        "Employees": "145",
+        "Tranche": "101 - 200",
+        "Description": "Private Sport Shop specialises in flash sales of sporting goods. The company negotiates exclusive deals with sports brands and offers them to its members over a 7-day period.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "129 av Compagnons, 34170 CASTELNAU LE LEZ",
+        "Company_Website": "http://www.privatesportshop.fr/",
+        "Job_Offers": "http://www.privatesportshop.fr/content/11-nous-recrutons-",
+        "lon": "3.91736",
+        "lat": "43.643807"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.91736,
+          43.643807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Provepharm",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff8dff39355e6bdc6fde/size_5_provepharm.png",
+        "Sector": "@HealthTech",
+        "Employees": "44",
+        "Tranche": "41 - 100",
+        "Description": "Provepharm is a subsidiary of the Provence Technologies group that is specialized in the development and commercialization of pharmaceutical drug products derived from active substances synthesized and patented by its parent company Provence Technologies. Product line emphasized by the first Methylene Blue of pharmaceutical quality, developed and patented by the Group.",
+        "Location": "Aix-Marseille French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.provepharm.com/",
+        "Job_Offers": "http://www.provepharm.com/recruitment-30.html",
+        "lon": "5.430697",
+        "lat": "43.34639"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.430697,
+          43.34639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Qualtera",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a0af9ac01e2a75852cda280/size_4_picture.png",
+        "Sector": "@Data @AI| @IoT @Manufacturing",
+        "Employees": "27",
+        "Tranche": "21 - 40",
+        "Description": "Qualtera provides the next generation of high-volume industrial big data solutions to fabless companies, OSATs, IDMs, and foundries - delivering comprehensive real-time intelligence and control of IC manufacturing and test operations. Qualtera is an ISO9001 and ISO27001 company.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "45 rue de Chabrol, 75010 Paris",
+        "Company_Website": "http://www.qualtera.com/",
+        "Job_Offers": "https://qualtera.workable.com/j/6D093B6AEA",
+        "lon": "2.352764",
+        "lat": "48.876867"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352764,
+          48.876867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Quantum Genomics",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938232aff393541b1a91506/size_5_quantumgenomicsjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "13",
+        "Tranche": "1 -20",
+        "Description": "Quantum Genomics is a biopharmaceutical company with the mission of developing new therapies for unmet medical needs in the field of cardiovascular diseases, especially high blood pressure and heart failure",
+        "Location": "Paris",
+        "Adresse": "Tour Maine Montparnasse, 33 Avenue du Maine, 75015 Paris",
+        "Company_Website": "http://www.quantum-genomics.com",
+        "Job_Offers": "http://www.quantum-genomics.com",
+        "lon": "2.32197",
+        "lat": "48.842129"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.32197,
+          48.842129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "REALIZ3D",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a203687ff3935793bd02bcd/size_3_picture.png",
+        "Sector": "@RealEstate",
+        "Employees": "42",
+        "Tranche": "41 - 100",
+        "Description": "REALIZ3D provides innovative real estate development tools based on an original technological mix. In one hand, the use of 3D models added into real time 3D engine, and in an other hand, a cloud streaming platform ensuring the availibility from any kind of digital devices. our solutions bring a common communication tool to all actors taking parts on a real estate project. From 3D visualization to space-planning simulations, we customize our 3D solutions according to our client objectives.",
+        "Location": "Paris",
+        "Adresse": "23 boulevard Jules Sandeau 75116 Paris",
+        "Company_Website": "http://www.realiz3d.fr",
+        "Job_Offers": "www.realiz3d.fr",
+        "lon": "2.272147",
+        "lat": "48.862463"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.272147,
+          48.862463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Rythm",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823c7ff393541a7a9152a/size_5_dreemjpg.jpg",
+        "Sector": "@HealthTech| @IoT @Manufacturing",
+        "Employees": "65",
+        "Tranche": "41 - 100",
+        "Description": "Dreem is the only active sleep solution that merges the latest and greatest in neuroscience research and advanced technology.",
+        "Location": "Paris",
+        "Adresse": "5 rue scribe, 75009 Paris",
+        "Company_Website": "http://www.rythm.co",
+        "Job_Offers": "https://rythm.workable.com/",
+        "lon": "2.330228",
+        "lat": "48.870495"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.330228,
+          48.870495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "S4M",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59e46b8d01e2a74bd7a2ee37/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility| @AdTech| @Data @AI",
+        "Employees": "144",
+        "Tranche": "101 - 200",
+        "Description": "S4M – the Mobile Shopper Advertising Platform – is the first and only mobile advertising technology to connect brands with consumers, by bridging the gap between digital advertising and the real-world.  Its unified technology empowers brands with full transparency and control from impression to consumer conversion (in apps or mobile sites) and physical points of sales.",
+        "Location": "Paris",
+        "Adresse": "43/45 Avenue de Clichy 75017 Paris",
+        "Company_Website": "https://www.wizbii.com/",
+        "Job_Offers": "https://www.wizbii.com/",
+        "lon": "2.325379",
+        "lat": "48.886758"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.325379,
+          48.886758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "SBG",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382322ff393541b1a91502/size_5_sbgsystemsjpg.jpg",
+        "Sector": "@CleanTech @Mobility| @IoT @Manufacturing",
+        "Employees": "31",
+        "Tranche": "21 - 40",
+        "Description": "SBG Systems offers a complete line of high performance and miniature Attitude and Heading Reference Systems (AHRS), Motion Reference Unit (MRU), Inertial Navigation Systems (INS) with embedded GNSS receiver (INS/GNSS).",
+        "Location": "Paris",
+        "Adresse": "3 Bis chemin de la Jonchère 92500 Rueil Malmaison",
+        "Company_Website": "http://www.sbg-systems.com",
+        "Job_Offers": "https://www.sbg-systems.com/company/careers-at-sbg-systems",
+        "lon": "2.157422",
+        "lat": "48.869104"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.157422,
+          48.869104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Selerys",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a251dd001e2a75bd4d19181/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility| @FoodTech",
+        "Employees": "9",
+        "Tranche": "1-20",
+        "Description": "Selerys designs and develops smart solutions to anticipate weather risks. Active in France, and six other countries (Spain, Belgium, Poland, Ukraine, Armenia, Turkey) Selerys systems are used in numeros sectors such as: orchards, vineyards, greenhouse farming, and the automotibile industry)",
+        "Location": "LORnTECH",
+        "Adresse": "770 avenue Olivier Perroy 13790 Rousset",
+        "Company_Website": "http://selerys.fr/en/",
+        "Job_Offers": "http://selerys.fr/en/jobs/",
+        "lon": "5.601639",
+        "lat": "43.470271"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.601639,
+          43.470271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Sens Digital",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382432ff393541a7a9154e/size_5_sensdigitaljpg.jpg",
+        "Sector": "@Retail| @AdTech",
+        "Employees": "30",
+        "Tranche": "21 - 40",
+        "Description": "SensDigital® supports companies and institutions in their digital transformation thanks to its 360 ° Phygital technology, adapted to any type of establishments (franchise networks, banks, malls, etc.). A real lever for performance, it combines physical and digital trough features, connected objects and data in order to connect consumers to their environment.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "Cap alpha l`europe, 9 Avenue de l`Europe, 34830 Clapiers",
+        "Company_Website": "http://www.sensdigital.fr",
+        "Job_Offers": "http://www.sensdigital.fr",
+        "lon": "3.900806",
+        "lat": "43.660957"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.900806,
+          43.660957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Sensorion",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382318ff393541a7a91502/size_5_sensorionjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "20",
+        "Tranche": "1 -20",
+        "Description": "Sensorion is a biopharmaceutical company committed to finding targeted and innovative treatments for inner ear disease. Our most advance clinical asset is in Phase 2",
+        "Location": "French Tech Montpellier",
+        "Adresse": "375 RUE DU PROFESSEUR BLAYAC 34080 MONTPELLIER",
+        "Company_Website": "http://www.sensorion-pharma.com",
+        "Job_Offers": "http://www.sensorion-pharma.com/fr/nous-rejoindre",
+        "lon": "3.828866",
+        "lat": "43.623963"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.828866,
+          43.623963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Short Edition",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823bcff393541a7a91526/size_5_shorteditionjpg.jpg",
+        "Sector": "@EdTech @Entertain| @IoT @Manufacturing",
+        "Employees": "16",
+        "Tranche": "1 -20",
+        "Description": "Short Edition is the community publisher for short literature. Short Edition puts online, circulates and publishes everything you can read in less than 20 minutes. | Short Edition also designed the Short Story Dispenser: a machine connected to our platform which prints, onto high-quality paper, stories of 1, 3 or 5 minutes’ duration.",
+        "Location": "French Tech in the Alps",
+        "Adresse": "12 rue Ampère, 38 000 Grenoble",
+        "Company_Website": "http://short-edition.com",
+        "Job_Offers": "http://short-edition.com",
+        "lon": "5.705563",
+        "lat": "45.18514"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.705563,
+          45.18514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Skilvioo",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938247eff393542eba9150d/size_5_skiliviojpg.jpg",
+        "Sector": "@EdTech @Entertain| @HR",
+        "Employees": "22",
+        "Tranche": "21 - 40",
+        "Description": "To enhance the accuracy of their look on individuals, Skilvioo enables firms, schools and employment operators to share the same referential of skills through a SaaS. | Rich, harmonized and dynamic, this referential is already considered by most as a universal language of skills. Thanks to Skilvioo, the different actors in the labor market will always fluidify more their interactions.",
+        "Location": "Lyon French Tech",
+        "Adresse": "Tour Part-Dieu, 129 Rue Servient, 69003 Lyon",
+        "Company_Website": "http://www.skilvioo.com",
+        "Job_Offers": "http://www.skilvioo.com/skiljobs",
+        "lon": "4.853769",
+        "lat": "45.761075"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.853769,
+          45.761075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Splio",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823b5ff3935425ca9150e/size_5_spliojpg.jpg",
+        "Sector": "@Retail",
+        "Employees": "160",
+        "Tranche": "101 - 200",
+        "Description": "Splio develops a comprehensive cloud software platform dedicated to the needs of retailers juggling e-commerce and physical store sales. Our Retail Marketing Cloud enables orchestration of cross-channel marketing campaigns centered on the consumer’s view. The platform integrates Distributed Marketing capabilities that allow store teams run their own marketing campaigns. The Clienteling tablet app puts actionable 360° customer insight into the hands of store personnel. ",
+        "Location": "Paris",
+        "Adresse": "103 Boulevard Haussmann, 75008 Paris",
+        "Company_Website": "https://www.splio.com/",
+        "Job_Offers": "https://www.splio.com/fr/a-propos-de-splio/carrieres/",
+        "lon": "2.317497",
+        "lat": "48.87474"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.317497,
+          48.87474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Tabmo",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823aeff393541a7a91522/size_5_tabmojpg.jpg",
+        "Sector": "@EdTech @Entertain| @AdTech",
+        "Employees": "60",
+        "Tranche": "41 - 100",
+        "Description": "TabMo is an adtech company running Hawk platform. Our product has been built to be the only Creative Mobile DSP. A unique marriage between Programmatic and Creativity.",
+        "Location": "Paris",
+        "Adresse": "2 Rue de Clichy, 75009 Paris",
+        "Company_Website": "http://hawk-platform.io",
+        "Job_Offers": "http://www.tabmo.io/jobs/",
+        "lon": "2.330899",
+        "lat": "48.877079"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.330899,
+          48.877079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Tageos",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382311ff39354282a91502/size_5_tageosjpg.jpg",
+        "Sector": "@Retail| @IoT @Manufacturing",
+        "Employees": "25",
+        "Tranche": "21 - 40",
+        "Description": "Tageos designs, manufactures, and sells globally patented 100% paper-based passive UHF RFID labels for item-level tagging",
+        "Location": "French Tech Montpellier",
+        "Adresse": "515 Rue Alfred Nobel, 34000 Montpellier",
+        "Company_Website": "http://www.tageos.com",
+        "Job_Offers": "http://www.tageos.com",
+        "lon": "3.912844",
+        "lat": "43.611831"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.912844,
+          43.611831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Talentsoft",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59dcece601e2a77d3a710a38/size_3_picture.png",
+        "Sector": "@HR| @EdTech @Entertain",
+        "Employees": "600",
+        "Tranche": "200+",
+        "Description": "Talentsoft is the European leader in Cloud-based talent management and learning software. It offers an ultra-customizable collaborative digital platform that fosters interactions and transforms employees’ work experience. Our application helps install a continuous conversation between employees, managers and HR. It supports interactions and key moments of the employee’s life to help managers and HR in their decision-making and to promote the expression of all the talents within the organization.",
+        "Location": "Paris",
+        "Adresse": "8 rue Heyrault 92100 Boulogne Billancourt",
+        "Company_Website": "http://www.talentsoft.com",
+        "Job_Offers": "www.talentsoft.careers/en",
+        "lon": "2.239771",
+        "lat": "48.83153"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.239771,
+          48.83153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Teach on Mars",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a21310cff393572ee51ad35/size_3_picture.png",
+        "Sector": "@EdTech @Entertain| @HR",
+        "Employees": "31",
+        "Tranche": "21-40",
+        "Description": "Teach on Mars is the European leader in the rapidly-growing mobile learning field. Its flagship product is a next generation digital learning platform offering a high-touch learner experience that is comprehensive and engaging. Optimized for use on mobile devices but also functioning seamlessly in more traditional web-based environments, the Teach on Mars solution helps companies and organizations train their employees and extended learner populations more effectively and more efficiently.",
+        "Location": "French Tech Cote d`Azur",
+        "Adresse": "399 route des Crêtes, 06560 VALBONNE",
+        "Company_Website": "https://www.teachonmars.com/en",
+        "Job_Offers": "https://angel.co/teach-on-mars/jobs/",
+        "lon": "7.030993",
+        "lat": "43.622566"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.030993,
+          43.622566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Télécom santé",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823a6ff393541a7a9151e/size_5_telecomsantcjpg.jpg",
+        "Sector": "@HealthTech",
+        "Employees": "45",
+        "Tranche": "41 - 100",
+        "Description": "Innovative technology company, Telecom Sante is specialized in digital solutions for healthcare industry. Telecom Sante advises hospitals and clinics management teams on their digital tools evolution and how to improve patient services, ease internal process and optimize staff’s daily tasks",
+        "Location": "French Tech Rennes St-Malo",
+        "Adresse": "8 Square du Chêne Germain, 35510 Cesson-Sévigné",
+        "Company_Website": "http://www.telecomsante.fr/",
+        "Job_Offers": "http://www.telecomsante.fr/",
+        "lon": "-1.623108",
+        "lat": "48.132355"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.623108,
+          48.132355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Toucan Toco",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59676aea01e2a77838ae68d1/size_5_toucantoco.png",
+        "Sector": "@Data @AI",
+        "Employees": "40",
+        "Tranche": "21 - 40",
+        "Description": "Our mission? Make people successful with their data! Since 2014 Toucan Toco helps managers to make decision in a much faster and more efficient way thanks to data visualisation available on any portable device (iOS, Android) like tablet and smartphone but also on PC and Mac. Our additional value is a cross platform mobility, an agile way to work with clients, an efficient design and performing user experience, the enhance of your data with the aggregation of external/multiple sources and the automation of data update.",
+        "Location": "Paris",
+        "Adresse": "2-4 Rue Paul Cézanne, 75008 Paris",
+        "Company_Website": "https://toucantoco.com/en/",
+        "Job_Offers": "https://toucantoco.com/en/team.html@jobs",
+        "lon": "2.309093",
+        "lat": "48.874155"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.309093,
+          48.874155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Ubi Transports",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5964ff98ff39355e6bdc6fe2/size_5_ubitransports.png",
+        "Sector": "@CleanTech @Mobility",
+        "Employees": "35",
+        "Tranche": "21 - 40",
+        "Description": "Ubi Transport publishes and integrates mobility software solutions, and offers for the first time in Europe innovative digital solutions, 100% Smartphone 100% Cloud, of fleet management services for the passengers road transport sector.",
+        "Location": "Lyon French Tech",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "http://www.ubitransports.com/",
+        "Job_Offers": "http://www.ubitransports.com/La_reunion_de_talents_techniques_aux_qualites_humaine_est_notre_principale_motivation",
+        "lon": "4.822142",
+        "lat": "46.29389"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.822142,
+          46.29389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Une Petite Mousse",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938239fff3935425ca9150a/size_5_unepetitemoussejpg.jpg",
+        "Sector": "@FoodTech",
+        "Employees": "18",
+        "Tranche": "1 -20",
+        "Description": "Une Petite Mousse is France @1 community of craft beer lover. Every month, we deliver at home a box with a selection of 6 craft beers from Europe. Our costumers actively take part in our community by rating the beers they taste and giving their opinion on the recipe of the next beers we will brew. We enable breweries to target the most relevant costumers according to the beers they sell.",
+        "Location": "French Tech in the Alps",
+        "Adresse": "32 rue de Comboire, Bâtiment H, 38130 Échirolles",
+        "Company_Website": "https://unepetitemousse.fr/",
+        "Job_Offers": "https://unepetitemousse.fr/",
+        "lon": "5.69011",
+        "lat": "45.143765"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.69011,
+          45.143765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Visiomed",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5938243dff393541a7a91552/size_5_visiomedjpg.jpg",
+        "Sector": "@HealthTech| @IoT @Manufacturing",
+        "Employees": "115",
+        "Tranche": "101 - 200",
+        "Description": "Visiomed Group is a company specialized in research, development and commercialization of digital health and telemedicine solutions intended for general audience and healthcare professionals. Under the brand BewellConnect with a wide range of connected medical devices associated with a unique, secure and easy-to-use service platform.",
+        "Location": "Paris",
+        "Adresse": "112 Avenue Kléber, 75116 Paris",
+        "Company_Website": "http://www.visiomed-lab.com",
+        "Job_Offers": "http://www.visiomed-lab.com/Offres-d-emploi_764.html",
+        "lon": "2.288108",
+        "lat": "48.864586"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.288108,
+          48.864586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Web Geo Services",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382397ff393541a7a9151a/size_5_webgeojpg.jpg",
+        "Sector": "@Retail| @AdTech| @FinTech| @Data @AI",
+        "Employees": "28",
+        "Tranche": "21 - 40",
+        "Description": "Web Geo Services specialise in helping businesses across different industries such as Retail, eCommerce, Travel and Hospitality to design and implement successful strategies leveraging location.| Web Geo Services has built “Woosmap” the local search engine as a Service for Retail and E-commerce Businesses. We help retailers to leverage their Google Maps as a powerful tool to engage with their customers and to drive conversion.",
+        "Location": "French Tech Montpellier",
+        "Adresse": "19 rue de la République 34000 MONTPELLIER",
+        "Company_Website": "http://www.webgeoservices.com",
+        "Job_Offers": "https://www.webgeoservices.com/about-us/careers",
+        "lon": "3.879255",
+        "lat": "43.605574"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.879255,
+          43.605574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Wipple",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/593823fcff393541a7a91542/size_5_wipplejpg.jpg",
+        "Sector": "@EdTech @Entertain| @HR",
+        "Employees": "23",
+        "Tranche": "21 - 40",
+        "Description": "Wipple Group (Wipple + Kickle) creates collaborative spaces that help you to create, manage and sell more effectively. We combine the best technologies and software that fit our customers and manage their whole projects from beginning to completion and beyond. Wipple is a value-added distributor: Wipple advises and distributes digital collaborative equipment. Kickle is a software editor: Kickle designs a collaborative videoconferencing product.",
+        "Location": "French Tech Lille",
+        "Adresse": "99 A BOULEVARD CONSTANTIN DESCAT 59200 TOURCOING",
+        "Company_Website": "http://www.wipple.fr",
+        "Job_Offers": "http://www.wipple.fr/join-us/",
+        "lon": "3.157178",
+        "lat": "50.700399"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.157178,
+          50.700399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Wizbii",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382339ff393541b1a9150a/size_5_wizbeejpg.jpg",
+        "Sector": "@EdTech @Entertain| @HR",
+        "Employees": "48",
+        "Tranche": "41 - 100",
+        "Description": "WIZBII`s mission is to promote youth employment and entrepreneurship around the world. To achieve our mission, we provide online services to students and young graduates through our website at the following address www.wizbii.com. These services allow them to meet, share ideas and projects, and to find a job.",
+        "Location": "French Tech in the Alps",
+        "Adresse": "31 Rue Gustave Eiffel, 38000 Grenobl",
+        "Company_Website": "https://www.wizbii.com/",
+        "Job_Offers": "https://www.wizbii.com/",
+        "lon": "5.703555",
+        "lat": "45.18376"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.703555,
+          45.18376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Woonoz",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a43b6f1ff39355e37ad312b/size_3_picture.png",
+        "Sector": "@EdTech @Entertain| @Data @AI| @HR",
+        "Employees": "85",
+        "Tranche": "41 - 100",
+        "Description": "Given that 80% of the information delivered during a training session is forgotten within seven days, Woonoz - the European leader in adaptive learning - has worked with neuroscientists to develop an Al-based solution that maximizes the retention rate of information, thereby significantly enhancing the impact of learning. This solution relies on Memory Anchoring® technology and is the world`s first and only award-winning training method to be successfully adopted by more than 5 million users.",
+        "Location": "Lyon French Tech",
+        "Adresse": "6 avenue Sidoine-Apollinaire, 69009 Lyon",
+        "Company_Website": "http://www.woonoz.com",
+        "Job_Offers": "http://projet-voltaire.humansourcing.com",
+        "lon": "4.794599",
+        "lat": "45.774341"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.794599,
+          45.774341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "YesPark",
+        "Logo_URL": "https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a439c4601e2a77c402082b5/size_3_picture.png",
+        "Sector": "@CleanTech @Mobility| @RealEstate",
+        "Employees": "14",
+        "Tranche": "1 - 20",
+        "Description": "Yespark is an innovative mobile app, which allows a hundred social landlords to rent their vacant parking spots to private individuals. Yespark is the easiest parking rental solution: you can subscribe in 3 minutes without deposit, lease or notice.  You can find parking places in more than 300 cities in France, our teams work everyday to develop our activity. Stay tunned!",
+        "Location": "Paris",
+        "Adresse": "17 quai de Grenelle 75015 Paris",
+        "Company_Website": "http://www.yespark.com/",
+        "Job_Offers": "https://www.yespark.fr/jobs",
+        "lon": "2.287535",
+        "lat": "48.853491"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.287535,
+          48.853491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Yoopies",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382390ff393541a7a91516/size_5_yoopiesjpg.jpg",
+        "Sector": "@HR",
+        "Employees": "34",
+        "Tranche": "21 - 40",
+        "Description": "With over 600 000 caregivers in Europe, Yoopies` aim is to help families find quality caregivers safely and efficiently. The platform offers a comprehensive service, including online payment and automated administrative procedures. Yoopies leveraged the B2C model to build a B2B solution for companies to improve their employees` work/life balance. We have more than 20 clients (Société Générale, Publicis, SNCF, Agnès B, etc.).",
+        "Location": "Paris",
+        "Adresse": "26 RUE RICHER - 75009 PARIS",
+        "Company_Website": "https://yoopies.fr/",
+        "Job_Offers": "http://www.welcometothejungle.co/companies/yoopies",
+        "lon": "2.345602",
+        "lat": "48.874076"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.345602,
+          48.874076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Company_Name": "Younited Credit",
+        "Logo_URL": "https://d25e16a427ed3ce77d27-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/59382389ff393541a7a91512/size_5_younitedcreditjpg.jpg",
+        "Sector": "@FinTech",
+        "Employees": "170",
+        "Tranche": "101 - 200",
+        "Description": "Younited Credit is the first online lending platform in Continental Europe. Regulated as a Credit Institution, the company operates in 5 European countries (France, Spain, Italy, Germany, Austria). With a staff of 170, Younited Credit has originated half a Billion Euros in loans since its commercial launch in early 2012. Younited Credit has raised € 63 million in equity.",
+        "Location": "Paris",
+        "Adresse": "24 Rue Drouot, 75009 Paris",
+        "Company_Website": "https://www.younited-credit.com",
+        "Job_Offers": "https://careers.younited-credit.com/fr",
+        "lon": "2.341136",
+        "lat": "48.874357"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.341136,
+          48.874357
+        ]
+      }
+    }
+  ]
+}

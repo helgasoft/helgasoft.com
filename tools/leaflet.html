@@ -50,7 +50,7 @@
 If your kml file or gpx file or geojson file is too big, you can compress (reduce) the file size. It is called optimizing the geospatial file.
 Lets explain how to prune a kml/gpx/geojson file and make it smaller, condensed, truncated.
 </div>
-<h2>Truncate Geo Tracks <span style='margin-left:60px' /><a href='https://helgalabs.shinyapps.io/trungeotrac/' >Live!</a></h2> 
+<h2>Simplify Geo Tracks <span style='margin-left:60px' /><a href='https://helgalabs.shinyapps.io/trungeotrac/' >Live!</a></h2> 
 
 <p>Smaller geospatial files are delivered faster on the Internet. Some GPS devices and mapping software generate large files with excessive number of points. That much accuracy is usually redundant and the application is reducing size by truncating the number of track points. Size reduction of over 90% is possible.</p>
 <p>The application was built with R using the <a href="https://rstudio.github.io/leaflet/">Leaflet library</a> for mapping. Truncation (pruning) was implemented by the <a href="https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm">Douglas-Peucker algorithm</a>. In-depth XML manipulations were performed thanks to the <a href="https://rdrr.io/cran/xml2/">xml2 library</a>.</p>

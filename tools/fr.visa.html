@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Helgasoft - French Tech Visa Map</title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<meta name="description" content="migration to PostgreSQL">
+	
+	<!-- Libs and Plugins CSS -->
+	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Skin CSS -->
+	<link rel="stylesheet" href="../css/skin/night-purple.css">
+	<style>
+		a, a:hover, a:focus { color: #3333ee; }
+		p { font: 14px/1.5em "Verdana"; }
+	</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.2.0/dist/MarkerCluster.css" />
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.2.0/dist/MarkerCluster.Default.css" />
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+ 	<script src='https://unpkg.com/leaflet.markercluster@1.2.0/dist/leaflet.markercluster.js' type='text/javascript'></script>
+
+	<!--script src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' type='text/javascript'></script-->
+	<script src='../inc/jquery/jquery-1.11.1.min.js' type='text/javascript'></script>
+
+	<style>
+		#map {
+			width: 700px;
+			height: 500px;
+		}
+		.stay-left {
+		  float: left;
+		  margin-top: 10px;
+		}
+		.stay-right {
+		  float: right;
+		  line-height: 26px;
+		  margin-top: 10px;
+		}
+		.clearer {
+		  clear: both;
+		}
+		.cblock {
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 700px;
+		}
+	</style>
+
+</head>
+
+<body>
+        
+	<!--========== BEGIN HEADER ==========-->
+	<header id="header" class="header-main" style='height:98px;'>
+	
+	<!-- Begin Navbar -->
+	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+	  <div class="container">
+	
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand page-scroll" href="../index.html">Helgasoft</a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	        <ul class="nav navbar-nav navbar-right">
+	            <li><a class="page-scroll" href="../#resources-section">Back</a></li>
+		</ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+	<!-- End Navbar -->
+	
+	</header>
+	<!-- ========= END HEADER =========-->
+<div style='margin-left:30px; margin-right:30px;'>
+<h2>Put me on a map!</h2>
+<br /><p>
+Have you seen web pages screeming "Put me on a map!" ? One found lately was the <a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa' target=_blank>French Tech Visa</a> page.
+Having a soft spot for things french, we decided to 'repair' the injustice and geocode the companies listed.  
+Luckily, all the data was inside the page source in JSON format. To clean and use it in R, one could simply copy and assign it to a variable, then <i>source</i> it in RStudio to fix any errors. Then it can be converted to a <i>data.frame</i>.
+<pre><code>products <- '[ { "Company_Name": "1001 Pharmacies",... } ]'
+companies <- jsonlite::fromJSON(products)</code></pre>
+Next step was to extract the addresses (<i>companies[1:3,]$Adresse</i>), clean them of special characters and try a <a href='https://www.doogal.co.uk/BatchGeocoding.php' target=_blank>batch geocode online</a>. From the KML output file, one could extract the lon/lat coordinates and match them to the companies by address.
+As a result, the <i>companies</i> data frame gets two more columns - latitude and longitude. We decided to save this geocoded data in another JSON file:
+<pre><code>xjson <- jsonlite::toJSON(companies, pretty=T)
+out <- file('french.json', encoding="UTF-8")
+write(xjson, file=out)
+</code></pre>
+Used Javascript next to recode the data from JSON to <i>geojson</i> format and save it. You can see it <a href='../img/french.geojson' target=_blank>here</a> raw, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741' target=_blank>here</a> on a map. Finally we read this geojson file and present it on a <a href='http://leafletjs.com/' target=_blank>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voila!
+<br />
+</p>
+<div class='cblock'>
+<div id='map'></div>
+<div id='company'><table width='700'><tr><td><img src='https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png' width='300' height='169' />
+</td><td vAlign='middle'>Click on a marker above to see details here.</td></tr></table></div>
+</div>
+<p>&nbsp;</p><p>&nbsp;</p>
+<script>
+
+var map = L.map('map').setView([46.507845, 2.460938], 6);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+function onEachFeature(feature, layer) {
+	var popupContent = "<table>";
+	//for (var p in feature.properties) {
+	    popupContent += "<tr><td vAlign='top'><b>Address</b>&nbsp;</td><td>"+ feature.properties['Adresse'] + '</td></tr>';
+	    popupContent += '<tr><td><b>Location</b>&nbsp;</td><td>'+ feature.properties['Location'] + '</td></tr>';
+	//}
+	popupContent += '</table>';
+	layer.bindPopup(popupContent);
+
+    layer.on('click', function (e) {
+	var clickContent = "<table width='700'>";
+	clickContent += "<tr><td rowspan=4 vAlign='top'><img src='" + e.target.feature.properties.Logo_URL + "' width='300' height='169' /></td></tr>";
+	clickContent += "<tr><td><div class='stay-left'><b><a href='" + e.target.feature.properties['Company_Website'] + "' target=_blank>" + e.target.feature.properties['Company_Name'] + 
+		"</a></b></div> <div class='stay-right'>Employees: " +e.target.feature.properties['Employees']+ "</div> <div class='clearer'></div></td>";
+	clickContent += '<tr><td>'+ e.target.feature.properties['Description'] + '</td>';
+	clickContent += '<tr><td><b>Sector</b>: '+ e.target.feature.properties['Sector'] + '</td>';
+	clickContent += '</tr></table>';
+
+ 	document.getElementById('company').innerHTML = clickContent;
+    });
+
+}
+    // create custom icon
+    var coqIcon = L.icon({
+        iconUrl: '../img/coq.png',
+        iconSize: [21, 28], // size of the icon
+        });
+
+$.getJSON('../img/french.geojson', function(geodata) {
+ 	var gj = L.geoJson(geodata, {
+
+		pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {icon: coqIcon});
+		},
+		onEachFeature: onEachFeature
+	});
+
+   var markers = L.markerClusterGroup();
+   markers.addLayer(gj);
+   //map.fitBounds(gj.getBounds());
+   markers.addTo(map);
+ })
+
+</script>
+
+</body>
+</html>
