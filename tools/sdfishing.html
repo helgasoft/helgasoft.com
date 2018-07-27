@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="../css/skin/night-purple.css">
 	<style>
 		a, a:hover, a:focus { color: #3333ee; }
-		p { font: 14px/1.5em "Verdana"; }
+		/* p { font: 14px/1.5em "Verdana"; } */
 		.imag { margin:15px; width: 90%; height: auto;}
 /* https://codepen.io/imprakash/pen/GgNMXO */
 .overlay {
@@ -109,18 +109,18 @@
 	<!-- ========= END HEADER =========-->
 <div style='margin-left:30px'>
 
-<div style='text-align:center;'><h2>Charts - San Diego fishing by boat</h2></div>
+<div style='text-align:center;'><h2>San Diego ocean fishing statistics</h2></div>
 <!--div style='display: inline-block; float:left;'><img src=../img/f.4cali.png height=500px /></div>
 <div style='display: inline-block; float:left; text-align:left; width:75%; margin-left:20px;'-->
-<div class='col-md-3 col-sm-3'><img src=../img/f.4cali.png height=500px /></div>
-<div class='col-md-9 col-sm-9' >
+<div class='col-md-2 col-sm-3'><img src=../img/f.4cali.png height=450px /></div>
+<div class='col-md-10 col-sm-9' >
 <!--p style="font-size:1.7vw;"-->
 Data for this study was collected from website <a href='http://www.sandiegofishreports.com/dock_totals/boats.php' target=_blank>sandiegofishreports.com</a>.  
-<br />It contains daily trip reports by San Diego recreational fishing vessels from January 2009 to end of June 2018.
-<br />Each report includes the starting date and duration of the trip, boat name, number of anglers and fish count by species.
+<br />It includes daily trip reports by San Diego recreational fishing vessels from January 2009 to end of June 2018.
+Each report consists of starting date and duration of the trip, boat name, number of anglers and fish count by species.
 <br />The amount of data is considerable - 109 boats with 51,422 fishing trips during 9.5 years, with a catch of <a href="#popup1">89 ocean species</a>.
-<br />Data preparation and analysis was mostly done through R library <b>dplyr</b>. Charts were generated with R library <b>ggplot2</b> and library <b>formattable</b> was used for the two tables.
-</p>
+<br />&nbsp;
+<p>Data preparation and analysis was mostly done through R library <b>dplyr</b>. Charts were generated with R library <b>ggplot2</b> and library <b>formattable</b> was used for the two tables.</p>
 </div>
 <center>
 <img src=../img/f.fleet.pct.png class='imag' style='max-width:400px;'/>
@@ -131,7 +131,7 @@ Data for this study was collected from website <a href='http://www.sandiegofishr
 <img src=../img/f.yt.mo.png class='imag' style='max-width:700px;' />
 <img src=../img/f.hali.png class='imag' style='max-width:600px;' />
 <img src=../img/f.yt.trp.png class='imag' style='max-width:700px;' />
-<div style='text-align:center;border: 2px solid; border-radius:20px !important; margin: 40px 20px; padding:6px; width:40%; '>Tables<br />
+<div style='text-align:center;border: 2px solid; border-radius:20px; margin: 40px 20px; padding:6px; width:40%; '>Tables<br />
 <a href=../img/f.boat.ftype.html target=_blank >Boats by total catch</a>
 <br /><a href=../img/f.boat.score.html target=_blank >Boats scored by fish ratio and trips</a>
 </div>
