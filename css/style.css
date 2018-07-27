@@ -35,11 +35,12 @@ body .body {
   background-color: #fff;
   padding: 50px 0;
 }
+/*
 * {
 	border-radius: 0 !important;
 	-webkit-border-radius: 0 !important;
 	-moz-border-radius: 0 !important;
-}
+} */
 *:focus { 
 	outline: none !important;
 	box-shadow: none !important;
@@ -54,24 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	margin-bottom: 10px;
 }
-h1 {
-	font-size: 36px;
-}
-h2 {
-	font-size: 30px;
-}
-h3 {
-	font-size: 26px;
-}
-h4 {
-	font-size: 22px;
-}
-h5 {
-	font-size: 18px;
-}
-p {
-	font: 14px/1.5em "Roboto";
-}
+h1 {	font-size: 36px;}
+h2 {	font-size: 30px;}
+h3 {	font-size: 26px;}
+h4 {	font-size: 22px;}
+h5 {	font-size: 18px;}
+/* p {	font: 14px/1.5em "Roboto";} */
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
 }
@@ -528,6 +517,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
     padding: 8px 10px;
     text-decoration: none;
     text-transform: uppercase;
+    border: 2px solid; border-radius: 10px;
 }
 .portfolio_content{}
 .portfolio_single_content{
