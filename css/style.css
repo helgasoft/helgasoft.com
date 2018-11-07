@@ -811,6 +811,7 @@ ul.social-list li a i {
 /* ===== Begin contact ===== */
 #contact-section {
 	position: relative;
+/*	background-image: url(img/map-bg.jpg); */	
 }
 #contact-section h4 {
 	font-weight: 400;

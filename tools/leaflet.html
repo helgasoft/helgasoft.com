@@ -36,7 +36,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	        <ul class="nav navbar-nav navbar-right">
-	            <li><a class="page-scroll" href="../#resources-section">Back</a></li>
+	            <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
 		</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
@@ -60,11 +60,12 @@ Lets explain how to prune a kml/gpx/geojson file and make it smaller, condensed,
 <li><a href="https://en.wikipedia.org/wiki/Keyhole_Markup_Language">kml</a> - open file format by Google</li>
 <li><a href="https://en.wikipedia.org/wiki/GeoJSON">geojson</a> - geographical elements with additional attributes in <a href="https://en.wikipedia.org/wiki/JSON">JSON</a></li>
 </ul>
+<p>You can <a href="https://helgalabs.shinyapps.io/trungeotrac/samplesGpxKmlGeo.zip">download</a> sample files in above formats for testing.</p>
 <img src='../img/truntrac.png' alt='demo screenshot' /><br />
 
 <div id="notes-and-limitations" class="section level3">
 <h3>Notes and Limitations</h3>
-<p>Pruning tracks with 1000s of points takes time. An animated icon (<img src="../img/spin4.gif" alt="spinner" />) appears during processing. Downloading large files is also slow and the animated icon will show up on <em>Save</em>. Elevation data is supported along with latitude and longitude.  
+<p>Pruning tracks with thousands of points takes time. An animated icon (<img src="../img/spin4.gif" alt="spinner" />) appears during processing. Downloading large files is also slow and the animated icon will show up on <em>Save</em>. Elevation data is supported along with latitude and longitude.  
 Additional elements from your file, like waypoints or shapes, may be shown along with the tracks. They are copied unchanged in the output file.<br />
 Longer tracks have sometimes multiple segments of points. The number of points is shown before (=0) and after (&gt;0) compression. Duplicate coordinate points are deleted. Mouse over a truncated(red) segment will highlight it, click will display its number and distance in kilometers.</p>
 <ul>
@@ -72,6 +73,8 @@ Longer tracks have sometimes multiple segments of points. The number of points i
 Elements <em>Polygon</em> and <em>LineRing</em> are not supported. <em>MultiGeometry</em> tracks are supported.</p></li>
 <li><p>gpx<br />
 Track points time (<em>&lt;trkpt&gt; &lt;time&gt;</em>) is supported/preserved. Track point names, if any, are not preserved. <em>Leaflet</em> shows route points (<em>&lt;rtept&gt;</em>) connected by lines, which could make the map appear congested.</p></li>
+<li><p>geoJson<br />
+<em>LineString</em> and <em>MultiLineString</em> tracks are supported, but not simultaneously in the same file.</p></li>
 </ul>
 <p>Source code is not provided at this time.</p>
 </div>
@@ -80,10 +83,12 @@ Track points time (<em>&lt;trkpt&gt; &lt;time&gt;</em>) is supported/preserved. 
 <p>
  
 </p>
-If you like the application, please:</p>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<p>You can <a href="mailto:contact@helgasoft.com?subject=Truncate%20Tracks%20app">contact us</a> with comments or to report any problems.<br />
+If you like the application, please</p>
+<a href='https://paypal.me/helgasoft' target=_blank><img src="../img/btn_donate_SM.gif" alt="PayPal - The safer, easier way to donate online!"></a>
+<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="6KJJ8ZPZZQSCJ"> <input type="image" src="../img/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+</form>  -->
 <p>
  
 </p>
