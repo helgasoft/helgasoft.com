@@ -504,20 +504,21 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 }
 .portfolio_menu ul{
 	list-style: none outside none;
-    text-align: center;
+	text-align: center;
 }
 .portfolio_menu ul li{
-    display: inline-block;
+	display: inline-block;
 }
 .portfolio_menu ul li a{
 	color: #363940;
 	background: transparent;
-    display: inline-block;
-    margin: 4px;
-    padding: 8px 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid; border-radius: 10px;
+	display: inline-block;
+	margin: 5px;
+	padding: 8px 10px;
+	text-decoration: none;
+/*    text-transform: uppercase; 
+	text-transform:none !important; */
+	border: 2px solid; border-radius: 10px;
 }
 .portfolio_content{}
 .portfolio_single_content{
@@ -1133,5 +1134,6 @@ p.subtitle {
 }
 /* ===== End buttons ===== */
 
-.udrug { display: none }
+/* .udrug { display: none } */
+.fsm { font-size: 70%; }
 
