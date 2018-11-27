@@ -85,18 +85,18 @@
 <div style='margin-left:30px; margin-right:30px;'>
 <h2>Put me on a map!</h2>
 <br /><p>
-Have you seen web pages screeming "Put me on a map!" ? One found lately was the <b><a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa' target=_blank>French Tech Visa</a></b> page.
+Have you seen web pages screeming "Put me on a map!" ? One found lately was the <b><a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa'>French Tech Visa</a></b> page.
 Having a soft spot for things french, we decided to 'repair' the injustice and geocode the companies listed (as of Dec 2017).  
 Luckily, all the data was inside the page source in JSON format. To clean and use it in R, one could simply copy and assign it to a variable, then <i>source</i> it in RStudio to fix any errors. Then it can be converted to a <i>data.frame</i>.
 <pre><code>products <- '[ { "Company_Name": "1001 Pharmacies",... } ]'
 companies <- jsonlite::fromJSON(products)</code></pre>
-Next step was to extract the addresses (<i>companies[1:100,]$Adresse</i>), clean them of special characters and try a <a href='https://www.doogal.co.uk/BatchGeocoding.php' target=_blank>batch geocode online</a>. From the KML output file, one could extract the lon/lat coordinates and match them to the companies by address.
+Next step was to extract the addresses (<i>companies[1:100,]$Adresse</i>), clean them of special characters and try a <a href='https://www.doogal.co.uk/BatchGeocoding.php'>batch geocode online</a>. From the KML output file, one could extract the lon/lat coordinates and match them to the companies by address.
 As a result, the <i>companies</i> data frame gets two more columns - latitude and longitude. We saved this geocoded data in a second JSON file.<br />
 <!-- pre><code>xjson <- jsonlite::toJSON(companies, pretty=T)
 out <- file('french.json', encoding="UTF-8")
 write(xjson, file=out)
 </code></pre-->
-Used Javascript next to recode the data from JSON to <i>geojson</i> format. You can see the file <a href='../img/french.geojson' target=_blank>raw</a>, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741' target=_blank>here</a> on a map. Finally we read this same geojson file and present it on a <a href='http://leafletjs.com/' target=_blank>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voilà!
+Used Javascript next to recode the data from JSON to <i>geojson</i> format. You can see the file <a href='../img/french.geojson'>raw</a>, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741'>here</a> on a map. Finally we read this same geojson file and present it on a <a href='http://leafletjs.com/'>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voilà!
 <br />
 </p>
 <!--
@@ -145,7 +145,7 @@ function onEachFeature(feature, layer) {
     // create custom icon
     var coqIcon = L.icon({
         iconUrl: '../img/coq.png',
-        iconSize: [27, 38] //[21, 29] // size of the icon
+        iconSize: [27, 38]  // size of the icon
         });
 
 $.getJSON('../img/french.geojson', function(geodata) {
@@ -159,7 +159,6 @@ $.getJSON('../img/french.geojson', function(geodata) {
 
    var markers = L.markerClusterGroup();
    markers.addLayer(gj);
-   //map.fitBounds(gj.getBounds());
    markers.addTo(map);
  })
 
