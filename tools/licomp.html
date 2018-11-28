@@ -1,100 +1,114 @@
-<html lang="en-US">
+<html lang='en-US'>
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Helgasoft - software solutions</title>
-    		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-		<meta name="description" content="Compare Lists Online">
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<title>Helgasoft - Compare Lists</title>
+    		<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon' />
+		<meta name='description' content='Compare Lists Online'>
 
 		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/style.css">
+		<link rel='stylesheet' href='../inc/bootstrap/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='../css/style.css'>
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="../css/skin/night-purple.css">
-  <script type="text/javascript">
+		<link rel='stylesheet' href='../css/skin/night-purple.css'>
+
+<script type='text/javascript'>
 // Copyright ©  Helgasoft.com   All Rights Reserved
+
+function clean(id) {
+	// remove empty lines
+	return document.getElementById(id).value.replace(/^\s*[\r\n]/gm, '').split('\n').filter(Boolean);
+}
 function sorta() {
-	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
-	var list2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
-	list1.sort();
-	list2.sort();
-	document.getElementById("TextBox1").value = list1.join("\n");
-	document.getElementById("TextBox2").value = list2.join("\n");
-	document.getElementById("timer").innerText = "";
+	// sort all arrays
+	document.getElementById('TextBox1').value = clean('TextBox1').sort().join('\n');
+	document.getElementById('TextBox2').value = clean('TextBox2').sort().join('\n');
+	document.getElementById('timer').innerText = '';
+	document.getElementById('dupl1').value = clean('dupl1').sort().join('\n');
+	document.getElementById('dupl2').value = clean('dupl2').sort().join('\n');
+	document.getElementById('uniq1').value = clean('uniq1').sort().join('\n');
+	document.getElementById('uniq2').value = clean('uniq2').sort().join('\n');
+	document.getElementById('common').value = clean('common').sort().join('\n');
 }
 function deldup(me) {
 	var startTime = Date.now();
-	var save1, save2;
-	save1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
-	save2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
-	list1 = save1.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
-	list2 = save2.filter(function(item, pos, self) { return self.indexOf(item) == pos; })
-	document.getElementById("TextBox1").value = list1.join("\n");
-	document.getElementById("TextBox2").value = list2.join("\n");
+	//var list1 = clean('TextBox1').filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+	//var list2 = clean('TextBox2').filter(function(item, pos, self) { return self.indexOf(item) == pos; })
+	let list1 = [...new Set(clean('TextBox1'))];
+	let list2 = [...new Set(clean('TextBox2'))];
+	document.getElementById('TextBox1').value = list1.join('\n');
+	document.getElementById('TextBox2').value = list2.join('\n');
 	leni('TextBox1', 'lbl1');
 	leni('TextBox2', 'lbl2');
 	elapsed(startTime);
 }
+function getdup(lst) {
+	// find duplicates
+	var sorted = lst.slice().sort();
+	var results = [];
+	for (var i = 0; i < sorted.length - 1; i++) {
+	    if (sorted[i + 1] == sorted[i]) { results.push(sorted[i]); }
+	}
+	return [...new Set(results)];
+}
 function compir() {
 	// TODO: 'processing..' msg for long lists
 	var startTime = Date.now();
+	document.getElementById('btnGo').style.background = '#FBB';
 
-	var list1 = document.getElementById("TextBox1").value.replace(/\r\n/g,"\n").split("\n");
-	var list2 = document.getElementById("TextBox2").value.replace(/\r\n/g,"\n").split("\n");
-	var dup1, dup2;
-	
-	//Find values that are in list1 but not in list2
-	var uniqueResultOne = list1.filter(function(obj) {
+	var list1 = clean('TextBox1')
+	var list2 = clean('TextBox2')
+
+	// find values that are in list1 but not in list2
+	var tmp = list1.filter(function(obj) {
 	    return !list2.some(function(obj2) {
 	        return obj == obj2;
 	    });
 	});
+	let uniqueResultOne = [...new Set(tmp)];
 
-	//Find values that are in list2 but not in list1
-	var uniqueResultTwo = list2.filter(function(obj) {
+	// find values that are in list2 but not in list1
+	tmp = list2.filter(function(obj) {
 	    return !list1.some(function(obj2) {
 	        return obj == obj2;
 	    });
 	});
+	let uniqueResultTwo = [...new Set(tmp)];
+
 	document.getElementById('uniq1').value = uniqueResultOne.join('\n');
 	document.getElementById('uniq2').value = uniqueResultTwo.join('\n');
 	leni('uniq1', 'lbl3');
 	leni('uniq2', 'lbl4');
 
-	//find duplicates
-	dup1 = list1.filter(function(item, pos, self) {
-	    return self.indexOf(item) != pos;
-	})
-	dup2 = list2.filter(function(item, pos, self) {
-	    return self.indexOf(item) != pos;
-	})
-	document.getElementById('dupl1').value = dup1.join('\n');
-	document.getElementById('dupl2').value = dup2.join('\n');
+	// find duplicates
+	document.getElementById('dupl1').value = getdup(list1).join('\n');
+	document.getElementById('dupl2').value = getdup(list2).join('\n');
 	leni('dupl1', 'lbl6');
 	leni('dupl2', 'lbl7');
 	
-	//Find values that are both in list2 and list1
-	var commonResult = list2.filter(function(obj) {
+	// common values both in list2 and list1
+	var tmp = list2.filter(function(obj) {
 	    return list1.some(function(obj2) {
 	        return obj == obj2;
 	    });
 	});
-	
+	let commonResult = [...new Set(tmp)];	
 	document.getElementById('common').value = commonResult.join('\n');
 	leni('common', 'lbl5');
 
 	leni('TextBox1', 'lbl1');
 	leni('TextBox2', 'lbl2');
+	document.getElementById('btnGo').style.background = 'buttonface';
 	elapsed(startTime);
 }
 function leni(meid,lbl) {
-	var text = typeof(meid)=="string" ? document.getElementById(meid).value : document.getElementById(meid.id).value;
+	var text = typeof(meid)=='string' ? document.getElementById(meid).value : document.getElementById(meid.id).value;
 	if (text.length == 0) {
 		document.getElementById(lbl).innerText = 'none';
 		return;
 	}
-	var rows = text.split("\n").length;
+	var rows = text.split('\n').length;
 	document.getElementById(lbl).innerText = rows + ' items'; 
 }
 function elapsed(st) {
@@ -102,12 +116,32 @@ function elapsed(st) {
 	var sec = Math.floor(ms / 1000);
 	var min = Math.floor(sec / 60);
 	sec = sec - (min * 60);
-	var timer = document.getElementById("timer");
-	timer.innerText = "Finished in " + min + ":" + pad(sec) + " (min:sec)";
+	var timer = document.getElementById('timer');
+	timer.innerText = (min*60+sec > 10) ? 'Finished in ' + min + ':' + pad(sec) + ' (min:sec)' : '';
 }
-function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) return ("-0" + Math.abs(n)); return n; }
-  </script>
- <style>
+function pad(n) { 
+	if (n < 10 & n >=0) return ('0' + n); if(n < 0 & n > -11) return ('-0' + Math.abs(n)); return n; 
+}
+
+function readText(filePath, tarea) {
+	if(filePath.value){
+		filePath.className = '';
+	} else {
+		filePath.className = 'notext';
+	}
+	if(filePath.files && filePath.files[0]) {	// html5 filelist support
+	  let reader = new FileReader();           
+	  reader.onload = function (e) {
+		document.getElementById(tarea).innerHTML = e.target.result;
+	  };
+	  reader.readAsText(filePath.files[0]);
+	}
+	else alert('browser has no html5 file support');
+	return true;
+}
+</script>
+
+<style>
 	/* body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }  */
 	td { vertical-align:top; }
 	table {
@@ -140,30 +174,32 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 	}
 	p { margin: 30px; }
 	span { border-radius: 10px !important; }
-
-  </style>
-
+	.notext{
+	 	color: transparent;
+	}
+	.blk { display:inline-block; }
+</style>
 </head>
 
 <body>
         
 	<!--========== BEGIN HEADER ==========-->
-	<header id="header" class="header-main" style='height:98px;'>
+	<header id='header' class='header-main' style='height:98px;'>
 	
 	<!-- Begin Navbar -->
-	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav id='main-navbar' class='navbar navbar-default navbar-fixed-top' role='navigation'>
 	
-	  <div class="container">
+	  <div class='container'>
 	
 	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <a class="navbar-brand page-scroll" href="../index.html">Helgasoft</a>
+	    <div class='navbar-header'>
+	      <a class='navbar-brand page-scroll' href='../index.html'>Helgasoft</a>
 	    </div>
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav navbar-right">
-	            <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
+	    <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+	        <ul class='nav navbar-nav navbar-right'>
+	            <li><a class='page-scroll' href='../#portfolio-section'>Back</a></li>
 		</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
@@ -174,60 +210,64 @@ function pad(n) { if (n < 10 & n >=0) return ("0" + n); if(n < 0 & n > -11) retu
 	<!-- ========= END HEADER =========-->
 
 
-<div style="text-align:center">
-	<h5 style="display:inline;margin-right:30px">Compare Lists</h5> 
+<div style='text-align:center'>
+	<h5 style='display:inline;margin-right:30px'>Compare Lists</h5> 
 </div>
 
-<table border='0' class="CoreTable">
+<table border='0' class='CoreTable'>
   <tr>
-	<td width="14%"><b>Input Lists</b></td>
-        <td width="43%">First  <br /><textarea id="TextBox1" onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea>
+	<td width='14%'><b>Input Lists</b></td>
+	<td width='43%'><div class='blk'><b>First</b> &nbsp; &nbsp; &nbsp; type or </div> 
+		<div class='blk'><input type='file' onchange="readText(this, 'TextBox1')" class='notext' /></div>  <br />
+		<textarea id='TextBox1' onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea>
 		<br /><span id="lbl1" class='badge'></span></td>
-        <td>Second  <br /><textarea id="TextBox2" onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea>
-		<br /><span id="lbl2" class='badge'></span></td>
+	<td><div class='blk'><b>Second</b> &nbsp; &nbsp; &nbsp; type or </div> 
+		<div class='blk'><input type='file' onchange="readText(this, 'TextBox2')" class='notext' /></div> <br />
+		<textarea id='TextBox2' onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea>
+		<br /><span id='lbl2' class='badge'></span></td>
     	</tr>
   <tr>
 	<td>&nbsp;</td>
-	<td colspan=2 style="text-align:center; padding:10;">
-		<button onclick="sorta()" >sort</button>
+	<td colspan=2 style='text-align:center; padding:10;'>
+		<button onclick='sorta()' >sort all</button>
 		<button onclick='deldup(this)' >delete duplicates</button>
-		<button onclick='compir()' tabindex=3 ><b>Compare</b></button>
-		<br /><div id="timer" class="txt"></div>
+		<button onclick='compir()' tabindex=3 id='btnGo'><b>Compare</b></button>
+		<br /><div id='timer' class='txt'></div>
 	</td>
 	</tr>
   <tr>
 	<td>&nbsp;</td>
-	<td colspan=2 class="rslt"></tr>
+	<td colspan=2 class='rslt'></td></tr>
   <tr>
 	<td><b>Unique</b> </td>
-        <td><textarea id="uniq1"></textarea><br /><span id="lbl3" class='badge'></span></td>
-        <td><textarea id="uniq2"></textarea><br /><span id="lbl4" class='badge'></span></td></tr>
+        <td><textarea id='uniq1'></textarea><br /><span id='lbl3' class='badge'></span></td>
+        <td><textarea id='uniq2'></textarea><br /><span id='lbl4' class='badge'></span></td></tr>
   <tr>
-	<td><b>Duplicate</b> </td>
-        <td><textarea id="dupl1"></textarea><br /><span id="lbl6" class='badge'></span></td>
-        <td><textarea id="dupl2"></textarea><br /><span id="lbl7" class='badge'></span></td>
+	<td><b>Duplicated</b><br /><div class='txt'>once or more</div> </td>
+        <td><textarea id='dupl1'></textarea><br /><span id='lbl6' class='badge'></span></td>
+        <td><textarea id='dupl2'></textarea><br /><span id='lbl7' class='badge'></span></td>
 	</tr>
   <tr>
 	<td><b>Common</b></td>
         <td colspan=2>
-		<div style="text-align:center"><textarea id="common" style="width:50% !important"></textarea><br />
-		<span id="lbl5" class='badge'></span></div></td>
+		<div style='text-align:center'><textarea id='common' style='width:50% !important'></textarea><br />
+		<span id='lbl5' class='badge'></span></div></td>
 	</tr>
 </table>
 
 <p>&nbsp;<br />
-<table border='0' class="CoreTable">
+<table border='0' class='CoreTable'>
   <tr>
 	<td>
-<b>Note</b>:  Firefox or MS Edge browser recommended, Chrome is slower.<br />
-Time estimate for 80K lists on Intel i5 processor is 7-8 minutes.<br />
+<b>Note</b>: Numerical items are converted to strings and compared/sorted as strings.<br />
+Time estimate for 80K items lists on Intel i5 processor is ~2 minutes.<br />
 Please do not interrupt when Compare button is <span style='color:#FF5555'>red</span>, browser is still working.<br />
-If prompted, select <i>Continue</i> or <i>Wait</i> for processing to complete.
+If prompted, select <i>Wait</i> or <i>Continue</i> for processing to complete.
 	</td><td>
 If you like and use the application, please 
 <br /><br /> 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="6KJJ8ZPZZQSCJ"> <input type="image" src="../img/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+<input type='hidden' name='cmd' value='_s-xclick'> <input type='hidden' name='hosted_button_id' value='6KJJ8ZPZZQSCJ'> <input type='image' src='../img/btn_donate_SM.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!'> <img alt='' border='0' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif' width='1' height='1'>
 </form> 
 	</td></tr>
 </table>
