@@ -46,7 +46,7 @@ body .body {
 	box-shadow: none !important;
 }
 
-/* Begin Fonts */
+/* Begin Fonts 
 body {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
@@ -60,7 +60,7 @@ h2 {	font-size: 30px;}
 h3 {	font-size: 26px;}
 h4 {	font-size: 22px;}
 h5 {	font-size: 18px;}
-/* p {	font: 14px/1.5em "Roboto";} */
+/* p {	font: 14px/1.5em "Roboto";} /
 .navbar-nav > li > a {
 	font-family: "Lato", Helvetica, Arial, sans-serif;
 }
@@ -1137,3 +1137,22 @@ p.subtitle {
 .udrug { display: none }
 .fsm { font-size: 70%; }
 
+.movie { display:block; margin-left:auto; margin-right:auto }
+.video-responsive {
+  /* display:block; margin-left:20px; margin-right:20px; */
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed,
+.video-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

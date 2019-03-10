@@ -2,43 +2,45 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Helgasoft - software solutions</title>
+	<title>Helgasoft software solutions</title>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 	<meta name="description" content="migration to PostgreSQL">
+
+		<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
+		<!-- Theme CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/mobile.css">
 	
 	<!-- Skin CSS -->
 	<link rel="stylesheet" href="../css/skin/night-purple.css">
-	<style>
-		a, a:hover, a:focus { color: #3333ee; }
-		p { font: 14px/1.5em "Verdana"; }
-	</style>
 </head>
 
-<body>
-        
+<body data-target="#main-navbar">   
+    	<div class="body">
 	<!--========== BEGIN HEADER ==========-->
-	<header id="header" class="header-main" style='height:98px;'>
+	<header id="header" class="header-main">
 	
 	<!-- Begin Navbar -->
 	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 	
 	  <div class="container">
-	
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <a class="navbar-brand page-scroll" href="../index.html">Helgasoft</a>
+	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
+	      </button>
+	      <a class="navbar-brand page-scroll" href="../">Helgasoft</a>
 	    </div>
 	
-	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav navbar-right">
-	            <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
-		</ul>
+			<ul class="nav navbar-nav navbar-right">
+	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
+			</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
 	</nav>
@@ -46,7 +48,8 @@
 	
 	</header>
 	<!-- ========= END HEADER =========-->
-<div style='margin-left:30px'>
+<div class="container">
+<p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
 
 <h2>Migrating from Sql Server to PostgreSQL</h2>
 
@@ -149,6 +152,6 @@ which had this line:</p>
 
 <p>&nbsp;</p>
 </div>
-
+</div>
 </body>
 </html>

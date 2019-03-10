@@ -2,42 +2,45 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Helgasoft - Compress Geo Tracks using Leaflet</title>
+	<title>Helgasoft software solutions</title>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-	<meta name="description" content="Leaflet app to truncate Geo Tracks">
+	<meta name="description" content="Leaflet app to Compress Geo Tracks">
+
+		<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
+		<!-- Theme CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/mobile.css">
 	
 	<!-- Skin CSS -->
 	<link rel="stylesheet" href="../css/skin/night-purple.css">
-	<style>
-		a, a:hover, a:focus { color: #3333ee; }
-		p { font: 14px/1.5em "Verdana"; }
-	</style>
 </head>
 
-<body>   
+<body data-target="#main-navbar">   
+    	<div class="body">
 	<!--========== BEGIN HEADER ==========-->
-	<header id="header" class="header-main" style='height:98px;'>
+	<header id="header" class="header-main">
 	
 	<!-- Begin Navbar -->
 	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 	
 	  <div class="container">
-	
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
+	      </button>
 	      <a class="navbar-brand page-scroll" href="../">Helgasoft</a>
 	    </div>
 	
-	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	        <ul class="nav navbar-nav navbar-right">
-	            <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
-		</ul>
+			<ul class="nav navbar-nav navbar-right">
+	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
+			</ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
 	</nav>
@@ -45,11 +48,13 @@
 	
 	</header>
 	<!-- ========= END HEADER =========-->
-<div style='margin-left:30px'>
+<div class="container">
+<p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
 <div class='udrug'>   
 If your kml file or gpx file or geojson file is too big, you can compress (reduce) the file size. It is called optimizing the geospatial file.
 Lets explain how to prune a kml/gpx/geojson file and make it smaller, condensed, truncated.
 </div>
+
 <h2>Compress Geo Tracks <span style='margin-left:60px' /><a href='https://helgalabs.shinyapps.io/trungeotrac/' >Live!</a></h2> 
 
 <p>Smaller geospatial files are delivered faster on the Internet. Some GPS devices and mapping software generate large files with excessive number of points. That much accuracy is usually redundant and the application is reducing size by truncating the number of track points. Size reduction of over 90% is possible.</p>
@@ -89,9 +94,8 @@ If you like the application, please</p>
 <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="6KJJ8ZPZZQSCJ"> <input type="image" src="../img/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>  -->
-<p>
- 
-</p>
+<p>&nbsp;</p>
+</div>
 </div>
 </body>
 </html>
