@@ -12,8 +12,6 @@
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
-		<!-- Theme CSS -->
-	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/mobile.css">
 	
 	<!-- Skin CSS -->
@@ -21,6 +19,14 @@
 
 	<script src='../js/papaparse.min.js'></script>
 	<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+	<style>
+		.dfilter_mobile { display:none }
+	</style>
+
 </head>
 
 <body data-target="#main-navbar">   
@@ -51,6 +57,7 @@
 	
 	</header>
 	<!-- ========= END HEADER =========-->
+
 <div class="container">
 <p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
 <h2>Gold price plot </h2>
@@ -68,13 +75,16 @@ Webkit <a href='http://phantomjs.org/'>phantomjs</a> was also used to handle som
 <br />&nbsp;<br />
 
 <b>2) with Google Charts</b>
-<p>Below is a <b>live</b> interactive chart showing the same data. Made with the <a href='https://developers.google.com/chart/'>Google Charts</a> javascript library, it features date range selection, area zoom, auto-resize, tooltips and annotations.
+<p>Below is a <b>live</b> interactive chart showing the same data. Made with the <a href='https://developers.google.com/chart/'>Google Charts</a> javascript library, it features date range selection, area zoom, auto-resize, tooltips and event annotations. On mobile devices the date range control is implemented with <a href='https://github.com/IonDen/ion.rangeSlider'>ion.rangeSlider</a>.
 </p>
 <br />
 <div id="dashboard">
   <div id="chart_line"></div>
   <div id="chart_difference"></div>
   <div id="chart_control_range"></div>
+  <div class='dfilter_mobile'>
+  	<input type="text" class="js-range-slider" name="my_range" value="" />
+  </div>
 </div>
 <br />&nbsp;<br />
 
@@ -110,11 +120,27 @@ The graphical part was implemented with library D3.js.
 
 google.charts.load('current', {
   callback: function () { 
-  	window.addEventListener('resize', loadGraph, false); // auto-resize!
+  	window.addEventListener('resize', loadGraph, false); // auto-resize
   	loadGraph(); 
   },
   packages:['controls', 'corechart']
 });
+
+var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var controlRangeFilter = chartLine = chartClmn = null;
+
+function dateToTS (date) {
+	return date.valueOf();
+}
+
+function tsToDate (ts) {
+	var d = new Date(ts);
+	return d.toLocaleDateString('en-US', {
+	    year: 'numeric',
+	    month: 'short',
+	    day: 'numeric'
+	});
+}
 
 function loadGraph() {
 
@@ -127,9 +153,9 @@ function loadGraph() {
 	dataChart.addColumn('number', 'disparity SGE-XAU');
 
 	var labelColor = '#676767';
-	var lastd = startd = new Date();
+	var firstd = lastd = startd = new Date();
 	
-	var chartLine = new google.visualization.ChartWrapper({
+	chartLine = new google.visualization.ChartWrapper({
 		chartType: 'LineChart',
 		containerId: 'chart_line',
 		dataTable: dataChart,
@@ -176,7 +202,7 @@ function loadGraph() {
 		}
 	});
 
-        var chartClmn = new google.visualization.ChartWrapper({
+        chartClmn = new google.visualization.ChartWrapper({
             chartType: 'ColumnChart',
             containerId: 'chart_difference',
             dataTable: dataChart,
@@ -191,7 +217,7 @@ function loadGraph() {
             }
         });
 
-	var controlRangeFilter = new google.visualization.ControlWrapper({
+	controlRangeFilter = new google.visualization.ControlWrapper({
 		controlType: 'ChartRangeFilter',
 		containerId: 'chart_control_range',
 		options: {
@@ -218,6 +244,8 @@ function loadGraph() {
 
 	var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard'));
 	dashboard.bind(controlRangeFilter, [chartLine, chartClmn]);
+	
+	Papa.parse('gold.csv', { download: true, header: true, complete: completeFn });  // async
 	
 	function completeFn(results) {
 		if (results && results.errors)
@@ -246,8 +274,9 @@ function loadGraph() {
 		formatter.format(dataChart, 5);
 	
 		// draw dashboard
+		firstd = new Date(results.data[0].date);
 		lastd = new Date(results.data[results.data.length-1].date);
-		startd.setTime(lastd.getTime() - (24*60*60*1000) * 180);  // 180 days prior
+		startd = new Date(lastd.getTime() - (24*60*60*1000) * 180) // 180 days prior
 		controlRangeFilter.setState({
 		   range: {
 			start: startd,
@@ -255,9 +284,18 @@ function loadGraph() {
 		   }
 		});
 		dashboard.draw(dataChart);
+		
+		$(".js-range-slider").ionRangeSlider({
+		    type: "double",
+		    grid: true,
+		    drag_interval: true,
+		    min: dateToTS(firstd),
+		    max: dateToTS(lastd), 
+		    from: dateToTS(startd),
+		    to: dateToTS(lastd),
+		    prettify: tsToDate
+		});
 	}
-	
-	Papa.parse('gold.csv', { download: true, header: true, complete: completeFn });  // async
 
 }
 
@@ -280,9 +318,20 @@ observer.observe(chartDiv, {
 	subtree: true
 });
 
-</script>
+// ChartRangeFilter doesn't work on mobile. Use ionRangeSlider to manipulate range
+if (is_mobile)
+{
+	$('#chart_control_range').hide();
+	$('.dfilter_mobile').toggle();
+	$('.js-range-slider').on("change", function () {
+		var $inp = $(this);
+		var ival = $inp.prop("value").split(';'); // reading input value
+		controlRangeFilter.setState({range: { start: new Date(Number(ival[0])), end: new Date(Number(ival[1])) }});
+		controlRangeFilter.draw();
+	});
+}
 
-    <script> /*
+/*
 function resize1() {
 	// canvas must cover full width of screen regardless of the resolution
 	var png = document.getElementById('myPng');

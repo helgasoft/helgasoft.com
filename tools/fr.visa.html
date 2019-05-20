@@ -12,8 +12,6 @@
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
-		<!-- Theme CSS -->
-	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/mobile.css">
 	
 	<!-- Skin CSS -->
@@ -27,10 +25,10 @@
  	<script src='https://unpkg.com/leaflet.markercluster@1.2.0/dist/leaflet.markercluster.js' type='text/javascript'></script>
 
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' type='text/javascript'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vissense/0.10.0/vissense.js"></script>
 
 	<style>
 		#map {
-		/*	width: 700px;*/
 			height: 500px;
 		}
 		.stay-left {
@@ -42,13 +40,13 @@
 		  line-height: 26px;
 		  margin-top: 10px;
 		}
-		.clearer {
-		  clear: both;
-		}
+		.clearer { clear: both; }
 		.cblock {
 		    margin-left: auto;
 		    margin-right: auto;
 		}
+		.row { font-style: italic; }
+		a { color: blue; }
 	</style>
 </head>
 
@@ -56,15 +54,15 @@
     	<div class="body">
 	<!--========== BEGIN HEADER ==========-->
 	<header id="header" class="header-main">
-	
+
 	<!-- Begin Navbar -->
 	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 	
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <a class="page-scroll" href="../#portfolio-section" style='color: white;'>BACK</a>
 	      </button>
 	      <a class="navbar-brand page-scroll" href="../">Helgasoft</a>
 	    </div>
@@ -73,11 +71,10 @@
 			<ul class="nav navbar-nav navbar-right">
 	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
 			</ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container -->
+	    </div>
+	  </div>
 	</nav>
-	<!-- End Navbar -->
-	
+	<!-- End Navbar -->	
 	</header>
 	<!-- ========= END HEADER =========-->
 <div class="container">
@@ -85,8 +82,19 @@
 
 <h2>Put me on a map!</h2>
 <br /><p>
-Have you seen web pages screeming "Put me on a map!" ? One found lately was the <b><a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa'>French Tech Visa</a></b> page.
-Having a soft spot for things french, we decided to 'repair' the injustice and geocode the companies listed (as of Dec 2017).  
+Have you seen web pages screeming "<i>Put me on a map !</i>" ?<br /> 
+One of them is <a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa'>French Tech Visa</a>. There is company info and search by area, but no map. <br />
+Here is a <b>live</b> geocoded map for the same page which could be used for location search. (data as of Dec 2017)
+</p>
+
+	<div class='cblock'>
+		<div id='map'></div>
+	</div>
+	<div class="row" id='company' style='font-style: italic;'>
+	    <div class="col-md-6 col-xs-12"><br /><b>Click on a map marker <img src='../img/coq.png' width=27px height=38px /> to see details here</b></div>
+	    <div class="col-md-6 col-xs-12"><img src='https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png' width='300' height='169' /></div>
+	</div>
+<br />
 Luckily, all the data was inside the page source in JSON format. To clean and use it in R, one could simply copy and assign it to a variable, then <i>source</i> it in RStudio to fix any errors. Then it can be converted to a <i>data.frame</i>.
 <pre><code>products <- '[ { "Company_Name": "1001 Pharmacies",... } ]'
 companies <- jsonlite::fromJSON(products)</code></pre>
@@ -97,23 +105,36 @@ out <- file('french.json', encoding="UTF-8")
 write(xjson, file=out)
 </code></pre>
 Used Javascript next to recode the data from JSON to <i>geojson</i> format. You can see the file <a href='../img/french.geojson'>raw</a>, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741'>here</a> on a map. Finally we read this same geojson file and present it on a <a href='http://leafletjs.com/'>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voilà!
-<br />
-</p>
 
-	<div class='cblock'>
-		<div id='map'></div>
-	</div>
-	<div class="row" id='company'>
-	    <div class="col-md-6 col-xs-12"><br /><b>Click on a map marker <img src='../img/coq.png' width=27px height=38px /> to see details here</b></div>
-	    <div class="col-md-6 col-xs-12"><img src='https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png' width='300' height='169' /></div>
-	</div>
 	<p>&nbsp;</p>
 	<hr><h2>Photos on a map</h2>
 	Below is a demo clip of another Leaflet map. Hover mouse on (green) markers will show related images. Images could be dragged over the map, zoomed along with the map, or closed by double-click.
-	<p>&nbsp;</p>
-	<div class="video-responsive">
-		<video width="590" height="504" controls="controls" controlsList="nodownload" autoplay="autoplay" muted playsinline>
+	<br />
+	<div class="video-responsive" style='max-width: 590px; max-height: 504px;'>
+		<video id="vid1" controlsList="nodownload" controls autoplay muted playsinline>
 		  <source src="../img/street.mp4" type="video/mp4"></source>
+		  Your browser does not support the video tag.
+		</video> 
+	</div>
+	<p>&nbsp;</p>
+	<hr><h2>Calculate distances</h2>
+	GIS projects ofter require spatial measurements. In the sample below, given a set of points (Lat/Lon coordinates), the goal is to find which ones are within 5 km distance from two predefined locations. By drawing a circle (radius 5km) from each location, all points inside the intersection area meet the requirement.
+	<br />
+	<div class="video-responsive" style='max-width: 722px; max-height: 400px;'>
+		<video id="vid2" controlsList="nodownload" controls autoplay muted playsinline>
+		  <source src="../img/leaf2circles.mp4" type="video/mp4"></source>
+		  Your browser does not support the video tag.
+		</video> 
+	</div>
+	<p>&nbsp;</p>
+	<hr><h2>Census data</h2>
+	Coded in R, the steps accomplished for this project were:
+	<ol type="1"> 
+	<li>load US census boundary and attribute data</li> <li>cleanup blocks outside city area</li> <li>build interactive map with census blocks color-coded by population</li> </ol>
+	<br />
+	<div class="video-responsive" style='max-width: 662px; max-height: 500px;'>
+		<video id="vid3" controlsList="nodownload" controls autoplay muted playsinline>
+		  <source src="../img/census.mp4" type="video/mp4"></source>
 		  Your browser does not support the video tag.
 		</video> 
 	</div>
@@ -168,6 +189,17 @@ $.getJSON('../img/french.geojson', function(geodata) {
    markers.addLayer(gj);
    markers.addTo(map);
  })
+
+// videos autoplay --------------------
+function VidPlay(myVideo) {
+	VisSense.VisMon.Builder(VisSense(myVideo, { fullyvisible: 0.75 }))
+	.on('fullyvisible', function(monitor) {  myVideo.play(); })
+	.on('hidden', function(monitor) {  myVideo.pause(); })
+	.build().start();
+}
+VidPlay(document.getElementById('vid1'));
+VidPlay(document.getElementById('vid2'));
+VidPlay(document.getElementById('vid3'));
 
 </script>
 
