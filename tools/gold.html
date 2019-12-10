@@ -128,6 +128,7 @@ google.charts.load('current', {
 
 var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 var controlRangeFilter = chartLine = chartClmn = null;
+var labelColor = '#676767';
 
 function dateToTS (date) {
 	return date.valueOf();
@@ -152,7 +153,6 @@ function loadGraph() {
 	dataChart.addColumn({id: 'ano', type: 'string', role: 'annotation'});
 	dataChart.addColumn('number', 'disparity SGE-XAU');
 
-	var labelColor = '#676767';
 	var firstd = lastd = startd = new Date();
 	
 	chartLine = new google.visualization.ChartWrapper({
@@ -303,12 +303,12 @@ var observer = new MutationObserver(function () {
 	// beautify annotations as timeline events
 	var recs = document.getElementById('chart_line').getElementsByTagName('rect');
 	Array.prototype.forEach.call(recs, function(rect) {
-	        if (rect.getAttribute('fill') === '#676767') {
-		  rect.setAttribute('width', '18');
+	        if (rect.getAttribute('fill') === labelColor) {
+		  rect.setAttribute('width', '20');
 		  rect.setAttribute('y', "0");
 		  rect.setAttribute('height', "340");
 		  rect.setAttribute('fill', "powderblue");
-		  rect.setAttribute('fill-opacity', "0.7");
+		  rect.setAttribute('fill-opacity', "0.5");
 	        }
 	});
 });
