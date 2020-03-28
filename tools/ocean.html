@@ -8,6 +8,7 @@
 	<meta name="description" content="Free Ocean Fishing Map in Southern California" />
 	<link rel="shortcut icon" href="../img/fish2.png" type="image/png" />
 
+<link rel="stylesheet" href="../css/misc.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
   crossorigin=""/>
@@ -19,73 +20,53 @@
   integrity="sha512-1tScwpjXwwnm6tTva0l0/ZgM3rYNbdyMj5q6RSQMbNX6EUMhYDE3pMRGZaT41zHEvLoWEK7qFEJmZDOoDMU7/Q=="
   crossorigin=""></script>
 <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js' type='text/javascript'></script>
-
-  <style>
-	body { font: 14px/1.5em "Verdana";	}
-	img { vertical-align:middle; }
-	a { text-decoration: none; }
-	a.whity { color: white; }
-	.meat { margin-left:20px; margin-right:20px;} 
-	#map { position: relative; height: 600px; width: 100%; }
-	#kw { display:none;}
-	#cam {
-	    width: 370px;
-	    height: 320px;
-	    background-color: #0000ff;
-	    overflow: auto;
-	    white-space:nowrap;
-	}
-	.ctr { text-align:center; }
-	.header-left { float: left; margin-top: 3px; padding-left: 35px; width: 100%; background-color: #51497F;}
-	.stay-right { float: right; margin-top: 5px; padding-right: 50px; }
-	.clearer { clear: both;}
-	.nw { white-space:nowrap; }
-	td { padding: 15px; }
-
-@media 
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid #ccc; }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
+<script src='https://unpkg.com/leaflet-pulse-icon@0.1.0/src/L.Icon.Pulse.js' /></script>
+<style>
+/* -------- locator -------- */
+.leaflet-pulsing-icon {
+    border-radius: 100%;
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
 }
+
+.leaflet-pulsing-icon:after {
+    content: "";
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    height: 300%;
+    width: 300%;
+    position: absolute;
+    margin: -100% 0 0 -100%;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1, 0.1);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+    }
+    100% {
+        transform: scale(1.2, 1.2);
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+    }
+}
+.trEmpty {content: url('../img/geolocation.30.empty.png'); }
+.trFull { content: url('../img/geolocation.30.png'); }
   </style>
+
 </head>
 
 <body>
    <!-- ========= HEADER =========-->
   <div class='header-left'>
-	<a href="../"><img src='../img/logo.png' alt='Helgasoft' /></a>
+	<a href="../" style='padding-left: 35px;'><img src='../img/logo.png' alt='Helgasoft' /></a>
 	<div class='stay-right'>
 	<a href=# onclick='window.history.back();' class='whity'>Back</a>
 	</div>
@@ -100,7 +81,7 @@ only screen and (max-width: 760px),
   <div id="map"></div>
 </div>
 
-<table><tr><td> &nbsp; &nbsp; &nbsp; Data Sources:</td>
+<table cellpadding='15'><tr><td> &nbsp; &nbsp; &nbsp; Data Sources:</td>
 <td><span class='nw'><img src=../img/goldfish.png /> <a href='http://fishingnetwork.net' target=_blank>FishingNetwork</a></span></td>
 <td><span class='nw'><img src=../img/tuna_fish.png width='32px;' /> <a href='https://www.bdoutdoors.com/fishing-chart-southern-california/' target=_blank>BloodyDecks</a></span></td>
 <td><span class='nw'><img src=../img/kelp.png /> <a href='http://www.socaloceanfishing.com/hp_kelp.html' target=_blank>SoCalOceanFishing</a></span></td> 
@@ -108,17 +89,18 @@ only screen and (max-width: 760px),
 </table>
 <div class='ctr'>This map is continually being updated. </div>
 <div id='kw'>What you can find on this page is fishing maps, locations, free ocean fishing spots, coordinates, GPS, popular spots, Albacore, Bluefin tuna, Marlin, Yellowfin Tuna, Yellowtail, Dorado, Barracuda, White Seabass, Calico Bass, Halibut, Rockfish, Lingcod, Bonito</div>
-<p>&nbsp;</p>
+
 <div class='ctr'>&copy; helgasoft.com</div>
-</div>
 
 <script src='../js/ocean-data.js' type='text/javascript'></script>
 <script>
-    var map = L.map('map', {
+	const minZoom = 2;
+	var startPoint = [32.8153333, -118.3541667];
+	var map = L.map('map', {
 	  minZoom: 2,
 	  maxZoom: 18,
 	  zoomControl: true
-	}).setView([32.8153333, -118.3541667], 8);
+	}).setView(startPoint, 8);
 	map.addControl(new L.control.scale({ imperial: false }));
 
 	var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{ 
@@ -126,6 +108,55 @@ only screen and (max-width: 760px),
 	var esri = L.esri.tiledMapLayer({
 	  url: 'https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer', maxZoom: 15 
 	});
+
+	var pulsingIcon = L.icon.pulse({iconSize:[20,20], color:'red'});
+	var current_position = null; 
+ 
+	function onLocationFound(e) {
+		if (!current_position || !map.hasLayer(current_position)) {
+			map.setView(e.latlng, 11);	// zoom in on location
+			tracker = L.DomUtil.get('tracker');
+			tracker.className += ' trFull';  // append: has other classes too
+		}
+		// if position defined, then remove the existing position marker and accuracy circle from the map
+		if (current_position) {
+			map.removeLayer(current_position);
+		}
+		current_position = L.marker(e.latlng, {icon: pulsingIcon})
+		map.addLayer(current_position);
+	}
+	function onLocationError(e) {
+		alert('Track err: '+e.message);	
+	}
+
+	var trackControl = L.Control.extend({
+	  options: { trackm: 'tracking position' }, //{ position: 'topleft', 
+	  onAdd: function (map) {
+	  	self = this;
+		var container = L.DomUtil.create('div', 'trEmpty');	
+		container.id = 'tracker';
+		container.setAttribute('title', 'click for '+self.options.trackm);
+
+		container.onclick = function(){
+		   if (!current_position || !map.hasLayer(current_position) ) {
+			this.setAttribute('title', self.options.trackm+' now');
+			map.locate({ 
+				watch: true, 
+				maxZoom: minZoom, 
+				enableHighAccuracy: true,
+				maximumAge: 5000, timeout: 20000 });
+		   } else {
+			map.stopLocate();
+		  	map.removeLayer(current_position);
+			this.setAttribute('title', 'not '+self.options.trackm);
+			this.className = this.className.replace( /(?:^|\s)trFull(?!\S)/g , '' )
+			this.className += ' trEmpty';
+		   }
+		}
+		return container;
+	  },
+	});
+
 	
 	var fnLayer = L.geoJSON(null, {
 	  pointToLayer: function(feature,latlng) {
@@ -281,6 +312,11 @@ makeGeoJSON(buoys, buoyLayer, '|', false);
 
 	mpaLayer.addData(ompa);
 	map.addLayer(mpaLayer);
+
+	map.addControl(new trackControl({ position: 'topleft'}));
+	map.on('locationfound', onLocationFound);
+    	map.on('locationerror', onLocationError);
+	//map.locate({setView: true, maxZoom: 16});
 
 	var overlays = {
 	  "Spots FN <img src=../img/goldfish.png />": fnLayer,

@@ -254,6 +254,7 @@ h1 {
 <a href="https://gist.github.com/wch/5436415/">https://gist.github.com/wch/5436415/</a> Shiny example app with dynamic number of plots <br />
 <a href="https://www.datasciencecentral.com/profiles/blogs/dummy-errors-when-using-neuralnet-package-in-r">https://www.datasciencecentral.com/profiles/blogs/dummy-errors-when-using-neuralnet-package-in-r</a></p>
 
+<p><span class='qq'>Debugging</span><br />
 <a href="https://shiny.rstudio.com/articles/debugging.html">https://shiny.rstudio.com/articles/debugging.html</a><br />
 If you want to actually browse the environment of a stack frame interactively, use recover() to select a frame.<br />
 <a href="https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio">https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio</a><br />
@@ -262,35 +263,43 @@ options(encoding = &quot;UTF-8&quot;)<br />
 sudo gedit shiny-server.conf<br />
 sudo service shiny-server restart<br />
 <a href="http://127.0.0.1:3838/sample-apps/sampdistclt/">http://127.0.0.1:3838/sample-apps/sampdistclt/</a>
+</p>
 
-<p>
-## Installing missing packages<br />
+<p>RStudio does not invoke the debugger if it looks like none of your own code is on the stack.<br />
+If you find that this is excluding an error you want to catch,<br />
+go to Tools -&gt; Global Options and uncheck &ldquo;Use debug error handler only when my code contains errors&rdquo;.</p>
+
+<p><span class='qq'>Installing missing packages</span><br />
 pkgs &lt;- c(&quot;shiny&quot;, &quot;dplyr&quot;, &quot;treemap&quot;, &quot;gridBase&quot;)<br />
 pkgs_needed &lt;- pkgs[!(pkgs %in% installed.packages()[,&quot;Package&quot;])]<br />
 if(length(pkgs_needed)) install.packages(pkgs_needed)<br />
 ## Run app from Github repo<br />
 shiny::runGitHub(&#39;manolo20/shinytreemap&#39;)</p>
 
-<p>rsconnect::setAccountInfo(name=&#39;urname&#39;, token=&#39;ttt&#39;, secret=&#39;xxx&#39;)<br />
-rsconnect::deployApp(&#39;C:/Projects/R/urproj&#39;) # must have app.R file</p>
-
-<p>RStudio does not invoke the debugger if it looks like none of your own code is on the stack.<br />
-If you find that this is excluding an error you want to catch,<br />
-go to Tools -&gt; Global Options and uncheck &ldquo;Use debug error handler only when my code contains errors&rdquo;.</p>
-
-<p><span class='qq'>use installr package to upgrade R :</span><br />
+<p><span class='qq'>use installr package to upgrade R</span><br />
 <a href="https://stackoverflow.com/questions/50134848/r-is-it-right-to-copy-the-old-r-version-packages-to-the-new-folder-that-contai">https://stackoverflow.com/questions/50134848/r-is-it-right-to-copy-the-old-r-version-packages-to-the-new-folder-that-contai</a><br />
 - updateR(TRUE) function which updates R runtime to a new version and also its packages.  (ok in Rstudio)<br />
 - The function copy.packages.between.libraries to copy files from the old library to the new one. And it doesn&#39;t copy fundamental packages as MASS, methods, utils, ...<br />
 copy.packages.between.libraries(from=&#39;C:\\Users\\user1\\Documents\\R\\win-library\\3.5&#39;, to=&#39;C:\\Users\\user1\\Documents\\R\\win-library\\3.6&#39;) =didn't work
 </p>
 
-<p><span class='qq'>Shiny downloadButton Disable &quot;target=&#39;_blank&quot; tag</span><br />
-> <a href="https://community.rstudio.com/t/downloadbutton-disable-target-blank-tag/6605">https://community.rstudio.com/t/downloadbutton-disable-target-blank-tag/6605</a> </p>
-
-<p><span class='qq'>Error: Failed to install &#39;blotter&#39; from GitHub:</span><br />
+<p><span class='qq'>Error: Failed to install &#39;blotter&#39; from GitHub</span><br />
 (converted from warning) incomplete final line found on &#39;C:\Users\me\Documents\.Rprofile&#39;<br />
 &gt; add empty line at end of .Rprofile</p>
+
+<p><span class='qq'>replace current lib with older</span><br />
+<a href="https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/">https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/</a><br />
+.libPaths() - see where your libs are<br />
+C:\Users\user1\Documents\R\win-library\3.x &gt; new folder with same lib name (rename current) &gt; copy older filesr code source &gt; There were 12 warnings (use warnings() to see them) &gt; warnings() &gt; Unknown or uninitialised column: &#39;Date&#39;.<br />
+&gt;&gt; Session &gt; Clear Workspace... &gt; fixed<br />
+also diagnostics off - <a href="https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column">https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column</a></p>
+
+<p><span class='qq'>Deploy on shinyapps.io and others</span><br />
+rsconnect::setAccountInfo(name=&#39;urname&#39;, token=&#39;ttt&#39;, secret=&#39;xxx&#39;)<br />
+rsconnect::deployApp(&#39;C:/Projects/R/urproj&#39;) # must have app.R file</p>
+
+<p><span class='qq'>Shiny downloadButton Disable &quot;target=&#39;_blank&quot; tag</span><br />
+> <a href="https://community.rstudio.com/t/downloadbutton-disable-target-blank-tag/6605">https://community.rstudio.com/t/downloadbutton-disable-target-blank-tag/6605</a> </p>
 
 <p><span class='qq'>rstudio &quot;error creating notebook: cannot open the connection&quot;</span><br />
 &gt; open a Project</p>
@@ -298,7 +307,7 @@ copy.packages.between.libraries(from=&#39;C:\\Users\\user1\\Documents\\R\\win-li
 <p><span class='qq'>need finite &#39;ylim&#39; values</span><br />
 &gt; In plot1, change y = range(x$VALUE) to y = range(x$VALUE, na.rm=TRUE) to remove NA missing values.</p>
 
-<p><span class='qq'>compile library source code:</span><br />
+<p><span class='qq'>compile library source code</span><br />
 <a href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a><br />
 &gt; open any R-project ? Project Options : Build Tools: set the folder where the source files are<br />
 &gt; Make (somewhere on right top side of Studio..) &gt; &quot;Build Binary&quot; command &gt; will create ZIP file &gt; install BIN package in Studio<br />
@@ -311,17 +320,11 @@ copy.packages.between.libraries(from=&#39;C:\\Users\\user1\\Documents\\R\\win-li
 Called from: nth(x, -1L, order_by = order_by, default = default)<br />
 &gt; nth is namespace:dplyr, called by &#39;last()&#39; also namespace:dplyr in bt.run which relies on base::last() !</p>
 
-<p><span class='qq'>Error in EMA(c(NA, NA, NA, NA, NA, &nbsp;:</span><br />
-n &gt; number of non-NA values in column(s) 1</p>
+<p><span class='qq'>Error in EMA(c(NA, NA, NA, NA, NA, &nbsp;</span><br />
+> number of non-NA values in column(s) 1 > decrease parameter n  or replace NAs with data</p>
 
-<p><span class='qq'>replace current lib with older:</span><br />
-<a href="https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/">https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/</a><br />
-see where your libs are: .libPaths()<br />
-C:\Users\user1\Documents\R\win-library\3.4 &gt; new folder with same lib name (rename current) &gt; copy older filesr code source &gt; There were 12 warnings (use warnings() to see them) &gt; warnings() &gt; Unknown or uninitialised column: &#39;Date&#39;.<br />
-&gt;&gt; Session &gt; Clear Workspace... &gt; fixed<br />
-# !diagnostics off <a href="https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column">https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column</a></p>
-
-<p><a href="http://www.milanor.net/blog/read-excel-files-from-r/">http://www.milanor.net/blog/read-excel-files-from-r/</a><br />
+<p><span class='qq'>Read Excel files</span><br />
+<a href="http://www.milanor.net/blog/read-excel-files-from-r/">http://www.milanor.net/blog/read-excel-files-from-r/</a><br />
 <a href="https://gist.github.com/schaunwheeler/5825002/raw/3526a15b032c06392740e20b6c9a179add2cee49/xlsxToR.r">https://gist.github.com/schaunwheeler/5825002/raw/3526a15b032c06392740e20b6c9a179add2cee49/xlsxToR.r</a> XLSX<br />
 wb = xlsxToR(&quot;C:\\Users\\user1\\Downloads\\Ten-Symbol-Ten-Years.xlsx&quot;,keep_sheets=NULL, header=TRUE)<br />
 |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed = 47s</p>
@@ -381,6 +384,20 @@ object &#39;.blotter&#39; not found<br />
 <p><span class='qq'>rselenium not resolved from current namespace (subprocess)</span><br />
 &gt; restart R</p>
 
+<p><span class='qq'>DOM element attributes in Shiny</span><br />
+<a href="https://stackoverflow.com/questions/49668048/get-attribute-of-element-in-rendered-ui-with-javascript-in-shiny">https://stackoverflow.com/questions/49668048/get-attribute-of-element-in-rendered-ui-with-javascript-in-shiny</a>
+<pre><code>$('html').on('DOMNodeInserted', 'iframe', function() {
+  alert("Fire in the hole!");
+  # Getting and setting CSS properties
+  $(this).css('background');                  # get
+  $(this).css('background-color', '#330000'); # set
+  # Getting elements attributes
+  $(this).attr('frameborder');      # get
+  $(this).attr('frameborder', '0'); # set
+});
+</code></pre></p>
+
+<p>&nbsp;</p>
 </dd>
 
 
@@ -395,12 +412,15 @@ object &#39;.blotter&#39; not found<br />
 <p><span class='qq'>Uncaught TypeError: Cannot read property '_leaflet_id' of undefined</span><br /> &gt; expects a Leaflet control but gets something else</p>
 <p><a href="http://web.archive.org/web/20160326164021/http://lyzidiamond.com/posts/osgeo-august-meeting/">http://web.archive.org/web/20160326164021/http://lyzidiamond.com/posts/osgeo-august-meeting/</a> Adding GeoJSON to Leaflet with Link Relations<br /> <a href="https://demo.mapsmarker.com/features/google-maps-import/">https://demo.mapsmarker.com/features/google-maps-import/</a> <a href="https://wordpress.org/plugins/leaflet-maps-marker/">https://wordpress.org/plugins/leaflet-maps-marker/</a></p>
 <p><span class='qq'>EMOJI</span><br /> <a href="https://gist.github.com/roachhd/1f029bd4b50b8a524f3c">https://gist.github.com/roachhd/1f029bd4b50b8a524f3c</a><br /> <a href="https://gist.github.com/parmentf/035de27d6ed1dce0b36a">https://gist.github.com/parmentf/035de27d6ed1dce0b36a</a> for github repos<br /> <a href="https://www.w3schools.com/charsets/ref_utf_dingbats.asp">https://www.w3schools.com/charsets/ref_utf_dingbats.asp</a><br /> <a href="https://dev.w3.org/html5/html-author/charref">https://dev.w3.org/html5/html-author/charref</a><br /> <a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/">https://www.webpagefx.com/tools/emoji-cheat-sheet/</a></p>
-<p><a href="https://stackoverflow.com/questions/49668048/get-attribute-of-element-in-rendered-ui-with-javascript-in-shiny">https://stackoverflow.com/questions/49668048/get-attribute-of-element-in-rendered-ui-with-javascript-in-shiny</a><br /> As soon as an iframe is added to the DOM, your code will be executed:<br /> $('html').on('DOMNodeInserted', 'iframe', function() {<br /> alert("Fire in the hole!");<br /> # Getting and setting CSS properties<br /> $(this).css('background'); # get<br /> $(this).css('background-color', '#330000'); # set</p>
-<p># Getting elements attributes<br /> $(this).attr('frameborder'); # get<br /> $(this).attr('frameborder', '0'); # set<br /> });</p>
 <p><span class='qq'>send email from static page</span>: <a href="https://formspree.io/">https://formspree.io/</a></p>
 <p><span class='qq'>efficient JS</span>:<br /> <a href="https://github.com/google/closure-compiler">https://github.com/google/closure-compiler</a> <br /> <a href="https://closure-compiler.appspot.com">https://closure-compiler.appspot.com</a></p>
-<p>google chart &gt; CSV &gt; <span class='qq'>Cannot read property 'getTime' of null</span> <br /> &gt; last line is empty &gt; delete</p>
-<p><span class='qq'>how to debug Chrome Extension Popups:</span><br /> &gt; <a href="https://stackoverflow.com/questions/5039875/debug-popup-html-of-a-chrome-extension">https://stackoverflow.com/questions/5039875/debug-popup-html-of-a-chrome-extension</a><br /> 1.Click your popup button to see the webpage (the popup window itself).<br /> 2.Right-click in the window and select Inspect element<br /> 3.The Chrome Debugger window comes up with the right context, but you've already missed your breakpoints and debugger statements.<br /> 4.HERE'S THE TRICK. Click on the Console part of the debugger and type: location.reload(true) and press enter.<br /> Now your breakpoints are hit! Great way to reload changed scripts without revisiting the Extension page.</p>
+<p>Error in google chart &gt; CSV &gt; <span class='qq'>Cannot read property 'getTime' of null</span> <br /> &gt; last line is empty &gt; delete</p>
+<p><span class='qq'>how to debug Chrome Extension Popups:</span><br /> &gt; <a href="https://stackoverflow.com/questions/5039875/debug-popup-html-of-a-chrome-extension">https://stackoverflow.com/questions/5039875/debug-popup-html-of-a-chrome-extension</a><br /> 
+1.Click your popup button to see the webpage (the popup window itself).<br /> 
+2.Right-click in the window and select Inspect element<br /> 
+3.The Chrome Debugger window comes up with the right context, but you've already missed your breakpoints and debugger statements.<br /> 
+4.Click on the Console part of the debugger and type: location.reload(true) and press enter.<br /> 
+Now your breakpoints are hit! Great way to reload changed scripts without revisiting the Extension page.</p>
 </dd>
 
 
@@ -408,6 +428,17 @@ object &#39;.blotter&#39; not found<br />
 
 <dt><a class="acc_title"> Windows </a></dt>
 <dd class="acc_panel anim_out acc_panel_col">
+
+<p><span class='qq'>useful DOS batch commands</span><br />
+list of commands <a href='http://ss64.com/nt/'>http://ss64.com/nt/</a><br />
+xcopy <a href='https://www.lifewire.com/xcopy-command-2618103'>https://www.lifewire.com/xcopy-command-2618103</a>
+<pre><code>net view \\192.168.0.3		remote PC by IP
+netstat -anob			Active Connections
+dir /s /b /o:n /ad > f.txt	subfolders
+dir /s /o:n /a *.mp4		all mp4 in tree
+pnputil /enum-drivers		drivers list
+</code></pre></p>
+
 <p><span class='qq'>check unresponsive Win 10 NMI_HARDWARE_FAILURE</span><br />
 &quot;Remove any hardware or drivers that have been recently installed. Make sure that all memory modules are of the same type.&quot;<br />
 <a href="https://www.solvusoft.com/en/errors/blue-screen-errors/microsoft-corporation/windows-operating-system/bug-check-0x80-nmi-hardware-failure/">https://www.solvusoft.com/en/errors/blue-screen-errors/microsoft-corporation/windows-operating-system/bug-check-0x80-nmi-hardware-failure/</a><br />
@@ -419,18 +450,19 @@ mdsched.exe &gt; restart and check RAM memory<br />
 
 <p><span class='qq'>windows 10 taskbar pop up shows but cannot click</span><br />
 <a href="http://www.thewindowsclub.com/taskbar-not-working-in-windows-10">http://www.thewindowsclub.com/taskbar-not-working-in-windows-10</a> tray frozen<br />
-&gt; find &amp; restart Win Explorer in Task Manager, not File &gt; Run &gt; explorer.exe</p>
+&gt; find and restart Win Explorer in Task Manager by right-click > Restart (not File &gt; Run &gt; explorer.exe)</p>
 
 <p><span class='qq'>Windows Explorer - how to disable the Preview pane</span><br />
 &gt; Alt-P couple times</p>
 
-<p><span class='qq'>change default application for BAT file extension</span><br />
-WIN+X hotkey) &gt; Settings &gt; Apps &gt; default apps &gt; Choose default apps by file type &gt; apps from Store only?!...<br />
-<a href="https://superuser.com/questions/569449/remove-file-type-associations-in-windows-7">https://superuser.com/questions/569449/remove-file-type-associations-in-windows-7</a><br />
-assign &gt; ftype ...??</p>
+<p><span class='qq'>change default application for BAT file extension (File Type Associations)</span><br />
+> Win.Explorer > right-click your BAT file > select <i>“Open with”</i> > click on <i>Choose another app</i> > (opt) <i>Look for another app on this PC</i><br />
+or > WIN+X hotkey &gt; Settings &gt; Apps &gt; default apps &gt; click <i>Choose default apps by file type</i> &gt; but choice from Win.Store only (!!?)
+</p>
 
 <p><span class='qq'>fix camera</span><br />
-&gt; Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform : set EnableFrameServerMode (DWORD) = 0</p>
+&gt; Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Media Foundation\Platform :<br />
+> set EnableFrameServerMode (DWORD) = 0</p>
 
 <p><span class='qq'>disable calendar notifications windows 10</span><br />
 &gt; open Settings &gt; System &gt; Notifications &amp; actions &gt; Show notifications from these apps &gt; toggle On to Off</p>
@@ -438,21 +470,22 @@ assign &gt; ftype ...??</p>
 <p><span class='qq'>thumbs.db</span><br />
 <a href="https://www.pcworld.com/article/2999243/windows/manage-thumbs-db-files-in-windows-and-on-the-network.html">https://www.pcworld.com/article/2999243/windows/manage-thumbs-db-files-in-windows-and-on-the-network.html</a><br />
 gpedit.msc &gt; User Configuration &gt; Administrative Templates &gt; Windows Components &gt; File Explorer<br />
-Click the Settings heading to alphabetize the list, then scroll down and find, then double-click &#39;Turn off the caching of thumbnails in hidden thumbs.db files&#39; &gt; Enable &gt; reboot</p>
+Click the Settings heading to alphabetize the list, then scroll down and find, then double-click <i>&#39;Turn off the caching of thumbnails in hidden thumbs.db files&#39;</i> &gt; Enable &gt; reboot<br />
+see also <i>C: drive cleanup</i> below</p>
 
 <p><span class='qq'>recent files</span><br />
 <a href="https://www.howtogeek.com/274573/how-do-you-get-the-all-recent-files-list-back-in-windows-10/">https://www.howtogeek.com/274573/how-do-you-get-the-all-recent-files-list-back-in-windows-10/</a><br />
 press Windows Key+R &gt; Enter shell:recent &gt; hit Return</p>
 
-<p><span class='qq'>FTP:</span><br />
-&gt; WinExplorer &gt; My PC &gt; rightClick &gt; Add Network Location &gt; <a href="ftp://xxx">ftp://xxx</a></p>
+<p><span class='qq'>FTP</span><br />
+&gt; Win.Explorer &gt; My PC &gt; rightClick &gt; Add Network Location &gt; <a href="ftp://xxx">ftp://xxx</a></p>
 
 <p><span class='qq'>auto download images as JFIF</span><br />
-&gt; <a href="https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/">https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/</a><br />
-Open regedit &gt; HKEY_CLASSES_ROOT &gt; MIME &gt; DATABASE &gt; Content type &gt; image/jpeg &gt; change &quot;extension&quot; value to .jpg</p>
+<a href="https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/">https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/</a><br />
+&gt; Open regedit &gt; HKEY_CLASSES_ROOT &gt; MIME &gt; DATABASE &gt; Content type &gt; image/jpeg &gt; change &quot;extension&quot; value to .jpg</p>
 
-<p><span class='qq'>C: drive cleanup:</span><br />
-&gt; Windows download files, Log files, Dump Files, Cache files</p>
+<p><span class='qq'>C: drive cleanup</span><br />
+&gt; Windows Explorer > C: > Properties > General > Disk Cleanup > Clean system files > select Windows Update, etc</p>
 
 <p><span class='qq'>Macrium reflect service cannot be killed</span><br />
 &gt; Services &gt; set it to Manual</p>
@@ -472,7 +505,9 @@ PC Chrome &gt; Menu &gt; Cast.. &gt; Cast To &gt; select source = Desktop &gt; s
 <p><span class='qq'>how to Turn Off the Mail Background App ?</span><br />
 &gt; Users can disable Mail running as a background app via Settings. To do that, press the Windows key + S hotkey.<br />
 Enter the keyword &lsquo;background app&rsquo; in the search box.<br />
-Click Background apps to open the Settings window, Then turn off the Mail and Calendar app setting</p>
+Click Background apps to open the Settings window, then turn off the Mail and Calendar app setting<br />
+see also <a href='https://windowsreport.com/how-to-disable-mail-app/'>https://windowsreport.com/how-to-disable-mail-app/</a>
+</p>
 
 <p><span class='qq'>desktop window manager high cpu windows 10</span><br />
 <a href="https://appuals.com/fix-desktop-window-manager-high-cpu-usage-dwm-exe/">https://appuals.com/fix-desktop-window-manager-high-cpu-usage-dwm-exe/</a><br />
@@ -487,6 +522,13 @@ C:\Users\guest\AppData\Local\Google\Update\Install\{6AD4FF50-2977-42CF-BC08-C631
 <a href="https://support.google.com/chrome/thread/18815843?hl=en">https://support.google.com/chrome/thread/18815843?hl=en</a><br />
 &gt; regedit delete for Phone Plugin 5.41.3.</p>
 
+<p><span class='qq'>Replacing antivirus Avast with Kaspersky without uninstalling Avast</span><br />
+install Kaspersky Security Cloud > get <i>"Error 27300. Error installing driver klhk.sys_x64"</i><br />
+&gt; Avast Free Antivirus > Menu > Settings > Components > turn off all shields > <br />
+&nbsp; &nbsp;  > Troubleshooting > uncheck all (rootkit_scan, anti-rootkit, etc) > OK
+</p>
+<br />
+&nbsp; &nbsp;
 </dd>
 
 </dl>

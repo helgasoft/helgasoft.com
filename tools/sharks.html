@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shark Attacks along the US Pacific Coast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="keywords" content="ocean, shark attack, survived, fatal, great white, surfing, swimming, diving, kayaking, shark encounters" />
+	<meta name="description" content="Shark Attacks on the West Coast - California, Oregon" />
+	<link rel="shortcut icon" href="../img/fish2.png" type="image/png" />
+
+<link rel="stylesheet" href="../css/misc.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+  integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+  crossorigin=""></script>
+  <!-- Load Esri Leaflet from CDN -->
+<script src="https://unpkg.com/esri-leaflet@2.3.0/dist/esri-leaflet.js"
+  integrity="sha512-1tScwpjXwwnm6tTva0l0/ZgM3rYNbdyMj5q6RSQMbNX6EUMhYDE3pMRGZaT41zHEvLoWEK7qFEJmZDOoDMU7/Q=="
+  crossorigin=""></script>
+<script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js' type='text/javascript'></script>
+
+</head>
+
+<body>
+   <!-- ========= HEADER =========-->
+  <div class='header-left'>
+	<a href="../" style='padding-left: 35px;'><img src='../img/logo.png' alt='Helgasoft' /></a>
+	<div class='stay-right'>
+	<a href=# onclick='window.history.back();' class='whity'>Back</a>
+	</div>
+  </div>
+  <div class='clearer'></div>
+
+<div class='meat'><br />
+	<span class='nw'><img src=../img/shark.png /> <h2 style='display:inline;'>Shark Attacks, US Pacific Coast, 2000-2019</h2>
+	</span>
+	<div id="map"></div>
+	<p>The map is showing only unprovoked attacks on people.</p>
+</div>
+<div class='ctr'>Data Sources:  &nbsp; &nbsp;
+	<a href='http://www.sharkresearchcommittee.com' target=_blank>SharkResearchCommittee</a> &nbsp; &nbsp;
+	<a href='http://www.sharkattackfile.net' target=_blank>SharkAttackFile</a>
+</div>
+<div id='kw'>On this page you can find info about locations, coordinates, GPS, Pacific Ocean, shark attack, survived, fatal, great white, surfing, swimming, diving, kayaking, shark encounters</div>
+<div class='ctr'>&copy; helgasoft.com</div>
+
+<script>
+var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
+'2000-09-29,P. E.,Surfing,"Mavericks, Half Moon Bay, CA",Survived,-122.4583339691162,37.482759237502655,\r\n' +
+'2000-11-04,C. S.,Surfing,"North Jetty, Humboldt Bay, CA",Survived,-124.175542,40.86587,\r\n' +
+'2002-05-31,L. F.,Surfing,"Stinson Beach, CA",Survived,-122.64673233032227,37.89382116477037,\r\n' +
+'2002-09-21,R. R.,Surfing,"Moonstone Beach, CA",Survived,-124.11392211914062,41.02964338716638,\r\n' +
+'2002-09-23,G. T.,Surfing,"Cape Kiwanda, OR",Survived,-123.97916793823242,45.222677199620094,\r\n' +
+'2002-11-28,M. C.,Surfing,"Salmon Creek, CA",Survived,-123.07002782821655,38.3570874760449,\r\n' +
+'2003-08-19,D. F.,Swimming,"Avila, CA",Fatal,-120.73236465454102,35.17044062975638,\r\n' +
+'2004-05-28,B. C.,Surfing,"Salmon Creek, CA",Survived,-123.07009220123291,38.35040716052233,\r\n' +
+'2004-06-26,K. F.,Surfing,"San Onofre State Beach, Trail 1, CA",Survived,-117.58134841918945,33.37949432215362,\r\n' +
+'2004-08-15,R. F.,Diving,"Ten Mile River Beach, Ft. Bragg, CA",Fatal,-123.787505,39.532015,\r\n' +
+'2004-08-20,S. L.,Surfing,"204s, San Clemente, CA",Survived,-117.626816,33.422472,\r\n' +
+'2004-09-20,S. M.,Surfing,"Gold Beach, OR",Survived,-124.43132400512694,42.405967152309145,\r\n' +
+'2004-10-01,C. W.,Surfing,"Lifeguard Tower 16, Huntington Beach, CA",Survived,-117.9912757873535,33.641705227439324,\r\n' +
+'2004-10-02,B. I.,Surfing,"Pismo Beach, CA",Survived,-120.64636230468749,35.12075102904729,\r\n' +
+'2004-10-10,P. DJ.,Surfing,"Limantour Beach, Point Reyes, CA",Survived,-122.88087844848633,38.019156349223834,\r\n' +
+'2004-11-11,B. K.,Surfing,"North Jetty, Humboldt Bay, CA",Survived,-124.18971061706543,40.84180103444971,\r\n' +
+'2005-08-24,T. S.,Surfing,"Scripps Pier, La Jolla Shores, CA",Survived,-117.258114,32.866045,\r\n' +
+'2005-10-19,M. H.,Surfing,"Salmon Creek, CA",Survived,-123.07000637054442,38.353638019796755,\r\n' +
+'2005-10-21,C. R.,Surfing,"Mouth of the Klamath River, CA",Survived,-124.090021,41.537583,\r\n' +
+'2005-11-02,J. D.,Surfing,"Ocean Beach, San Francisco, CA",Survived,-122.51798629760742,37.753615462062704,\r\n' +
+'2005-11-03,T. W.,Surfing,"Pillar Point, Mavericks, Half Moon Bay, CA",Survived,-122.4966788291931,37.493349558068054,\r\n' +
+'2005-12-24,B. A.,Surfing,"First Point, Tillamook Head, OR",Survived,-123.99641990661621,45.93581092908431,\r\n' +
+'2006-01-18,M. L.,Surfing,"Second Bowl, Santa Cruz, CA",Survived,-122.01484680175781,36.96066006119624,\r\n' +
+'2006-06-17,J. P.,Diving,"Monterey Plaza Hotel Beach, CA",Survived,-121.89571380615234,36.61251352532886,\r\n' +
+'2006-07-31,R. M.,Surfing,"Short Sands Beach, Oswald State Park, OR",Survived,-123.970469,45.760271,\r\n' +
+'2006-08-29,T. L.,Surfing,"South Jetty, Siuslaw River, Florence, OR",Survived,-124.15117,43.999276,\r\n' +
+'2006-10-31,T. P.,Surfing,"Siletz River, Lincoln City, OR",Survived,-124.02997970581055,44.93794954799314,\r\n' +
+'2006-12-10,R. F.,Surfing,"Dillon Beach, CA",Survived,-122.98627853393553,38.25449278074263,\r\n' +
+'2007-06-30,K. Z.,Swimming,"Will Rogers State Beach, CA",Survived,-118.51999282836913,34.0236404659703,\r\n' +
+'2007-07-17,S. L.,Swimming,"Faria Beach, CA",Survived,-119.38274145126344,34.31705134464762,\r\n' +
+'2007-07-21,Dan,Kayaking,"Bean Hollow Beach, Pigeon Point, CA",Survived,-122.41194248199463,37.22414343337113,\r\n' +
+'2007-07-22,V. C.,Paddleboard,"Malibu, CA",Survived,-118.74535,34.02216,\r\n' +
+'2007-07-28,J. S.,Surfing,"Imperial Beach, CA",Survived,-117.13520050048828,32.592165889507555,\r\n' +
+'2007-08-28,T. E.,Surfing,"Marina State Beach, CA",Survived,-121.82138442993164,36.68039705457155,\r\n' +
+'2007-09-27,S. S.,Surfing,"Moonstone Beach, Humboldt County, CA",Survived,-124.11469459533691,41.024528088513854,\r\n' +
+'2007-09-30,A. S.,Surfing,"Santa Monica Beach, CA",Survived,-118.49287033081055,33.99703103725378,\r\n' +
+'2007-10-07,S. B.,Surfing,"Venice Beach, CA",Survived,-118.46763610839844,33.97112508470244,\r\n' +
+'2008-03-07,T. L.,Surfing,"Dog Beach, Huntington Beach, CA",Survived,-118.02871942520142,33.672122078514114,\r\n' +
+'2008-04-25,D. M.,Swimming,"Fletcher Cove, Solana Beach, CA",Fatal,-117.27594137191771,32.99135142298398,\r\n' +
+'2008-06-21,Bettina Pereira,Kayaking,"West Cove, Catalina Island, CA",Survived,-118.601213,33.46896,\r\n' +
+'2008-09-08,K. K.,Surfing,"Surf Beach, Santa Barbara County, CA",Survived,-120.63468933105469,34.6704879985043,\r\n' +
+'2008-12-20,T. J.,Kayaking,"Dillon Beach, CA",Survived,-122.98009872436523,38.240337375904566,\r\n' +
+'2009-04-06,R. A.,Diving,"La Jolla, CA",Survived,-117.261106,32.85768,\r\n' +
+'2009-07-11,B. H.,Paddleboard,"San Onofre State Beach, CA",Survived,-117.570958,33.375484,\r\n' +
+'2009-08-25,B. E.,Swimming,"Terramar Beach, Carlsbad, CA",Survived,-117.33904838562012,33.130920820123734,\r\n' +
+'2009-08-30,C. H.,Surfing,"Huntington Beach, CA",Survived,-118.01264762878418,33.65599516355675,\r\n' +
+'2009-10-24,S. B.,Surfing,"San Onofre State Beach, CA",Survived,-117.572623,33.377106,\r\n' +
+'2009-11-05,E. G.,Surfing,"Lagunas, Santa Cruz, CA",Survived,-122.15844154357909,36.9800665440453,\r\n' +
+'2009-11-16,J. W.,Fishing,"Loch Lomond, San Rafael, CA",Survived,-122.47923374176024,37.96879758361718,\r\n' +
+'2010-07-02,D. C.,Surfing,"Silver Shoals at Shell Beach, Pismo Beach, CA",Survived,-120.69620847702026,35.16768673935221,\r\n' +
+'2010-07-02,D. B.,Paddleboard,"Dog Patch, San Onofre State Beach, CA",Survived,-117.56743,33.372107,\r\n' +
+'2010-08-02,D. S.,Kayaking,"5 Nautical Miles off, Gaviota State Beach, CA",Survived,-120.2178955078125,34.391612388638656,\r\n' +
+'2010-08-14,A. C.,Kayaking,"Bean Hollow Beach, Pigeon Point, CA",Survived,-122.41507530212402,37.228244012186536,\r\n' +
+'2010-09-27,D. L.,Surfing,"Umpqua River, Winchester Bay, OR",Survived,-124.225217,43.653019,\r\n' +
+'2010-10-22,L. R.,Boogie Brdg,"Surf Beach, Vandenberg AFB, CA",Fatal,-120.64498901367186,34.81944056416081,\r\n' +
+'2010-10-28,S. M.,Surfing,"North Jetty, Siuslaw River, Florence, OR",Survived,-124.145664,44.034062,\r\n' +
+'2011-06-06,J. S.,Diving,"Reef near Children`s Pool, La Jolla, CA",Survived,-117.279679,32.847526,\r\n' +
+'2011-06-24,D. G.,Surfing,"San Onofre State Beach, CA",Survived,-117.576111,33.379093,\r\n' +
+'2011-09-11,B. R.,Surfing,"Samoa Beach, Eureka, CA",Survived,-124.19932365417482,40.82731951134558,\r\n' +
+'2011-10-10,D. N.,Surfing,"`The Cove`, Seaside, OR",Survived,-123.9513972,45.9866208,\r\n' +
+'2011-10-20,B. G.,Surfing,"South Beach State Park, Newport, OR",Survived,-124.07306671142578,44.60159063224486,\r\n' +
+'2011-10-29,E. T.,Surfing,"Marina State Beach, Marina, CA",Survived,-121.81140661239623,36.70023604041322,\r\n' +
+'2011-11-22,H. P.,Kayaking,"Pigeon Point, CA",Survived,-122.398059,37.181599,https://vimeo.com/32551025\r\n' +
+'2011-12-06,? ?,Surfing,"Seaside Cove, Seaside, OR",Survived,-123.942571,45.997025,\r\n' +
+'2012-01-13,S. H.,Surfing,"Nelscott Reef, Lincoln City, OR",Survived,-124.0201950073242,44.98629187566784,\r\n' +
+'2012-05-06,R.M.,Paddleboard,"near Avalon, Catalina Island, CA",Survived,-118.32678,33.34149,https://www.presstelegram.com/2012/05/07/shark-attacks-15-year-old-paddleboarder-at-catalina-island/\r\n' +
+'2012-05-12,J. N.,Kayaking,"North of Leffingwell Landing, Cambria, CA",Survived,-121.12401008605957,35.5823789015691,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2012.05.12-Nocchi.pdf\r\n' +
+'2012-07-07,M. C.,Kayaking,"Pleasure Point, Santa Cruz, CA",Survived,-121.97375535964966,36.95350138600633,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2012.07.07.a-SantaCruz.pdf\r\n' +
+'2012-07-31,J. T.,Surfing,"Topanga State Beach, CA",Survived,-118.57900142669678,34.03676423792958,\r\n' +
+'2012-10-07,G. P.,Windsurfing,"Davenport Landing, CA",Survived,-122.2175359725952,37.02229110771148,\r\n' +
+'2012-10-23,F. S.,Surfing,"Surf Beach near Ocean Park Beach, CA",Fatal,-124.0744400024414,46.45394316729876,\r\n' +
+'2012-10-30,S. S.,Surfing,"North Jetty, Humboldt Bay, CA",Survived,-124.220438,40.793833,\r\n' +
+'2013-06-25,M. F.,Kayaking,"Linda Mar Beach, CA",Survived,-122.513631,37.601225,https://www.pacificariptide.com/pacifica_riptide/2015/07/i-created-this-map-image-from-the-incident-log-of-the-gsat-that-sfgate-entered-the-data-points-for-gsat-keeps-an-incident-lo.html\r\n' +
+'2013-08-17,W. Z.,Surfing,"Pillar Point, Half Moon Bay, CA",Survived,-122.50112056732176,37.501946704324666,\r\n' +
+'2013-08-31,N. K.,Swimming,"Butterfly Beach, Santa Barbara, CA",Survived,-119.64737892150877,34.415468886376765,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2013.08.31-Kennedy.pdf\r\n' +
+'2013-10-06,J. S.,Surfing,"North Jetty, Humboldt Bay, CA",Survived,-124.21108245849608,40.811275746573315,\r\n' +
+'2013-11-22,A. G.,Surfing,"Gleneden Beach, OR",Survived,-124.0422534942627,44.88099187303886,\r\n' +
+'2014-07-05,R. J.,Surfing,"Oceano Dunes State Beach, Oceano, CA",Survived,-120.64104080200194,35.07440290076302,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2014.07.05.a-Surfer.pdf\r\n' +
+'2014-10-02,M. M.,Surfing,"Jack`s Beach, Santa Barbara County, CA",Survived,-119.78530883789062,34.39671178864245,\r\n' +
+'2014-10-03,R. A.,Kayaking,"Vandenberg AFB, Santa Barbara County, CA",Survived,-120.6573486328125,34.76361482922189,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2014.10.03.a-Armenta.pdf\r\n' +
+'2014-10-03,R. H.,Kayaking,"Vandenberg AFB, Santa Barbara County, CA",Survived,-120.66970825195312,34.615126683462194,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2014.10.03.b-Howell.pdf\r\n' +
+'2014-10-19,T. B.,Outrigger,"Leadbetter Point, Santa Barbara County, CA",Survived,-119.69398498535155,34.397136724618285,\r\n' +
+'2014-12-28,K.S.,Surfing,"Montana de Oro State Park, CA",Survived,-120.884729,35.297922,\r\n' +
+'2015-07-10,D.M.,Surfing,"Huntington Beach-Lifeguard Tower 17, CA",Survived,-117.98234939575195,33.63563128627361,\r\n' +
+'2015-08-18,C.L.,Kayaking,"Gaviota State Beach, CA",Survived,-120.18630981445312,34.448821163611186,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2015.08.18.b-Lyon.pdf\r\n' +
+'2015-08-29,D.P.,Surfing,"Morro Rock, Morro Bay, CA",Survived,-120.87132453918456,35.37564912380872,\r\n' +
+'2015-08-29,E.D.,Surfing,"Morro Strand State Beach, Morro Bay, CA",Survived,-120.87222576141357,35.39170887735458,\r\n' +
+'2015-09-06,C.G.,Paddleboard,"El Pescador State Beach,  Malibu, CA",Survived,-118.89297008514403,34.036977615823425,\r\n' +
+'2015-09-24,D.K.,Kayaking,"Horseshoe Rock, Santa Barbara, CA",Survived,-119.74016189575194,34.39047914644578,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2015.09.24-Kenney.pdf\r\n' +
+'2016-05-29,M.K.,Swimming,"Corona del Mar State Beach, CA",Survived,-117.87252902984619,33.58970558152763,\r\n' +
+'2016-07-15,L.F.,Surfing,"North Jetty at Surfside, Sunset Beach, CA",Survived,-118.09101104736328,33.72398272621453,\r\n' +
+'2016-09-01,T.McQ,Freediving,"Refugio State Beach, CA",Survived,-120.0690972805023,34.461312672508534,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2016.09.01-McQuillen.pdf\r\n' +
+'2016-09-17,Y.,Surfing,"South Jetty, Humboldt Bay, CA",Survived,-124.270568,40.72415,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2016.09.17.b-Yuma.pdf\r\n' +
+'2016-10-10,J. T.,Surfing,"Indian Beach, near Cannon Beach, OR",Survived,-123.98217201232909,45.92721459497437,\r\n' +
+'2017-03-18,B. C.,Kayaking,"San Carlos Beach, Monterey, CA",Survived,-121.89468383789061,36.61053276293726,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.03.18-Correiar.pdf\r\n' +
+'2017-04-29,L. E.,Swimming,"San Onofre State Beach, CA",Survived,-117.564871,33.37121,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.04.29.d-Ericson.pdf\r\n' +
+'2017-07-11,S.L.,Kayaking,"`Steamer Lane`, Santa Cruz, CA",Survived,-122.01965332031249,36.94797117025446,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.07.11-Lawson.pdf\r\n' +
+'2017-07-16,M. K.,Surfing,"`South Beach` near the Jetty, Westport, WA",Survived,-124.150891,46.8972,\r\n' +
+'2017-07-20,B. J.,Kayaking,"East Beach South of the wharf, Santa Barbara, CA",Survived,-119.67209815979004,34.41165407412687,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.07.20.b-Jackson.pdf\r\n' +
+'2017-07-20,R. G.,Paddleboard,"Seal Rock near Goleta Beach, Santa Barbara, CA",Survived,-119.83002662658691,34.41285783877771,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.07.20.a-Geyling.pdf\r\n' +
+'2017-08-01,P. C.,Kayaking,"Between Pescadero Point & Bean Hollow Beach, CA",Survived,-122.41747856140135,37.23388194398141,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.08.01-Conroy.pdf\r\n' +
+'2017-11-24,A. G.,Freediving,"Stillwater Cove, Monterey Bay, CA",Survived,-121.94431543350218,36.56259141991421,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2017.11.24-Azatian.pdf\r\n' +
+'2017-12-30,N. J.,Surfing,"Pt. Reyes National Seashore, Marin County, CA",Survived,-122.98370361328124,38.10430528370985,\r\n' +
+'2018-06-25,J. W.,Outrigger,"2 miles West of Harbor Entrance, Oceanside, CA",Survived,-117.42290496826172,33.20020052932254,\r\n' +
+'2018-09-27,E. K.,Kayaking,"Shelter Cove, CA",Survived,-124.06173706054686,40.01808386084316,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2018.09.27-Kaai.pdf\r\n' +
+'2018-09-29,K. H.,Diving,"Beacon`s Beach, Encinitas, CA",Survived,-117.30637907981873,33.06489526764487,\r\n' +
+'2018-10-23,R. E.,Diving,"Farallon Islands near San Francisco, CA",Survived,-122.958984375,37.67947293019486,\r\n' +
+'2019-01-08,N. W.,Surfing,"Sandspit Beach, Montana de Oro State Park, CA",Survived,-120.881463,35.315059,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2019.01.08-Wapner.pdf\r\n' +
+'2019-02-18,J. S.,Surfing,"Dog Beach, Huntington Beach, CA",Survived,-118.02455663681029,33.66888979407736,\r\n' +
+'2019-10-05,D.McD,Kayaking,"Ship Rock, Catalina Island, CA",Survived,-118.5015851,33.459306,https://www.latimes.com/california/story/2019-10-08/great-white-shark-bites-kayak-loses-teeth-catalina-island\r\n' +
+'2019-10-25,D. Z.,Kayaking,"North of Leffingwell Landing, Cambria, CA",Survived,-121.12156391143799,35.5803720010423,\r\n' +
+'2019-12-21,A. C.,Surfing,"Northwest  Santa Rosa Island, Santa Barbara, CA",Survived,-120.23300170898438,34.022502265437836,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2019.12.21-Coons.pdf';
+
+    var map = L.map('map', {
+	  minZoom: 2,
+	  maxZoom: 18,
+	  zoomControl: true
+	}).setView([36.388448, -120.730919], 6);
+	map.addControl(new L.control.scale({ imperial: false }));
+
+	var googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{ 
+		maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '&copy; Google Maps' });
+	var esri = L.esri.tiledMapLayer({
+	  url: 'https://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer', maxZoom: 15 
+	});
+
+	function makeGeoJSON(csvData, layer, sep=',', doAdd=true) {
+		csv2geojson.csv2geojson(csvData, {
+		    latfield: 'lat',
+		    lonfield: 'lon',
+		    delimiter: sep
+		}, 
+		function(err, data) {
+			if (err) console.log(err);
+			layer.addData(data);
+			if (doAdd) layer.addTo(map);
+		});
+	}
+
+	function coord(feature, latlng) {
+			title = "<font color='brown'>"+String(feature.properties.Location)+'</font>';
+			var dicon = feature.properties.Outcome=='Survived' ? 
+				  L.icon({ iconUrl: '../img/sharkb.png', iconSize: [32, 32]})
+				: L.icon({ iconUrl: '../img/sharkf.png', iconSize: [32, 32]})
+			return new L.marker(latlng, { icon: dicon }).bindTooltip(title).openTooltip();
+		}
+	function feat(feature, layer) {
+			var info = feature.properties.Date + '<br />' + 
+			'<span style="white-space:nowrap;">' +feature.properties.Location + "</span><br />" + feature.properties.Activity + 
+			"<br /><span style='" + (feature.properties.Outcome=='Survived' ? 'color:green' : 'color:red') +";font-weight:bold;'>"+ feature.properties.Outcome+'</span>' +
+			(feature.properties.media!='' ? '<br /><a href='+feature.properties.media+' target=_blank >media</a>' :'')
+			layer.bindPopup(info, { maxWidth: "auto" });
+		}
+	function kayakFilter(feature) {
+		if (feature.properties.Activity === "Kayaking") return true
+	}
+	function surfFilter(feature) {
+		if (feature.properties.Activity === "Surfing") return true
+	}
+	function otherFilter(feature) {
+		if (feature.properties.Activity!="Kayaking" & feature.properties.Activity!="Surfing") return true
+	}
+	var kayaking = L.geoJson(null, { filter: kayakFilter, pointToLayer: coord, onEachFeature: feat })
+	var surfing = L.geoJson(null, { filter: surfFilter, pointToLayer: coord, onEachFeature: feat })
+	var othering = L.geoJson(null, { filter: otherFilter, pointToLayer: coord, onEachFeature: feat })
+
+	makeGeoJSON(sharkdata, kayaking, ',');
+	makeGeoJSON(sharkdata, surfing, ',');
+	makeGeoJSON(sharkdata, othering, ',');
+
+	var overlays = {
+	  "kayaking <img src=../img/kayak.png width='32px'/>": kayaking,
+	  "surfing <img src=../img/surfboard.png width='32px'/>": surfing,
+	  "other <img src=../img/swimming.png width='32px'/>": othering
+	};
+	var baseLayers = {
+	  "Google": googleHybrid,
+	  "ESRI depths": esri
+	};
+	L.control.layers(baseLayers, overlays).addTo(map);
+	googleHybrid.addTo(map);		// default map
+
+</script>
+
+</body>
+</html> 
