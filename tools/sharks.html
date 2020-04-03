@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Shark Attacks along the US Pacific Coast</title>
+	<title>Shark Attacks map along the US Pacific Coast</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="keywords" content="ocean, shark attack, survived, fatal, great white, surfing, swimming, diving, kayaking, shark encounters" />
 	<meta name="description" content="Shark Attacks on the West Coast - California, Oregon" />
@@ -34,16 +34,16 @@
   <div class='clearer'></div>
 
 <div class='meat'><br />
-	<span class='nw'><img src=../img/shark.png /> <h2 style='display:inline;'>Shark Attacks, US Pacific Coast, 2000-2019</h2>
+	<span class='nw'><img src=../img/shark.png /> <h2 style='display:inline;'>Shark Attacks Map, US Pacific Coast, 2000-2019</h2>
 	</span>
 	<div id="map"></div>
-	<p>The map is showing only unprovoked attacks on people.</p>
+	<p>Map only includes confirmed, unprovoked shark attacks that resulted in injury or fatality. GPS locations are approximate.</p>
 </div>
 <div class='ctr'>Data Sources:  &nbsp; &nbsp;
 	<a href='http://www.sharkresearchcommittee.com' target=_blank>SharkResearchCommittee</a> &nbsp; &nbsp;
 	<a href='http://www.sharkattackfile.net' target=_blank>SharkAttackFile</a>
 </div>
-<div id='kw'>On this page you can find info about locations, coordinates, GPS, Pacific Ocean, shark attack, survived, fatal, great white, surfing, swimming, diving, kayaking, shark encounters</div>
+<div id='kw'>On this page you can find info about shark attack locations in inshore waters of the Pacific Ocean. Many have survived. A few attacks from great white were fatal. These are shark encounters while surfing, swimming, diving, kayaking. </div>
 <div class='ctr'>&copy; helgasoft.com</div>
 
 <script>
@@ -54,10 +54,10 @@ var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
 '2002-09-21,R. R.,Surfing,"Moonstone Beach, CA",Survived,-124.11392211914062,41.02964338716638,\r\n' +
 '2002-09-23,G. T.,Surfing,"Cape Kiwanda, OR",Survived,-123.97916793823242,45.222677199620094,\r\n' +
 '2002-11-28,M. C.,Surfing,"Salmon Creek, CA",Survived,-123.07002782821655,38.3570874760449,\r\n' +
-'2003-08-19,D. F.,Swimming,"Avila, CA",Fatal,-120.73236465454102,35.17044062975638,\r\n' +
+'2003-08-19,D. F.,Swimming,"Avila, CA",Fatal,-120.73236465454102,35.17044062975638,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2003.08.19-Franzman.pdf\r\n' +
 '2004-05-28,B. C.,Surfing,"Salmon Creek, CA",Survived,-123.07009220123291,38.35040716052233,\r\n' +
 '2004-06-26,K. F.,Surfing,"San Onofre State Beach, Trail 1, CA",Survived,-117.58134841918945,33.37949432215362,\r\n' +
-'2004-08-15,R. F.,Diving,"Ten Mile River Beach, Ft. Bragg, CA",Fatal,-123.787505,39.532015,\r\n' +
+'2004-08-15,R. F.,Diving,"Ten Mile River Beach, Ft. Bragg, CA",Fatal,-123.787505,39.532015,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2003.08.19-Franzman.pdf\r\n' +
 '2004-08-20,S. L.,Surfing,"204s, San Clemente, CA",Survived,-117.626816,33.422472,\r\n' +
 '2004-09-20,S. M.,Surfing,"Gold Beach, OR",Survived,-124.43132400512694,42.405967152309145,\r\n' +
 '2004-10-01,C. W.,Surfing,"Lifeguard Tower 16, Huntington Beach, CA",Survived,-117.9912757873535,33.641705227439324,\r\n' +
@@ -86,7 +86,7 @@ var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
 '2007-09-30,A. S.,Surfing,"Santa Monica Beach, CA",Survived,-118.49287033081055,33.99703103725378,\r\n' +
 '2007-10-07,S. B.,Surfing,"Venice Beach, CA",Survived,-118.46763610839844,33.97112508470244,\r\n' +
 '2008-03-07,T. L.,Surfing,"Dog Beach, Huntington Beach, CA",Survived,-118.02871942520142,33.672122078514114,\r\n' +
-'2008-04-25,D. M.,Swimming,"Fletcher Cove, Solana Beach, CA",Fatal,-117.27594137191771,32.99135142298398,\r\n' +
+'2008-04-25,D. M.,Swimming,"Fletcher Cove, Solana Beach, CA",Fatal,-117.27594137191771,32.99135142298398,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2008.04.25-DaveMartin.pdf\r\n' +
 '2008-06-21,Bettina Pereira,Kayaking,"West Cove, Catalina Island, CA",Survived,-118.601213,33.46896,\r\n' +
 '2008-09-08,K. K.,Surfing,"Surf Beach, Santa Barbara County, CA",Survived,-120.63468933105469,34.6704879985043,\r\n' +
 '2008-12-20,T. J.,Kayaking,"Dillon Beach, CA",Survived,-122.98009872436523,38.240337375904566,\r\n' +
@@ -102,7 +102,7 @@ var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
 '2010-08-02,D. S.,Kayaking,"5 Nautical Miles off, Gaviota State Beach, CA",Survived,-120.2178955078125,34.391612388638656,\r\n' +
 '2010-08-14,A. C.,Kayaking,"Bean Hollow Beach, Pigeon Point, CA",Survived,-122.41507530212402,37.228244012186536,\r\n' +
 '2010-09-27,D. L.,Surfing,"Umpqua River, Winchester Bay, OR",Survived,-124.225217,43.653019,\r\n' +
-'2010-10-22,L. R.,Boogie Brdg,"Surf Beach, Vandenberg AFB, CA",Fatal,-120.64498901367186,34.81944056416081,\r\n' +
+'2010-10-22,L. R.,Boogie Brdg,"Surf Beach, Vandenberg AFB, CA",Fatal,-120.64498901367186,34.81944056416081,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2010.10.22-Ransom.pdf\r\n' +
 '2010-10-28,S. M.,Surfing,"North Jetty, Siuslaw River, Florence, OR",Survived,-124.145664,44.034062,\r\n' +
 '2011-06-06,J. S.,Diving,"Reef near Children`s Pool, La Jolla, CA",Survived,-117.279679,32.847526,\r\n' +
 '2011-06-24,D. G.,Surfing,"San Onofre State Beach, CA",Survived,-117.576111,33.379093,\r\n' +
@@ -113,12 +113,12 @@ var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
 '2011-11-22,H. P.,Kayaking,"Pigeon Point, CA",Survived,-122.398059,37.181599,https://vimeo.com/32551025\r\n' +
 '2011-12-06,? ?,Surfing,"Seaside Cove, Seaside, OR",Survived,-123.942571,45.997025,\r\n' +
 '2012-01-13,S. H.,Surfing,"Nelscott Reef, Lincoln City, OR",Survived,-124.0201950073242,44.98629187566784,\r\n' +
-'2012-05-06,R.M.,Paddleboard,"near Avalon, Catalina Island, CA",Survived,-118.32678,33.34149,https://www.presstelegram.com/2012/05/07/shark-attacks-15-year-old-paddleboarder-at-catalina-island/\r\n' +
+'2012-05-06,R.M.,Paddleboard,"near Avalon, Catalina Island, CA",Survived,-118.330871,33.359395,https://www.presstelegram.com/2012/05/07/shark-attacks-15-year-old-paddleboarder-at-catalina-island/\r\n' +
 '2012-05-12,J. N.,Kayaking,"North of Leffingwell Landing, Cambria, CA",Survived,-121.12401008605957,35.5823789015691,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2012.05.12-Nocchi.pdf\r\n' +
 '2012-07-07,M. C.,Kayaking,"Pleasure Point, Santa Cruz, CA",Survived,-121.97375535964966,36.95350138600633,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2012.07.07.a-SantaCruz.pdf\r\n' +
 '2012-07-31,J. T.,Surfing,"Topanga State Beach, CA",Survived,-118.57900142669678,34.03676423792958,\r\n' +
 '2012-10-07,G. P.,Windsurfing,"Davenport Landing, CA",Survived,-122.2175359725952,37.02229110771148,\r\n' +
-'2012-10-23,F. S.,Surfing,"Surf Beach near Ocean Park Beach, CA",Fatal,-124.0744400024414,46.45394316729876,\r\n' +
+'2012-10-23,F. S.,Surfing,"Surf Beach near Lompoc, CA",Fatal,-120.6100336,34.6827641,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2012.10.23-Solorio.pdf\r\n' +
 '2012-10-30,S. S.,Surfing,"North Jetty, Humboldt Bay, CA",Survived,-124.220438,40.793833,\r\n' +
 '2013-06-25,M. F.,Kayaking,"Linda Mar Beach, CA",Survived,-122.513631,37.601225,https://www.pacificariptide.com/pacifica_riptide/2015/07/i-created-this-map-image-from-the-incident-log-of-the-gsat-that-sfgate-entered-the-data-points-for-gsat-keeps-an-incident-lo.html\r\n' +
 '2013-08-17,W. Z.,Surfing,"Pillar Point, Half Moon Bay, CA",Survived,-122.50112056732176,37.501946704324666,\r\n' +
