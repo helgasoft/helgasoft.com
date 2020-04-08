@@ -266,6 +266,10 @@
                                 
                                 <div class="portfolio_content_area" >
                                     <div class="portfolio_menu">
+						<strong>San Diego County COVID map by zipcode</strong><br />(smartphone simulation testing) <br />
+						<video id="video1" preload="auto" loop="loop" src="img/sd-covid-map3.mp4" type="video/mp4" muted="muted">
+						  San Diego Covid cases by zip code
+						</video>
                                         <ul>
                              <li><a href='tools/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />Biotech <div class='fsm'>R/Shiny</div></a></li>
                              <li><a href='tools/stock.html'><img src='img/stockapp.png' width='200px' /><br />Stock Market <div class='fsm'>R/Shiny/quantmod</div></a></li>
@@ -354,6 +358,31 @@
                                               
         </div><!-- body ends -->
 
+	<script>
+	// video control 
+function createObserver() {
+  let observer;
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [0.25, 0.6]
+  };
+  observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(videoElement);
+}
+function handleIntersect(entries, observer) {
+  entries.forEach((entry) => {
+		if (entry.intersectionRatio >= 0.6) { 
+			entry.target.play(); 
+		} 
+		if (entry.intersectionRatio <= 0.25) {
+			entry.target.pause(); 
+		}
+  });
+}
+var videoElement = document.querySelector("#video1");
+createObserver();
+	</script>
 
         <!-- Plugins JS -->
 	<script src="inc/jquery/jquery-1.11.1.min.js"></script>
@@ -366,7 +395,7 @@
 	<script src="inc/classie.js"></script>
 	<script src="inc/jquery.easing.min.js"></script>
 	<script src="inc/jquery.counterup.min.js"></script>
-	<script src="inc/smoothscroll.js"></script>
+<!--	<script src="inc/smoothscroll.js"></script> -->
 
 	<!-- Theme JS -->
 	<script src="js/theme.js"></script>
