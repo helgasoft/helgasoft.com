@@ -498,7 +498,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 .portfoloi_top{}
 .portfoloi_content_area{}
 .portfolio_menu{
-	text-align: center;
+/*	text-align: center;*/
 	overflow: hidden;
 	margin-top:22px;
 	margin-bottom:48px;
@@ -636,93 +636,6 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 /* ===== End Counter-Up ===== */
 
 
-/* ===== Begin team ===== */
-.team-item {
-	height: 120px;
-}	
-.team-item .team-triangle {
-	width: 120px;
-	height: 120px;
-	background: transparent;
-	-ms-transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	margin: 0 auto;
-	position: relative;
-	top: 25px;
-	box-shadow: 0 0 0 6px #FFFFFF, 0 0 0 7px #dadbdb;
-	overflow: hidden;
-}
-.team-item img {
-    max-width: 100%;
-}
-.team-items {
-	margin-bottom: 50px;
-	padding-top: 10px;
-	margin-top: 0;
-}
-.team-triangle .content {
-	-ms-transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	top: -35px;
-	position: absolute;
-	left: -37px;
-	width: 190px;
-	height: 190px;
-}
-.team-hover {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba( 103, 109, 117, 0.9);
-	opacity: 0;
-	-webkit-transition: opacity 0.4s ease-in; /* For Safari 3.1 to 6.0 */
-    transition: opacity 0.4s ease-in;
-}
-.team-item .team-triangle:hover .team-hover {
-	opacity: 1;
-}
-.team-hover i {
-    color: rgba(255, 255, 255,.75);
-    font-size: 28px;
-    margin-top: 57px;
-    position: relative;
-}
-.team-hover p {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 0;
-}
-.team-items .col-md-2:nth-child(7n+5) {
-	clear: left;
-	margin-left: 24.9999999%;
-}
-.team-items .col-md-2:nth-child(7n+1) {
-	clear: left;
-	margin-left: 16.6666666%;
-}
-/* ===== End team ===== */
-
-
-/* ===== Begin partners ===== */
-#partners-section {
-	padding: 80px 0;
-}
-.partners {
-	background-color: #252320;
-}
-
-.partners img {
-	max-width: 100%;
-	padding: 0 15px;
-}
-/* ===== End partners ===== */
-
-
 /* ===== Begin panels ===== */
 .panel, .panel-heading, .panel-footer  {
 }
@@ -786,28 +699,6 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 	transform: rotate(45deg);
 }
 /* ===== End prices ===== */
-
-
-/* ===== Begin social ===== */
-#social-section {
-	padding: 80px 0;
-}
-ul.social-list {
-	text-align: center;
-	margin: 0 auto;
-}
-ul.social-list li{
-	display: inline-block;
-	margin-right: 20px;
-}
-ul.social-list li .rotate-box-1 {
-	margin: 0;
-}
-ul.social-list li a i {
-	color: #fff;
-	font-size:20px;
-}
-/* ===== End social ===== */
 
 
 /* ===== Begin contact ===== */
@@ -1157,3 +1048,46 @@ p.subtitle {
   width: 100%;
   height: 100%;
 }
+.tcenter { text-align: center; }
+
+.showSlide {  
+    display: none
+}  
+.showSlide img {  
+    width: 100%;  
+}
+.slidercontainer {  
+    max-width: 1000px;  
+    position: relative;  
+    margin: 15px;  
+}  
+.sleft, .sright {  
+    cursor: pointer;  
+    position: absolute;  
+    top: 50%;  
+    width: auto;  
+    padding: 16px;  
+    margin-top: -22px;  
+    color: white;  
+    font-weight: bold;  
+    font-size: 24px;  
+    transition: 0.6s ease;  
+    border-radius: 0 3px 3px 0;
+}  
+.sright {  
+    right: 0;  
+    border-radius: 3px 0 0 3px;  
+}  
+    .sleft:hover, .sright:hover {  
+        background-color: rgba(115, 115, 115, 0.8);
+        text-decoration: none;  
+    }  
+.scontent {  
+    color: #eff5d4;  
+    font-size: 12px;  
+    padding: 8px 12px;  
+    position: absolute;  
+    top: 10px;  
+    width: 100%;  
+    text-align: center;
+}  

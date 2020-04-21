@@ -266,10 +266,43 @@
                                 
                                 <div class="portfolio_content_area" >
                                     <div class="portfolio_menu">
-						<strong>San Diego County COVID map by zipcode</strong><br />(smartphone simulation testing) <br />
+						<div class='tcenter'>
+							<strong>Progress of southern CA cities weekly layoffs</strong><br />
+							ETL of <a href='https://www.edd.ca.gov'>EDD data</a> with R, dplyr, leaflet, geocoding
+						</div>
+						<div class="slidercontainer">  
+					        <div class="showSlide">  
+					            <img src="img/layoff9.png" />  
+					        </div>  
+					        <div class="showSlide">  
+					            <img src="img/layoff10.png" />  
+					        </div>  
+					        <div class="showSlide">  
+					            <img src="img/layoff11.png" />  
+					        </div>  
+					        <div class="showSlide">  
+					            <img src="img/layoff12.png" />  
+					        </div>  
+					        <div class="showSlide">  
+					            <img src="img/layoff13.png" />  
+					        </div>  
+					        <div class="showSlide">  
+					            <img src="img/layoff14.png" />  
+					        </div>
+					        <div class="showSlide">  
+					            <img src="img/layoff15.png" />  
+					        </div> 
+					        <!-- Navigation arrows -->  
+					        <a class="sleft" onclick="nextSlide(-1)">&laquo;</a>  
+					        <a class="sright" onclick="nextSlide(1)">&raquo;</a> 
+						</div>
+						
+						<div class='tcenter'>
+						<strong>San Diego County COVID map by zipcode</strong><br />smartphone simulation testing <p>&nbsp;</p>
 						<video id="video1" preload="auto" loop="loop" src="img/sd-covid-map3.mp4" type="video/mp4" muted="muted">
 						  San Diego Covid cases by zip code
 						</video>
+						</div>
                                         <ul>
                              <li><a href='tools/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />Biotech <div class='fsm'>R/Shiny</div></a></li>
                              <li><a href='tools/stock.html'><img src='img/stockapp.png' width='200px' /><br />Stock Market <div class='fsm'>R/Shiny/quantmod</div></a></li>
@@ -359,6 +392,39 @@
         </div><!-- body ends -->
 
 	<script>
+	(function(d) {
+	   'use strict';
+	   var divs = d.getElementsByClassName('showSlide');
+	   for ( var c = 0; c < divs.length; c ++ ){
+	     var dv = d.createElement( 'div' );
+		dv.classList.add( 'scontent' );
+		dv.appendChild( d.createTextNode( 'Southern CA cities weekly layoffs' ) );
+		divs[c].appendChild( dv );
+        }
+	}(document));
+
+        var slide_index = 4;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }   
+
 	// video control 
 function createObserver() {
   let observer;
