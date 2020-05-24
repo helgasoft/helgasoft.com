@@ -304,9 +304,6 @@ rsconnect::deployApp(&#39;C:/Projects/R/urproj&#39;) # must have app.R file</p>
 <p><span class='qq'>rstudio &quot;error creating notebook: cannot open the connection&quot;</span><br />
 &gt; open a Project</p>
 
-<p><span class='qq'>need finite &#39;ylim&#39; values</span><br />
-&gt; In plot1, change y = range(x$VALUE) to y = range(x$VALUE, na.rm=TRUE) to remove NA missing values.</p>
-
 <p><span class='qq'>compile library source code</span><br />
 <a href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a><br />
 &gt; open any R-project ? Project Options : Build Tools: set the folder where the source files are<br />
@@ -333,18 +330,6 @@ wb = xlsxToR(&quot;C:\\Users\\user1\\Downloads\\Ten-Symbol-Ten-Years.xlsx&quot;,
 &gt; <a href="https://github.com/stan-dev/rstan/issues/467">https://github.com/stan-dev/rstan/issues/467</a><br />
 &gt; cat(&#39;Sys.setenv(BINPREF = &quot;C:/Util/Rtools/mingw_$(WIN)/bin/&quot;)&#39;, file = file.path(Sys.getenv(&quot;HOME&quot;), &quot;.Rprofile&quot;), sep=&quot;\n&quot;, append = TRUE)</p>
 
-<p><span class='qq'>r layout &#39;invalid graphics state&#39;</span><br />
-&gt; dev.off()</p>
-
-<p><span class='qq'>Error in plot.new() : figure margins too large</span><br />
-&gt; graphics.off()<br />
-par(&quot;mar&quot;) #&gt; [1] 5.1 4.1 4.1 2.1<br />
-par(mar=c(1,1,1,1))<br />
-&quot;Error in plot.new() : figure margins too large&quot;. To avoid such errors you can first check par(&quot;mar&quot;) output. You should be getting:<br />
-[1] 5.1 4.1 4.1 2.1<br />
-To change that write:<br />
-par(mar=c(1,1,1,1)) This should rectify the error. Or else you can change the values accordingly.</p>
-
 <p><span class='qq'>unable to find an inherited method for function &lsquo;span&rsquo; for signature &lsquo;&quot;shiny.tag&quot;&rsquo;</span><br />
 &gt; was using geosphere::span instead of htmltools::span</p>
 
@@ -358,19 +343,11 @@ C:/Users/user1/Documents/R/win-library/3.5</p>
 <p><span class='qq'>Warning: Error in [.data.frame: undefined columns selected</span><br />
 &gt; bad data.frame in chart_Series or add_TA</p>
 
-<p><span class='qq'>Dygraph</span> <br>
-<a href="https://stackoverflow.com/questions/55361481/show-hide-series-interractively-in-dygraph?rq=1">https://stackoverflow.com/questions/55361481/show-hide-series-interractively-in-dygraph?rq=1</a><br />
-&gt; You could do it with a plugin like this one <a href="https://github.com/rstudio/dygraphs/issues/63">https://github.com/rstudio/dygraphs/issues/63</a><br />
-similar to this <a href="http://dygraphs.com/tests/visibility.html">http://dygraphs.com/tests/visibility.html</a></p>
-
 <p><span class='qq'>quantstrat applyStrategy &#39;Transactions must be added in order&#39;</span><br />
 &gt; .blotter &lt;- new.env(); .strategy &lt;- new.env()<br />
 object &#39;.blotter&#39; not found<br />
 # <a href="https://stat.ethz.ch/pipermail/r-sig-finance/2012q2/010169.html">https://stat.ethz.ch/pipermail/r-sig-finance/2012q2/010169.html</a><br />
 &gt; if (!exists(&#39;.blotter&#39;)) .blotter &lt;- new.env()</p>
-
-<p><span class='qq'>Warning: Error in xy.coords: &#39;x&#39; and &#39;y&#39; lengths differ</span><br />
-&gt; set Sys.envir(TZ=&#39;UTC&#39;)</p>
 
 <p><span class='qq'>blotter: Warning in getInstrument(Symbol) : instrument BCOR not found, please create it first.</span><br />
 &gt; stock(symbols, currency=&quot;USD&quot;)</p>
@@ -378,8 +355,31 @@ object &#39;.blotter&#39; not found<br />
 <p><span class='qq'>Error in curl::curl_fetch_memory(url, handle = handle) : Recv failure: Connection was reset</span><br />
 &gt; was HTTP, replace by HTTPS</p>
 
+<p><span class='qq'>Dygraph</span> <br>
+<a href="https://stackoverflow.com/questions/55361481/show-hide-series-interractively-in-dygraph?rq=1">https://stackoverflow.com/questions/55361481/show-hide-series-interractively-in-dygraph?rq=1</a><br />
+&gt; You could do it with a plugin like this one <a href="https://github.com/rstudio/dygraphs/issues/63">https://github.com/rstudio/dygraphs/issues/63</a><br />
+similar to this <a href="http://dygraphs.com/tests/visibility.html">http://dygraphs.com/tests/visibility.html</a></p>
+
+<p><span class='qq'>r layout &#39;invalid graphics state&#39;</span><br />
+&gt; dev.off()</p>
+
+<p><span class='qq'>need finite &#39;ylim&#39; values</span><br />
+&gt; In plot1, change y = range(x$VALUE) to y = range(x$VALUE, na.rm=TRUE) to remove NA missing values.</p>
+
+<p><span class='qq'>Error in plot.new() : figure margins too large</span><br />
+&gt; graphics.off()<br />
+par(&quot;mar&quot;) #&gt; [1] 5.1 4.1 4.1 2.1<br />
+par(mar=c(1,1,1,1))<br />
+&quot;Error in plot.new() : figure margins too large&quot;. To avoid such errors you can first check par(&quot;mar&quot;) output. You should be getting:<br />
+[1] 5.1 4.1 4.1 2.1<br />
+To change that write:<br />
+par(mar=c(1,1,1,1)) This should rectify the error. Or else you can change the values accordingly.</p>
+
 <p><span class='qq'>after restart R: Error in plot.xy(xy.coords(x, y), type = type, ...) : plot.new has not been called yet</span><br />
 &gt; plot.new()</p>
+
+<p><span class='qq'>Warning: Error in xy.coords: &#39;x&#39; and &#39;y&#39; lengths differ</span><br />
+&gt; set Sys.envir(TZ=&#39;UTC&#39;)</p>
 
 <p><span class='qq'>rselenium not resolved from current namespace (subprocess)</span><br />
 &gt; restart R</p>
@@ -473,6 +473,9 @@ gpedit.msc &gt; User Configuration &gt; Administrative Templates &gt; Windows Co
 Click the Settings heading to alphabetize the list, then scroll down and find, then double-click <i>&#39;Turn off the caching of thumbnails in hidden thumbs.db files&#39;</i> &gt; Enable &gt; reboot<br />
 see also <i>C: drive cleanup</i> below</p>
 
+<p><span class='qq'>C: drive cleanup</span><br />
+&gt; Windows Explorer > C: > Properties > General > Disk Cleanup > Clean system files > select Windows Update, etc</p>
+
 <p><span class='qq'>recent files</span><br />
 <a href="https://www.howtogeek.com/274573/how-do-you-get-the-all-recent-files-list-back-in-windows-10/">https://www.howtogeek.com/274573/how-do-you-get-the-all-recent-files-list-back-in-windows-10/</a><br />
 press Windows Key+R &gt; Enter shell:recent &gt; hit Return</p>
@@ -483,9 +486,6 @@ press Windows Key+R &gt; Enter shell:recent &gt; hit Return</p>
 <p><span class='qq'>auto download images as JFIF</span><br />
 <a href="https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/">https://www.cnet.com/forums/discussions/jpeg-to-jfif-automatically-help/</a><br />
 &gt; Open regedit &gt; HKEY_CLASSES_ROOT &gt; MIME &gt; DATABASE &gt; Content type &gt; image/jpeg &gt; change &quot;extension&quot; value to .jpg</p>
-
-<p><span class='qq'>C: drive cleanup</span><br />
-&gt; Windows Explorer > C: > Properties > General > Disk Cleanup > Clean system files > select Windows Update, etc</p>
 
 <p><span class='qq'>Macrium reflect service cannot be killed</span><br />
 &gt; Services &gt; set it to Manual</p>
