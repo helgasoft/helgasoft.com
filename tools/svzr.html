@@ -9,46 +9,24 @@
 		<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<!-- Libs and Plugins CSS -->
-	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/mobile.css">
-	
-	<!-- Skin CSS -->
-	<link rel="stylesheet" href="../css/skin/night-purple.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/misc.css" />
+
 </head>
 
-<body data-target="#main-navbar">   
-    	<div class="body">
-	<!--========== BEGIN HEADER ==========-->
-	<header id="header" class="header-main">
-	
-	<!-- Begin Navbar -->
-	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-	
-	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
-	      </button>
-	      <a class="navbar-brand page-scroll" href="../">Helgasoft</a>
-	    </div>
-	
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
-			</ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container -->
-	</nav>
-	<!-- End Navbar -->
-	
-	</header>
-	<!-- ========= END HEADER =========-->
+<body>
+   <!-- ========= HEADER =========-->
+  <div class='header-left'>
+	<a href="../"><img src='../img/logo.png' alt='Helgasoft' class='header-pad' /></a>
+	<div class='stay-right header-pad'>
+		<a href='../#portfolio-section' class='whity'>Back</a>
+	</div>
+  </div>
+  <div class='clearer'></div>
+
 <div class="container">
-<p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
-<h2>Shiny application - video demo</h2>
+<p>&nbsp;</p>
+<h3>Biotech app - video demo</h3>
 <p>
 Web interface in <a href='https://shiny.rstudio.com/'>Shiny</a> built for a biotech cytometry library.  Features include:
 &nbsp;</p>
@@ -58,18 +36,18 @@ Web interface in <a href='https://shiny.rstudio.com/'>Shiny</a> built for a biot
 <li>Lenghty process indicator</li> 
 <li>Input parameter range and consistency checks</li>
 <li>Option to save results in PDF, PNG and CSV format</li>
-</ul>   
-<p>&nbsp;</p>
+</ul>
 
-<div class="video-responsive">
-	<video width="592" height="362" controls="controls" controlsList="nodownload" autoplay="autoplay" muted playsinline poster='../img/svzr.jpg'>
+<div class="embed-responsive embed-responsive-16by9">
+	<video class="embed-responsive-item" controls autoplay muted>
 	  <source src="../img/svzr.mp4" type="video/mp4" />
 	  Your browser does not support the video tag.
-	</video> 
+	</video>
 </div>
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </div>
-</div>
+
 </body>
 </html>

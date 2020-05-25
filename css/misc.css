@@ -1,5 +1,5 @@
 
-	body { font: 14px/1.5em Verdana; }
+	body { font: 14px/1.5em Verdana; margin:0; }
 	img { vertical-align:middle; }
 	a { text-decoration: none; }
 	a.whity { color:white; font-weight:bold }
@@ -7,8 +7,9 @@
 	#map { position: relative; height: 600px; width: 100%; }
 	#kw { display:none;}
 	.ctr { text-align:center; }
-	.header-left { float: left; margin-top: 3px; width: 100%; background-color: #51497F;}
-	.stay-right { float: right; margin-top: 5px; padding-right: 50px; }
+	.header-pad { padding: 10px 35px; }
+	.header-left { float: left; width: 100%; background-color: #51497F;}
+	.stay-right { float: right; margin-top: 10px; }
 	.stay-left { float: left; margin-top: 5px; }
 	.clearer { clear: both;}
 	.nw { white-space:nowrap; }

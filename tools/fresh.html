@@ -24,9 +24,9 @@
 <body onload="domLoaded();">
    <!-- ========= HEADER =========-->
   <div class='header-left'>
-	<a href="../" style='padding-left:35px;'><img src='../img/logo.png' alt='Helgasoft' /></a>
-	<div class='stay-right'>
-	<a href=# onclick='window.history.back();' class='whity'>Back</a>
+	<a href="../"><img src='../img/logo.png' alt='Helgasoft' class='header-pad' /></a>
+	<div class='stay-right header-pad'>
+		<a href=# onclick='window.history.back();' class='whity'>Back</a>
 	</div>
   </div>
   <div class='clearer'></div>
@@ -56,33 +56,39 @@ Ever wondered where is all the fish ?  Click on a marker to see details below th
 </div>
 
 <div id='kw'>map, locations, coordinates, GPS, Bass,CatFish,Salmon,Inland Salmon,Panfish,Shad,Steelhead,Striped Bass,Sturgeon,Trout Wild,Trout Hatchery,Backcountry, Trout,Lahontan Cutthroat Trout, Rainbow Trout,Golden Trout,Brown Trout,Brook Trout,Longitude,Latitude,Boat,Catch And Release</div>
-<p>&nbsp;</p>
+
 <div class='ctr'>&copy; helgasoft.com</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 </div>
 
 <script src='../js/fresh-data.js' type='text/javascript'></script>
 <script>
-function domLoaded() {
-	document.getElementById("allfish").addEventListener('click', function() {
-		if (this.checked) {	  //checking 'ALL' unchecks the rest
-			var elems = document.getElementsByName("ftype");
-			for(i in elems) { elems[i].checked = false; }	// reset all chkboxes
-		}
-	});
-	var elems = document.getElementsByName('ftype');
-	for(i in elems) elems[i].addEventListener('click', function() { 
-		if (this.checked) document.getElementById("allfish").checked = false;}); //, false);
-}
+	function domLoaded() {
+		document.getElementById("allfish").addEventListener('click', function() {
+			if (this.checked) {	  //checking 'ALL' unchecks the rest
+				var elems = document.getElementsByName('ftype');
+				for(i in elems) { elems[i].checked = false; }	// reset all chkboxes
+			}
+		});
+		document.querySelectorAll("input[name='ftype']").forEach(item => {
+		  item.addEventListener('click', function() {
+		    if (this.checked) document.getElementById("allfish").checked = false;
+		  })
+		})
+	}
 
 	function doEachFeature(feature, layer) {
 		var popupContent = feature.properties.NAME; 
-		layer.bindPopup(popupContent, {closeButton: false}); //, offset: L.point(0, -20)});
+		layer.bindPopup(popupContent, {closeButton: false});
 	
 		layer.on('click', function (e) {
-			var keys = [];
+			let keys = [];
 			for (var key in e.target.feature.properties) { if (e.target.feature.properties[key]=='1') keys.push(key); }
-			var clicko = "<div class='stay-left'><b>Name</b> " + e.target.feature.properties.NAME;
-			clicko += "</div><div class='stay-right'><span class='nw'><b>Elevation</b>(ft) " +e.target.feature.properties.Elevation+ "</span></div> <div class='clearer'></div>";
+			let elev = Number(e.target.feature.properties.Elevation);
+			let clicko = "<div class='stay-left'><b>Name</b> " + e.target.feature.properties.NAME;
+			clicko += "</div><div class='stay-right'><span class='nw'><b>Elevation</b>(ft) " +(isNaN(elev) ? '-' : elev.toLocaleString())+ "</span></div> <div class='clearer'></div>";
 			clicko += '<b>Acres</b> ' + (e.target.feature.properties.AcresReach!=null ? e.target.feature.properties.AcresReach : '') + ' &nbsp; &nbsp; &nbsp; &nbsp;';
 			clicko += (keys.find(elem => elem=='Bass')) ? " <span class='nw'>bass <img src='../img/bass_fish.png' /></span>" : '';
 			clicko += (keys.find(elem => elem=='CatFish')) ? " <span class='nw'>catfish <img src='../img/catfish.png' /></span>" : '';
@@ -91,7 +97,7 @@ function domLoaded() {
 			clicko += (keys.find(elem => elem=='bcBrownTrout')) ? " <span class='nw'>brown <img src='../img/brown.png' /></span>" : '';
 			clicko += (keys.find(elem => elem=='bcBrookTrout')) ? " <span class='nw'>brook <img src='../img/brook.png' /></span>" : '';
 			clicko += (keys.find(elem => elem=='bcRainbowTrout')) ? " <span class='nw'>rainbow <img src='../img/rainbow.png' /></span>" : '';
-			var rest = keys.filter(el => 'Bass,CatFish,bcTrout,TroutWild,bcGoldenTrout,bcBrownTrout,bcBrookTrout,bcRainbowTrout'.indexOf(el) == -1 ); //filter OUT!
+			let rest = keys.filter(el => 'Bass,CatFish,bcTrout,TroutWild,bcGoldenTrout,bcBrownTrout,bcBrookTrout,bcRainbowTrout'.indexOf(el) == -1 ); //filter OUT!
 			clicko += '&nbsp; &nbsp; &nbsp; ' + rest.toString();
 			clicko += '<br />'+e.target.feature.properties.FishingComments;
 			document.getElementById('details').innerHTML = clicko;
@@ -190,16 +196,7 @@ function makeGeoJSON(csvData) {
 }
 
 makeGeoJSON(mycsv);
-/*
-$(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: './fspots2.txt',
-        dataType: "text",
-        success: function(csvData) { makeGeoJSON(csvData); }
-     });
-});
-*/
+
 </script>
 
 </body>

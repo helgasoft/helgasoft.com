@@ -10,12 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
-	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../css/mobile.css">
+<!--	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">-->
+<!--	<link rel="stylesheet" href="../css/style.css">-->
+<!--	<link rel="stylesheet" href="../css/mobile.css">-->
 	
 	<!-- Skin CSS -->
-	<link rel="stylesheet" href="../css/skin/night-purple.css">
+<!--	<link rel="stylesheet" href="../css/skin/night-purple.css">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/misc.css" />
 
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.2.0/dist/MarkerCluster.css" />
 	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.2.0/dist/MarkerCluster.Default.css" />
@@ -24,8 +26,8 @@
 	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
  	<script src='https://unpkg.com/leaflet.markercluster@1.2.0/dist/leaflet.markercluster.js' type='text/javascript'></script>
 
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' type='text/javascript'></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vissense/0.10.0/vissense.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/vissense/0.10.0/vissense.min.js"></script>-->
 
 	<style>
 		#map {
@@ -49,42 +51,25 @@
 		a { color: blue; }
 	</style>
 </head>
+<body>
+   <!-- ========= HEADER =========-->
+  <div class='header-left'>
+	<a href="../"><img src='../img/logo.png' alt='Helgasoft' class='header-pad' /></a>
+	<div class='stay-right header-pad'>
+		<a href='../#portfolio-section' class='whity'>Back</a>
+	</div>
+  </div>
+  <div class='clearer'></div>
 
-<body data-target="#main-navbar">   
-    	<div class="body">
-	<!--========== BEGIN HEADER ==========-->
-	<header id="header" class="header-main">
 
-	<!-- Begin Navbar -->
-	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-	
-	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <a class="page-scroll" href="../#portfolio-section" style='color: white;'>BACK</a>
-	      </button>
-	      <a class="navbar-brand page-scroll" href="../">Helgasoft</a>
-	    </div>
-	
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
-			</ul>
-	    </div>
-	  </div>
-	</nav>
-	<!-- End Navbar -->	
-	</header>
-	<!-- ========= END HEADER =========-->
 <div class="container">
-<p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
+<p>&nbsp;</p>
 
-<h2>Put me on a map!</h2>
-<br /><p>
-Have you seen web pages screeming "<i>Put me on a map !</i>" ?<br /> 
-One of them is <a href='https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa'>French Tech Visa</a>. There is company info and search by area, but no map. <br />
-Here is a <b>live</b> geocoded map for the same page which could be used for location search. (data as of Dec 2017)
+<h3>Put me on a map!</h3>
+<p>
+Have you seen web pages screeming for a map? <!-- https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa -->
+One of them was <a href='https://lafrenchtech.com/en/how-france-helps-startups/french-tech-visa/visa-for-employees/'>French Tech Visa</a>. There was company info and search by area, but no map. <br />
+Below is a <b>live</b> geocoded map for the same page which could be used for location search. (data as of Dec 2017)
 </p>
 
 	<div class='cblock'>
@@ -107,41 +92,46 @@ write(xjson, file=out)
 Used Javascript next to recode the data from JSON to <i>geojson</i> format. You can see the file <a href='../img/french.geojson'>raw</a>, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741'>here</a> on a map. Finally we read this same geojson file and present it on a <a href='http://leafletjs.com/'>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voilà!
 
 	<p>&nbsp;</p>
-	<hr><h2>Photos on a map</h2>
+
+	<hr><h3>Photos on a map</h3>
 	Below is a demo clip of another Leaflet map. Hover mouse on (green) markers will show related images. Images could be dragged over the map, zoomed along with the map, or closed by double-click.
-	<br />
-	<div class="video-responsive" style='max-width: 590px; max-height: 504px;'>
-		<video id="vid1" controlsList="nodownload" controls autoplay muted playsinline>
-		  <source src="../img/street.mp4" type="video/mp4"></source>
+
+	<div class="embed-responsive embed-responsive-1by1">
+		<video class="embed-responsive-item" controls autoplay muted>
+		  <source src="../img/street.mp4" type="video/mp4" />
 		  Your browser does not support the video tag.
-		</video> 
+		</video>
 	</div>
 	<p>&nbsp;</p>
-	<hr><h2>Calculate distances</h2>
+
+	<hr><h3>Calculate distances</h3>
 	GIS projects ofter require spatial measurements. In the sample below, given a set of points (Lat/Lon coordinates), the goal is to find which ones are within 5 km distance from two predefined locations. By drawing a circle (radius 5km) from each location, all points inside the intersection area meet the requirement.
-	<br />
-	<div class="video-responsive" style='max-width: 722px; max-height: 400px;'>
-		<video id="vid2" controlsList="nodownload" controls autoplay muted playsinline>
-		  <source src="../img/leaf2circles.mp4" type="video/mp4"></source>
-		  Your browser does not support the video tag.
-		</video> 
-	</div>
 	<p>&nbsp;</p>
-	<hr><h2>Census data</h2>
+	<div class="embed-responsive embed-responsive-21by9">
+		<video class="embed-responsive-item" controls autoplay muted>
+		  <source src="../img/leaf2circles.mp4" type="video/mp4" />
+		  Your browser does not support the video tag.
+		</video>
+	</div>
+
+	<p>&nbsp;</p>
+
+	<hr><h3>Census data</h3>
 	Coded in R, the steps accomplished for this project were:
 	<ol type="1"> 
 	<li>load US census boundary and attribute data</li> <li>cleanup blocks outside city area</li> <li>build interactive map with census blocks color-coded by population</li> </ol>
 	<br />
-	<div class="video-responsive" style='max-width: 662px; max-height: 500px;'>
-		<video id="vid3" controlsList="nodownload" controls autoplay muted playsinline>
-		  <source src="../img/census.mp4" type="video/mp4"></source>
+	<div class="embed-responsive embed-responsive-4by3">
+		<video class="embed-responsive-item" controls autoplay muted>
+		  <source src="../img/census.mp4" type="video/mp4" />
 		  Your browser does not support the video tag.
-		</video> 
+		</video>
 	</div>
+
 	<p>&nbsp;</p><p>&nbsp;</p>
 </div>
 
-</div>
+
 <script>
 
 var map = L.map('map').setView([46.507845, 2.460938], 6);
@@ -189,7 +179,7 @@ $.getJSON('../img/french.geojson', function(geodata) {
    markers.addLayer(gj);
    markers.addTo(map);
  })
-
+/*
 // videos autoplay --------------------
 function VidPlay(myVideo) {
 	VisSense.VisMon.Builder(VisSense(myVideo, { fullyvisible: 0.75 }))
@@ -200,7 +190,7 @@ function VidPlay(myVideo) {
 VidPlay(document.getElementById('vid1'));
 VidPlay(document.getElementById('vid2'));
 VidPlay(document.getElementById('vid3'));
-
+*/
 </script>
 
 </body>
