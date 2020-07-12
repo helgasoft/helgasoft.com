@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Helgasoft software solutions</title>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-	<meta name="description" content="miscellaneous projects and applications">
+	<meta name="description" content="additional projects and applications">
 
 		<!-- Mobile Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,11 @@
 	
 	<!-- Skin CSS -->
 	<link rel="stylesheet" href="../css/skin/night-purple.css">
+<style>
+	.msection { margin-top: 35px; margin-bottom:25px; }
+	.imag { margin:15px; width: 90%; height: auto;}
+</style>
+
 </head>
 
 <body data-target="#main-navbar">   
@@ -49,12 +54,52 @@
 <div class="container">
 <p>&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
 
-<h2>Miscellaneous</h2>
+<h2>Various completed projects</h2>
 
-<p>&nbsp;</p>
+<div class='msection'>
+<h4>Progress of Southern California cities weekly layoffs</h4>
+		WARN notices for temporary/permanent layoffs by effective date<br />
+		ETL of <a href='https://www.edd.ca.gov'>EDD data</a> with R, dplyr, leaflet, geocoding. &nbsp; &nbsp; &nbsp; &nbsp; 
+		<i>Click on left/right side arrows for weekly slides.</i>
+</div>	
+	<div class="slidercontainer">  
+	   <div class="showSlide"><img src="../img/layoff8.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff9.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff10.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff11.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff12.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff13.png" /></div>  
+	   <div class="showSlide"><img src="../img/layoff14.png" /></div>
+	   <div class="showSlide"><img src="../img/layoff15.png" /></div> 
+	   <div class="showSlide"><img src="../img/layoff16.png" /></div> 
+	   <div class="showSlide"><img src="../img/layoff17.png" /></div>
+	   <div class="showSlide"><img src="../img/layoff18.png" /></div> 
+	   <div class="showSlide"><img src="../img/layoff19.png" /></div> 
+        <!-- Navigation arrows -->  
+        <a class="sleft" onclick="nextSlide(-1)">&laquo;</a>  
+        <a class="sright" onclick="nextSlide(1)">&raquo;</a> 
+	</div>
 
-<h4 style='display:inline;'><b>California fishing maps</b></h4>
-<div style='display:inline;'> - interactive Leaflet maps with feature filtering</div>, ETL project <br />&nbsp;
+<div class='msection'>
+<h4 style='display:inline;'>San Diego County COVID map by zipcode</h4> 
+<div style='display:inline;'> - smartphone demo of the app</div>
+</div>
+	<video id="video1" preload="auto" loop="loop" src="../img/sd-covid-map3.mp4" type="video/mp4" muted="muted">
+	  San Diego Covid cases by zip code
+	</video>
+
+<div class='msection'>
+<h4>Shiny UI for distribution modeling app</h4>
+&bull; upload shapefiles in .csv, .zip or (.dbf,.shp,.shx,.prj) format<br />
+&bull; field and parameter selection and validation<br />
+&bull; run preparation and modeling, display results as plots/tables, download<br />
+</div>
+<img src='../img/mod.proj2.png' alt='modeling GUI' class='imag' style='max-width:931px;' /></img>
+
+<div class='msection'>
+<h4 style='display:inline;'>California fishing maps</h4>
+<div style='display:inline;'> - <i>live</i> interactive Leaflet maps with feature filtering</div>, an ETL project
+</div>
 <ul>
 	<li><i>Extract</i> - data collected from various sources like web tables, PDF files, Excel. </li>
 	<li><i>Transformation</i> - clean data from redundant rows and columns, recode GPS coordinates, reformat to csv/data.frame/geoJson.</li>
@@ -65,13 +110,75 @@
 	<br /><a href='fresh.html'><img src='../img/brook.png' /> &nbsp; &nbsp;<b>Rivers & Lakes</b></a>
 	<br /><a href='sharks.html'><img src='../img/shark.png' width='64px' height='64px' /> &nbsp; &nbsp;<b>Shark Attacks</b></a>
 </blockquote>
+
+<div class='msection'>
+<h4 style='display:inline;'>Software Notes</h4>
+<div style='display:inline;'> - <a href='prnotes.html'>solutions to common problems</a> in R, Javascript, Windows.</div>
+</div>
+<div class='tcenter'>&copy; helgasoft.com</div>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h4 style='display:inline;'><b>Software Notes</b></h4>
-<div style='display:inline;'> - <a href='prnotes.html'>solutions to common problems</a> in R, Javascript, Windows.</div>
-<p>&nbsp;</p>&nbsp;
+</div>
+</div> <!-- body -->
+	<script>
+	(function(d) {
+	   'use strict';
+	   var divs = d.getElementsByClassName('showSlide');
+	   for ( var c = 0; c < divs.length; c ++ ){
+	     var dv = d.createElement( 'div' );
+		dv.classList.add( 'scontent' );
+		dv.appendChild( d.createTextNode( 'Southern CA cities weekly layoffs' ) );
+		divs[c].appendChild( dv );
+        }
+	}(document));
 
-</div>
-</div>
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }   
+
+		// video control 
+	function createObserver() {
+	  let observer;
+	  let options = {
+	    root: null,
+	    rootMargin: "0px",
+	    threshold: [0.25, 0.6]
+	  };
+	  observer = new IntersectionObserver(handleIntersect, options);
+	  observer.observe(videoElement);
+	}
+	function handleIntersect(entries, observer) {
+	  entries.forEach((entry) => {
+			if (entry.intersectionRatio >= 0.6) { 
+				entry.target.play(); 
+			} 
+			if (entry.intersectionRatio <= 0.25) {
+				entry.target.pause(); 
+			}
+	  });
+	}
+	var videoElement = document.querySelector("#video1");
+	createObserver();
+	</script>
+
 </body>
 </html>

@@ -10,18 +10,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
-	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="../css/misc.css" />
+<!--	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css"> 
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/mobile.css">
-	
-	<!-- Skin CSS -->
-	<link rel="stylesheet" href="../css/skin/night-purple.css">
-	<style>
-		a, a:hover, a:focus { color: #3333ee; }
-		/* p { font: 14px/1.5em "Verdana"; } */
-		.imag { margin:15px; width: 90%; height: auto;}
-		td, th { font-size: 10pt;}
-		.rbfish { font-size: 12pt; }
+
+	<link rel="stylesheet" href="../css/skin/night-purple.css"> -->
+<style>
+	a, a:hover, a:focus { color: #3333ee; }
+	/* p { font: 14px/1.5em "Verdana"; } */
+	.imag { margin:15px; width: 90%; height: auto;}
+	td, th { font-size: 10pt;}
+	.rbfish { font-size: 12pt; }
 
 /* https://codepen.io/imprakash/pen/GgNMXO */
 .overlay {
@@ -72,7 +73,7 @@
   max-height: 30%;
   overflow: auto;
 }
-
+/*
 @media screen and (max-width: 700px){
   .box{ width: 70%; }
   .popup{ width: 70%; }
@@ -83,20 +84,19 @@
 @media (min-width: 960px) {
   div { font-size: 2.0rem; }
   input[type=radio] { transform:scale(1.5); }
-}
-	</style>
+} */
+</style>
 </head>
 
+<!--
 <body data-target="#main-navbar">   
     	<div class="body">
-	<!--========== BEGIN HEADER ==========-->
+	<!--========== BEGIN HEADER ========== --
 	<header id="header" class="header-main">
 	
-	<!-- Begin Navbar -->
 	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
 	
 	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
@@ -108,27 +108,39 @@
 			<ul class="nav navbar-nav navbar-right">
 	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
 			</ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container -->
+	    </div>
+	  </div>
 	</nav>
-	<!-- End Navbar -->
-	
 	</header>
 	<!-- ========= END HEADER =========-->
-<div class="container">
-<p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
-<div style='text-align:center;'><h2>San Diego ocean fishing statistics</h2></div>
-<!--div style='display: inline-block; float:left;'><img src=../img/f.4cali.png height=500px /></div>
+
+<body>
+   <!-- ========= HEADER =========-->
+  <div class='header-left'>
+	<a href="../"><img src='../img/logo.png' alt='Helgasoft' class='header-pad' /></a>
+	<div class='stay-right header-pad'>
+		<a href='../#portfolio-section' class='whity'>Back</a>
+	</div>
+  </div>
+  <div class='clearer'></div>
+<!--
+ <p>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
+ div style='display: inline-block; float:left;'><img src=../img/f.4cali.png height=500px /></div>
 <div style='display: inline-block; float:left; text-align:left; width:75%; margin-left:20px;'-->
-<div class='col-md-2 col-sm-3'><img src=../img/f.4cali.png height=450px /></div>
+	
+<div class="container">
+
+<div class="row">
+<div class='col-md-2 col-sm-3'><img src=../img/f.4cali.png class='imag' style='max-width:229px;' /></div>
 <div class='col-md-10 col-sm-9'>
-<!--p style="font-size:1.7vw;"-->
+	<p><div style='text-align:center;'><h3>San Diego ocean fishing statistics</h3></div></p>
 Data for this study was collected from website <a href='http://www.sandiegofishreports.com/dock_totals/boats.php'>sandiegofishreports.com</a>.  
 <br />It includes daily trip reports by San Diego recreational fishing vessels from January 2009 to end of June 2018.
 Each report consists of starting date and duration of the trip, boat name, number of anglers and fish count by species.
-<br />The amount of data is considerable - 109 boats with 51,422 fishing trips during 9.5 years, with a catch of <a href="#popup1">89 ocean species</a>.
+<br />The amount of data is considerable - 109 boats with 51,422 fishing trips in 9.5 years, with a catch of <a href="#popup1">89 ocean species</a>.
 <br />&nbsp;
 <p>Data preparation and analysis was mostly done through R library <b>dplyr</b>. Charts were generated with R library <b>ggplot2</b> and library <b>formattable</b> was used for the two tables.</p>
+</div>
 </div>
 
 <center>
@@ -138,21 +150,23 @@ Each report consists of starting date and duration of the trip, boat name, numbe
 <img src=../img/f.tpy.png class='imag' style='max-width:800px;' />
 <img src=../img/f.yt.bt.png class='imag' style='max-width:600px;' />
 <img src=../img/f.yt.mo.png class='imag' style='max-width:700px;' />
-<img src=../img/f.hali.png class='imag' style='max-width:600px;' />
+<img src=../img/f.avg.anglers.png class='imag' style='max-width:900px;' />
 <img src=../img/f.yt.trp.png class='imag' style='max-width:700px;' />
+
 <div style='text-align:center;border: 2px solid; border-radius:20px; margin: 40px 20px; padding:6px; width:40%; '>Tables<br /><br />
 <a href=../img/f.boat.ftype.html >Boats by total catch</a><br />
 <br /><a href=../img/f.boat.score.html >Boats scored by fish ratio and trips</a><br />&nbsp;
 </div>
+
 <a name="pp" id="pp">&nbsp;</a>
 <img src=../img/f.propo.png class='imag' style='max-width:856px;' />
+<div class="row">
 <div class='col-md-8 col-sm-8' style='text-align:left'>The chart above gives an overview of the fish species being caught on half-day trips. It represents quantity proportions, not quantities. 
 The spike seen on July 22, for instance, corresponds to more Rockfish and Sculpin caught than Calico Bass. Data for that day is shown on the right.<br />
 If updated daily, the chart could help fishermen target the most abundant fish type.
-<p>&nbsp; <br /> &nbsp;</p>
 </div><div class='col-md-3 col-sm-3'>
 	<table><tr><th colspan=2>July 22, 2018</th></tr> 
-	<tr><td>Calico		</td><td style="text-align:right" width='40'>    84</td></tr>
+	<tr><td>Calico		</td><td style="text-align:right">    84</td></tr>
 	<tr><td>Rockfish	</td><td style="text-align:right">   262</td></tr>
 	<tr><td>Sand Bass	</td><td style="text-align:right">    40</td></tr>
 	<tr><td>Mackerel	</td><td style="text-align:right">     0</td></tr>
@@ -161,6 +175,10 @@ If updated daily, the chart could help fishermen target the most abundant fish t
 	<tr><td>Other		</td><td style="text-align:right">    42</td></tr>
 	</table>
 </div>
+</div>
+<p>&nbsp;</p>
+
+<div class="row">
 <div class='col-md-12 col-sm-12'>
 <a name="ym" id="ym">&nbsp;</a>
 <strong>Comparison by year, month and fish type</strong> 
@@ -169,26 +187,31 @@ If updated daily, the chart could help fishermen target the most abundant fish t
 <input class="rbfish" type="radio" name='fish' value="Yellowfin" onchange='fchange(this)' /> Yellowfin &nbsp;
 <input class="rbfish" type="radio" name='fish' value="Yellow1" onchange='fchange(this)' /> Yellowtail 1+ days &nbsp;
 <input class="rbfish" type="radio" name='fish' value="Yellow2" onchange='fchange(this)' /> Yellowtail half-day &nbsp;
+
 <img id='dimg' src='../img/mo-blue.png' alt='chart' />
 </p>
 <script>
 function fchange(cb) {
 	switch (document.querySelector('input[name=fish]:checked').value) {
-	  case 'Bluefin':
-	    src = 'mo-blue.png'; break;
-	  case 'Yellowfin':
-	    src = 'mo-yfin.png'; break;
-	  case 'Yellow1':
-	    src = 'mo-ytail.1m.png'; break;
-	  case 'Yellow2':
-	    src = 'mo-ytail.05.png'; break;
+	  case 'Bluefin':	    src = 'mo-blue.png'; break;
+	  case 'Yellowfin':	    src = 'mo-yfin.png'; break;
+	  case 'Yellow1':	    src = 'mo-ytail.1m.png'; break;
+	  case 'Yellow2':	    src = 'mo-ytail.05.png'; break;
 	}
 	document.getElementById('dimg').src = '../img/' + src;
 }
 </script>
-<p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p>
 </div>
+</div>
+
+<div id='kw'></div>
+
+<div class='ctr'>&copy; helgasoft.com</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 </center>
+
 <div style='text-align:right; margin-bottom:50px;'>
 <!-- Last updated: <script>document.write( document.lastModified )</script>-->
 <!--#config timefmt="%D" -->

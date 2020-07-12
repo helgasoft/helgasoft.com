@@ -258,27 +258,27 @@ go to Tools -&gt; Global Options and uncheck &ldquo;Use debug error handler only
 <p><span class='qq'>Installing missing packages</span><br />
 pkgs &lt;- c(&quot;shiny&quot;, &quot;dplyr&quot;, &quot;treemap&quot;, &quot;gridBase&quot;)<br />
 pkgs_needed &lt;- pkgs[!(pkgs %in% installed.packages()[,&quot;Package&quot;])]<br />
-if(length(pkgs_needed)) install.packages(pkgs_needed)<br />
-## Run app from Github repo<br />
-shiny::runGitHub(&#39;manolo20/shinytreemap&#39;)</p>
+if(length(pkgs_needed)) install.packages(pkgs_needed)</p>
 
-<p><span class='qq'>use installr package to upgrade R</span><br />
-<a href="https://stackoverflow.com/questions/50134848/r-is-it-right-to-copy-the-old-r-version-packages-to-the-new-folder-that-contai">https://stackoverflow.com/questions/50134848/r-is-it-right-to-copy-the-old-r-version-packages-to-the-new-folder-that-contai</a><br />
-- updateR(TRUE) function which updates R runtime to a new version and also its packages.  (ok in Rstudio)<br />
-- The function copy.packages.between.libraries to copy files from the old library to the new one. And it doesn&#39;t copy fundamental packages as MASS, methods, utils, ...<br />
-copy.packages.between.libraries(from=&#39;C:\\Users\\user1\\Documents\\R\\win-library\\3.5&#39;, to=&#39;C:\\Users\\user1\\Documents\\R\\win-library\\3.6&#39;) =didn't work
+<p><span class='qq'>use installr package to upgrade R
+<a href="https://stackoverflow.com/questions/50134848/r-is-it-right-to-copy-the-old-r-version-packages-to-the-new-folder-that-contai">link</a></span><br />
+- <i>updateR(TRUE)</i> function which updates R runtime to a new version and also its packages.  Ok in R GUI and Rstudio.<br />
+- see also function <i>copy.packages.between.libraries</i><br />
+- see also <a href="https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/">this link</a><br />
 </p>
 
 <p><span class='qq'>Error: Failed to install &#39;blotter&#39; from GitHub</span><br />
 (converted from warning) incomplete final line found on &#39;C:\Users\me\Documents\.Rprofile&#39;<br />
 &gt; add empty line at end of .Rprofile</p>
 
-<p><span class='qq'>replace current lib with older</span><br />
-<a href="https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/">https://www.r-bloggers.com/upgrade-r-without-losing-your-packages/</a><br />
-.libPaths() - see where your libs are<br />
-C:\Users\user1\Documents\R\win-library\3.x &gt; new folder with same lib name (rename current) &gt; copy older filesr code source &gt; There were 12 warnings (use warnings() to see them) &gt; warnings() &gt; Unknown or uninitialised column: &#39;Date&#39;.<br />
-&gt;&gt; Session &gt; Clear Workspace... &gt; fixed<br />
-also diagnostics off - <a href="https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column">https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column</a></p>
+<p><span class='qq'>Unwanted warnings in RStudio</span><br />
+When sourcing/executing R code &gt; <i>There were 12 warnings (use warnings() to see them)</i> <br />
+&gt; assign("last.warning", NULL, envir = baseenv())<br />
+see also <i>diagnostics off</i> in <a href="https://stackoverflow.com/questions/39041115/fixing-a-multiple-warning-unknown-column">fixing a multiple warning unknown column</a>
+</p>
+
+<p><span class='qq'>Run app from Github repo</span><br />
+shiny::runGitHub(&#39;manolo20/shinytreemap&#39;)</p>
 
 <p><span class='qq'>Deploy on shinyapps.io and others</span><br />
 rsconnect::setAccountInfo(name=&#39;urname&#39;, token=&#39;ttt&#39;, secret=&#39;xxx&#39;)<br />
@@ -290,9 +290,9 @@ rsconnect::deployApp(&#39;C:/Projects/R/urproj&#39;) # must have app.R file</p>
 <p><span class='qq'>rstudio &quot;error creating notebook: cannot open the connection&quot;</span><br />
 &gt; open a Project</p>
 
-<p><span class='qq'>compile library source code</span><br />
-<a href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa</a><br />
-&gt; open any R-project ? Project Options : Build Tools: set the folder where the source files are<br />
+<p><span class='qq'>compile library source code
+<a href="https://stackoverflow.com/questions/25721884/how-should-i-deal-with-package-xxx-is-not-available-for-r-version-x-y-z-wa">link</a></span><br />
+&gt; open any R-project &gt; Project Options : Build Tools: set the folder where the source files are<br />
 &gt; Make (somewhere on right top side of Studio..) &gt; &quot;Build Binary&quot; command &gt; will create ZIP file &gt; install BIN package in Studio<br />
 (or Open Project to be built from foldr &gt; Build &gt; tar.gz file - needs Rtools.exe installed on computer</p>
 
