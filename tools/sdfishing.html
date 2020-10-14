@@ -2,15 +2,15 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=1000, user-scalable=0">
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<title>Helgasoft software solutions</title>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 	<meta name="description" content="San Diego fishing statistics">
 
-		<!-- Mobile Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/misc.css" />
 <!--	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css"> 
 	<link rel="stylesheet" href="../css/style.css">
@@ -190,6 +190,8 @@ If updated daily, the chart could help fishermen target the most abundant fish t
 
 <img id='dimg' src='../img/mo-blue.png' alt='chart' />
 </p>
+
+
 <script>
 function fchange(cb) {
 	switch (document.querySelector('input[name=fish]:checked').value) {
@@ -217,6 +219,7 @@ function fchange(cb) {
 <!--#config timefmt="%D" -->
 <!-- Last modified <!--#echo var="LAST_MODIFIED" -->
 </div>
+
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h3>89 ocean species</h3>

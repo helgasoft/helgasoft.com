@@ -4,6 +4,7 @@
 
 $('.page-scroll').bind('click', function(event) {
     var $anchor = $(this);
+    if ($anchor.attr('href') == '../') return;
     $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top -64
     }, 1500, 'easeInOutExpo');
@@ -48,7 +49,7 @@ $("#owl-intro-text").owlCarousel({
     pagination : true
 })
 
-
+/*
 // Partner carousel
 $("#owl-partners").owlCarousel({
     items : 4,
@@ -66,7 +67,7 @@ $("#owl-testimonial").owlCarousel({
     pagination : true,
     autoHeight : true
 })
-
+*/
 
 ////////////////////////////////////////////////////////////////////
 // Stellar (parallax): https://github.com/markdalgleish/stellar.js
@@ -146,8 +147,18 @@ $('.scrolltotop').on('click', function(){
 // Close mobile menu when click menu link (Bootstrap default menu)
 ////////////////////////////////////////////////////////////////////
 
-$('.navbar-collapse').on('click', function(e) {
-    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-        $(this).collapse('hide');
+//$('.navbar-collapse').on('click', function(e) {	// crap!
+//    if( $(e.target).is('a') && !$(e.target).hasClass('dropdown-toggle') ) {
+//        $(this).collapse('hide');
+//    }
+//});
+$('.navbar-nav li a').on('click', function(){
+    if($('.navbar-collapse').hasClass('in')){
+        $('.navbar-collapse').collapse('hide');
+    } //else $('.navbar-collapse').classList.add("in");
+})
+$(document).on('click',function(){
+    if($('.navbar-collapse').hasClass('in')){
+	$('.navbar-collapse').collapse('hide');
     }
-});
+})

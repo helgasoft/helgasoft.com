@@ -2,12 +2,10 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Helgasoft software solutions</title>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
 	<meta name="description" content="additional projects and applications">
-
-		<!-- Mobile Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Libs and Plugins CSS -->
 	<link rel="stylesheet" href="../inc/bootstrap/css/bootstrap.min.css">
@@ -19,6 +17,8 @@
 <style>
 	.msection { margin-top: 35px; margin-bottom:25px; }
 	.imag { margin:15px; width: 90%; height: auto;}
+	#containerm { float:left }
+	marquee { width:60% } 
 </style>
 
 </head>
@@ -35,9 +35,9 @@
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
+	        <a href="../#portfolio-section" style='color:white'>BACK</a>
 	      </button>
-	      <a class="navbar-brand page-scroll" href="../"></a>
+	      <a class="navbar-brand" href="../"></a>
 	    </div>
 	
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,10 +57,26 @@
 <h2>Various completed projects</h2>
 
 <div class='msection'>
+<h4>Shiny UI for distribution modeling app</h4>
+&bull; upload shapefiles in .csv, .zip or (.dbf,.shp,.shx,.prj) format<br />
+&bull; field and parameter selection and validation<br />
+&bull; run preparation and modeling, display results as plots/tables, download<br />
+</div>
+<img src='../img/mod.proj2.png' alt='modeling GUI' class='imag' style='max-width:931px;' /></img>
+
+<div class='msection'>
+<h4>Build and maintain a Javascript library for offline maps on GitHub</h4>
+	<a href='https://github.com/helgasoft/leaflet.dexie' target=_blank>leaflet.dexie</a> is a Leaflet plugin for saving maps in local storage using library Dexie.js.<br />
+	The <a href='https://helgasoft.github.io/leaflet.dexie/index.html' target=_blank>demo</a> implements creation and deletion of maps and can simulate offline map display.
+	<a href='https://helgasoft.github.io/leaflet.dexie/index.html' target=_blank><img src='../img/ldexie-demo.png' /></a>
+</div>	
+
+<div class='msection'>
 <h4>Progress of Southern California cities weekly layoffs</h4>
-		WARN notices for temporary/permanent layoffs by effective date<br />
-		ETL of <a href='https://www.edd.ca.gov'>EDD data</a> with R, dplyr, leaflet, geocoding. &nbsp; &nbsp; &nbsp; &nbsp; 
-		<i>Click on left/right side arrows for weekly slides.</i>
+	WARN notices for temporary/permanent layoffs by effective date<br />
+	<div id="containerm">ETL of <a href='https://www.edd.ca.gov'>EDD data</a> with R, dplyr, leaflet, geocoding. &nbsp; &nbsp; </div>
+	<marquee behavior="alternate" direction="right" scrollamount=2" scrolldelay="2"> 
+		<i>Click on side arrows (&laquo; &raquo;) below for weekly slides.</i> </marquee>
 </div>	
 	<div class="slidercontainer">  
 	   <div class="showSlide"><img src="../img/layoff8.png" /></div>  
@@ -81,24 +97,16 @@
 	</div>
 
 <div class='msection'>
-<h4 style='display:inline;'>San Diego County COVID map by zipcode</h4> 
-<div style='display:inline;'> - smartphone demo of the app</div>
+<h4>San Diego County COVID map by zipcode</h4> 
+<div>below is a smartphone demo of the app</div>
 </div>
 	<video id="video1" preload="auto" loop="loop" src="../img/sd-covid-map3.mp4" type="video/mp4" muted="muted">
 	  San Diego Covid cases by zip code
 	</video>
 
 <div class='msection'>
-<h4>Shiny UI for distribution modeling app</h4>
-&bull; upload shapefiles in .csv, .zip or (.dbf,.shp,.shx,.prj) format<br />
-&bull; field and parameter selection and validation<br />
-&bull; run preparation and modeling, display results as plots/tables, download<br />
-</div>
-<img src='../img/mod.proj2.png' alt='modeling GUI' class='imag' style='max-width:931px;' /></img>
-
-<div class='msection'>
-<h4 style='display:inline;'>California fishing maps</h4>
-<div style='display:inline;'> - <i>live</i> interactive Leaflet maps with feature filtering</div>, an ETL project
+	<h4>California fishing maps</h4>
+	<i>Live</i> interactive Leaflet maps with feature filtering, an ETL project
 </div>
 <ul>
 	<li><i>Extract</i> - data collected from various sources like web tables, PDF files, Excel. </li>
@@ -106,14 +114,14 @@
 	<li><i>Load</i> - build web page and maps with overlays, load data from files or inserts, solve CORS issues.</li>
 </ul>
 <blockquote>
-	<a href='ocean.html'><img src='../img/tuna_fish.png' /> &nbsp; &nbsp;<b>Ocean</b></a>  &nbsp; &nbsp; 
-	<br /><a href='fresh.html'><img src='../img/brook.png' /> &nbsp; &nbsp;<b>Rivers & Lakes</b></a>
+	<a href='fresh.html'><img src='../img/brook.png' /> &nbsp; &nbsp;<b>Rivers & Lakes</b></a>
+	<br /><a href='ocean.html'><img src='../img/tuna_fish.png' /> &nbsp; &nbsp;<b>Ocean</b></a>  &nbsp; &nbsp; 
 	<br /><a href='sharks.html'><img src='../img/shark.png' width='64px' height='64px' /> &nbsp; &nbsp;<b>Shark Attacks</b></a>
 </blockquote>
 
 <div class='msection'>
-<h4 style='display:inline;'>Software Notes</h4>
-<div style='display:inline;'> - <a href='prnotes.html'>solutions to common problems</a> in R, Javascript, Windows.</div>
+	<h2>Software Notes</h2>
+	<a href='prnotes.html'>solutions to common problems</a> in R, Javascript, Windows.
 </div>
 <div class='tcenter'>&copy; helgasoft.com</div>
 <p>&nbsp;</p>

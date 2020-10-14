@@ -134,7 +134,10 @@ Used Javascript next to recode the data from JSON to <i>geojson</i> format. You 
 
 <script>
 
-var map = L.map('map').setView([46.507845, 2.460938], 6);
+	var map = L.map('map', { scrollWheelZoom: false }).setView([46.507845, 2.460938], 6);
+	// zoom options enable/disable
+	map.on('click', () => { map.scrollWheelZoom.enable();});
+	map.on('mouseout', () => { map.scrollWheelZoom.disable();});
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

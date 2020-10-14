@@ -1,35 +1,38 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Helgasoft - software solutions</title>
-    		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="canonical" href="https://helgasoft.com" />
-		<meta name="description" content="Expert Software Outsourcing">
-		<meta name="keywords" content="visualization, R, Shiny, Javascript, C#, SQL Server, PostgreSQL, Leaflet, GIS, GPX, geospatial, coding, software, database, integration, data modeling, outsourcing, contractor, contract" />
-		<meta name="author" content="helgasoft.com">
-		<meta name="google-site-verification" content="cCRbeVYsPWoQ86eN5CjokjMP9c1t3NZrMdN3kYy96l0" />
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Helgasoft - software solutions</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="canonical" href="https://helgasoft.com" />
+	<meta name="description" content="Expert Software Outsourcing">
+	<meta name="keywords" content="visualization, R, Shiny, Javascript, C#, SQL Server, PostgreSQL, Leaflet, GIS, GPX, geospatial, coding, software, database, integration, data modeling, outsourcing, contractor, contract" />
+	<meta name="author" content="helgasoft.com">
+	<meta name="google-site-verification" content="cCRbeVYsPWoQ86eN5CjokjMP9c1t3NZrMdN3kYy96l0" />
         
-		<link rel="stylesheet" href="css/fonts.css">
+<!--	<link rel="stylesheet" href="css/fonts.css">-->
 
 		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="inc/animations/css/animate.min.css">
-		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> 
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
-		<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">-->
+<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">-->
+<!--	 NOT working  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+<!-- works <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<!--	<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="inc/animations/css/animate.min.css">
+	<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
+	<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
 
-		<!-- Theme CSS -->
-        	<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/mobile.css">
+	<!-- Theme CSS -->
+<!--   	<link rel="stylesheet" href="css/reset.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css">
 
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skin/night-purple.css">
+	<!-- Skin CSS -->
+	<link rel="stylesheet" href="css/skin/night-purple.css">
 
 </head>
 
@@ -54,13 +57,13 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand page-scroll" href="body"></a>
+	      <a class="navbar-brand" href=""></a>  <!--  page-scroll -->
 	    </div>
 	
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 	        <ul class="nav navbar-nav navbar-right">
-	            <li><a class="page-scroll" href="body">Home</a></li>
+	            <li><a class="page-scroll" href="#text-carousel-intro-section">Home</a></li>
 	            <li><a class="page-scroll" href="#about-section">About</a></li>
 	            <li><a class="page-scroll" href="#tech-section">Technologies</a></li>
 	            <li><a class="page-scroll" href="#portfolio-section">Portfolio</a></li>
@@ -79,16 +82,25 @@
             
             
 	<!-- Begin text carousel intro section -->
-	<section id="text-carousel-intro-section" class="parallax" Xdata-stellar-background-ratio="0.5" style="background-image: url(img/slider-bg.jpg);">
+	<section id="text-carousel-intro-section" class="parallax" style="background-image: url(img/slider-bg.jpg);">
 		
 		<div class="container">
-			<div class="caption text-center text-white" Xdata-stellar-ratio="0.7">
+			<div class="caption text-center text-white">
 
-				<div id="owl-intro-text" class="owl-carousel">
-					<div class="item">
+<!--		https://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      <li data-target="#myCarousel" data-slide-to="1"></li>
+	      <li data-target="#myCarousel" data-slide-to="2"></li>
+	    </ol>
+	
+	    <div class="carousel-inner" role="listbox">
+	
+					<div class="item active">
 						<h1>Software Solutions</h1>
 						<p>crafted with passion</p>
-                				<div class="extra-space-l"></div>
+                			<div class="extra-space-l"></div>
 					</div>
 					<div class="item" valign="top">
 						<img src=img/logo-r.png width="128" height="128"/> &nbsp; &nbsp;
@@ -101,7 +113,39 @@
 						<p>Desktop and web applications with database support</p>
 						<div class="extra-space-l"></div>
 					</div>
+	    </div>
+	
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	      <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	      <span class="sr-only">Next</span>
+	    </a>
+	  </div>
+-->
+
+				<div id="owl-intro-text" class="owl-carousel">
+					<div class="item">
+						<h1>Software Solutions</h1>
+						<p>crafted with passion</p>
+                				<div class="extra-space-l"></div>
+					</div>
+					<div class="item" valign="top">
+						<img src=img/logo-r.png width="128" height="128"/> &nbsp; &nbsp;
+						<img src=img/shiny-logo.png width="110" height="128"/> &nbsp; &nbsp;
+						<img src=img/js-logo.png width="113" height="128"/>
+						<p>Data analysis and visualization</p>
+						<div class="extra-space-l"></div>
+					</div>
+					<div class="item">
+						<h1>C# &nbsp; SQL &nbsp; LINQ</h1>
+						<p>Desktop and web applications with database support</p>
+						<div class="extra-space-l"></div>
+					</div>
 				</div>
+
 
 			</div> <!-- /.caption --> 
 		</div> <!-- /.container -->
@@ -165,7 +209,7 @@
                                     <span class="rotate-box-icon"><i class="fa fa-clock-o"></i></span>
                                     <div class="rotate-box-info">
                                   <h4>Since When?</h4>
-                                        <p>1997 - that's 20 years and counting</p>
+                                        <p>20 years and counting...</p>
                                     </div>
                                 </div>
                             </div>
@@ -264,18 +308,18 @@
                                     <div class="portfolio_menu">
 
                                         <ul>
-    <li><a href='tools/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />Biotech <div class='fsm'>R/Shiny</div></a></li>
-    <li><a href='tools/stock.html'><img src='img/stockapp.png' width='200px' /><br />Stock Market <div class='fsm'>R/Shiny/quantmod</div></a></li>
-    <li><a href='tools/leaflet.html'><img src='img/truntrac.png' width='200px' /><br />Mapping <div class='fsm'>R/Shiny/leaflet</div></a></li>
+    <li><a href='tools/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />Biotech <div class='fsm'>R, Shiny</div></a></li>
+    <li><a href='tools/stock.html'><img src='img/stockapp.png' width='200px' /><br />Stock Market <div class='fsm'>R, Shiny, quantmod</div></a></li>
+    <li><a href='tools/leaflet.html'><img src='img/truntrac.png' width='200px' /><br />Mapping <div class='fsm'>R, Shiny, leaflet</div></a></li>
 		 <br /><br />
-    <li><a href='tools/sdfishing.html'><img src='img/f.propo.png' width='200px' /><br />Charts <div class='fsm'>R/ggplot</div></a></li>
+    <li><a href='tools/sdfishing.html'><img src='img/f.propo.png' width='200px' /><br />Charts <div class='fsm'>R, ggplot</div></a></li>
     <li><a href='tools/gold.html'><img src='img/graphs.gif' width='200px' /><br />Graphs <div class='fsm'>R & JS</div></a></li>
-    <li><a href='tools/fr.visa.html'><img src='img/geospatial.png' width='200px' /><br />Geocoding <div class='fsm'>R/JS/leaflet</div></a></li>
+    <li><a href='tools/fr.visa.html'><img src='img/geospatial.png' width='200px' /><br />Geocoding <div class='fsm'>R, JS, leaflet</div></a></li>
 		 <br /><br />
     <li><a href='https://helgasoft.github.io/Chrome-Ext-Gvoice/'><div style="margin:10px">Chrome Extension <div class='fsm'>JS</div></div></a></li>
     <li><a href='tools/licomp.html'><div style="margin:10px">Compare Lists <div class='fsm'>JS &nbsp; &nbsp; <font color='red'>LIVE</font></div></div></a></li>
-    <li><a href='tools/migration.html'><div style="margin:10px">PostgreSQL migration <div class='fsm'>&nbsp;</div></div></a></li>
-    <li><a href='tools/misc.html'><div style="margin-bottom:8px"><div style='display:inline-block;'><b>More</b>&nbsp;<div class='fsm'>&nbsp;</div></div> <img src='img/spin4.gif' style='display:inline-block; '/></div></a></li>
+    <li><a href='tools/migration.html'><div style="margin:10px">PostgreSQL migration <div class='fsm'>report</div></div></a></li>
+    <li><a href='tools/misc.html'><div><span><b>More</b></span> <img src='img/spin4.gif'/></div></a></li>
                                         </ul>
                                     </div>
 
@@ -290,7 +334,7 @@
 
     
             <!-- Begin contact section -->
-            <section id="contact-section" class="page text-white parallax" Xdata-stellar-background-ratio="0.5">
+            <section id="contact-section" class="page text-white parallax">
             	<div class="cover"></div>
             
                  <!-- Begin page header-->
@@ -310,20 +354,20 @@
                     	<div class="row">
                         
                             <div class="col-sm-6 text-center">
-                                <div class="contact-info">
-                            		<ul class="imp-links">
-		                            <li><a href="mailto:contact@helgasoft.com?subject=Contact%20from%20website">
-						<h4>Email</h4> <i class="fa fa-envelope"></i> &nbsp; contact@helgasoft.com</a></li>
-		                        </ul>
+                                <div class="contact-info imp-links">
+<!--                            		<ul class="imp-links">
+		                            <li> --> <a href="mailto:contact@helgasoft.com?subject=Contact%20from%20website">
+						<h4>Email</h4> <i class="fa fa-envelope"></i> &nbsp; contact@helgasoft.com</a> <!-- </li>
+		                        </ul> -->
                                 </div>
                             </div>
                             <div class="col-sm-6 text-center">
-                                <div class="contact-info">
-                            		<ul class="imp-links">
-		                            <li><a href='https://github.com/helgasoft' target=_blank>
+                                <div class="contact-info imp-links">
+<!--                            		<ul class="imp-links">
+		                            <li> --><a href='https://github.com/helgasoft' target=_blank>
 						<h4>GitHub</h4>
-								<img src='img/GitHub-Mark-Light-64px.png' alt='GitHub' /></a></li>
-		                        </ul>
+								<img src='img/GitHub-Mark-Light-64px.png' alt='GitHub' /></a> <!-- </li>
+		                        </ul> -->
                                 </div>
                             </div>
                                                                                 
@@ -354,16 +398,18 @@
 
         <!-- Plugins JS NEW -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="inc/bootstrap/js/bootstrap.min.js"></script>
+<!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<!--	<script src="inc/bootstrap/js/bootstrap.min.js"></script>-->
 	<script src="inc/animations/js/wow.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<!--	NOT good <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
 
         <!-- Plugins JS --
 	<scr ipt src="inc/jquery/jquery-1.11.1.min.js"></script>

@@ -500,7 +500,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 .portfolio_menu{
 /*	text-align: center;*/
 	overflow: hidden;
-	margin-top:22px;
+/*	margin-top:22px;*/
 	margin-bottom:48px;
 }
 .portfolio_menu ul{
@@ -509,6 +509,7 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 }
 .portfolio_menu ul li{
 	display: inline-block;
+	padding: 10px 20px;
 }
 .portfolio_menu ul li a{
 	color: #363940;
@@ -720,6 +721,12 @@ ul.imp-links li {
 	padding: 5px 0;
 }
 ul.imp-links li a {
+	text-decoration: none;
+	color: #fff;
+}
+.imp-links a {    /* replaced the above */
+	margin-top: 15px;
+	padding: 5px 0;
 	text-decoration: none;
 	color: #fff;
 }

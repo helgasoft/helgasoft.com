@@ -1,18 +1,158 @@
 <html lang='en-US'>
 <head>
 	<meta charset='utf-8'>
+	<meta name="viewport" content="width=1000, user-scalable=0"> <!--initial-scale=1, maximum-scale=1"-->
 	<title>Helgasoft - Compare Lists in JS</title>
 	<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon' />
 	<meta name='description' content='Compare Lists Online'>
 	<meta name="keywords" content="compare two lists online, compare lists online tool, Compare list differences, free" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Libs and Plugins CSS -->
 	<link rel='stylesheet' href='../inc/bootstrap/css/bootstrap.min.css'>
 	<link rel='stylesheet' href='../css/style.css'>
+	<link rel="stylesheet" href="../css/mobile.css">
 
 	<!-- Skin CSS -->
 	<link rel='stylesheet' href='../css/skin/night-purple.css'>
+
+<style>
+	/* body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }  */
+	td { vertical-align:top; }
+	table {
+	    border-collapse: separate;
+	    border-spacing: 10px;
+	}
+	.txt {font-size:small}
+	.rslt {
+	    display: table-cell;
+	    border: solid #55A 1px;
+	    border-style: solid none none none;
+	    /* background-color:#AAF; */
+	}
+	button { margin-right: 20px; }
+	button:active { border: solid #F55 2px; background:#FBB;}
+	table.CoreTable
+	{
+	    border-collapse: collapse;
+	    width: 90%;
+	    text-align: center;
+	}
+	textarea { 
+	    resize:both; max-height:500px; min-height:100px; 
+	    /* border: none; */
+	    width: 94%;
+	    margin: 8px;
+	    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+	       -moz-box-sizing: border-box; /* FF1+ */
+	            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+	}
+	p { margin: 30px; }
+	span { border-radius: 10px !important; }
+	.notext{
+	 	color: transparent;
+	}
+	.blk { display:inline-block; }
+</style>
+</head>
+
+<body data-target="#main-navbar">   
+    	<div class="body">
+	<!--========== BEGIN HEADER ==========-->
+	<header id="header" class="header-main">
+	
+	<!-- Begin Navbar -->
+	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <a class="page-scroll" href="../#portfolio-section" style='color:white'>BACK</a>
+	      </button>
+	      <a class="navbar-brand page-scroll" href="../"></a>
+	    </div>
+	
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+	        <li><a class="page-scroll" href="../#portfolio-section">Back</a></li>
+			</ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container -->
+	</nav>
+	<!-- End Navbar -->
+	</header>
+	<!-- ========= END HEADER =========-->
+
+<div style='text-align:center; margin-top:70px;'>
+	<h3>Compare Lists</h3> 
+</div>
+
+<table border='0' class='CoreTable'>
+  <tr>
+	<td width='14%'><b>Input Lists</b></td>
+	<td width='43%'><div class='blk'><b>First</b> &nbsp; &nbsp; &nbsp; type or </div> 
+		<div class='blk'><input type='file' onchange="readText(this, 'TextBox1')" class='notext' /></div>  <br />
+		<textarea id='TextBox1' onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea>
+		<br /><span id="lbl1" class='badge'></span></td>
+	<td><div class='blk'><b>Second</b> &nbsp; &nbsp; &nbsp; type or </div> 
+		<div class='blk'><input type='file' onchange="readText(this, 'TextBox2')" class='notext' /></div> <br />
+		<textarea id='TextBox2' onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea>
+		<br /><span id='lbl2' class='badge'></span></td>
+    	</tr>
+  <tr>
+	<td>&nbsp;</td>
+	<td colspan=2 style='text-align:center; padding:10;'>
+		<button onclick='sorta()' >sort all</button>
+		<button onclick='deldup(this)' >delete duplicates</button>
+		<button onclick='compir()' tabindex=3 id='btnGo'><b>Compare</b></button>
+		<br /><div id='timer' class='txt'></div>
+	</td>
+	</tr>
+  <tr>
+	<td>&nbsp;</td>
+	<td colspan=2 class='rslt'></td></tr>
+  <tr>
+	<td><b>Unique</b> </td>
+        <td><textarea id='uniq1'></textarea><br /><span id='lbl3' class='badge'></span></td>
+        <td><textarea id='uniq2'></textarea><br /><span id='lbl4' class='badge'></span></td></tr>
+  <tr>
+	<td><b>Duplicated</b><br /><div class='txt'>once or more</div> </td>
+        <td><textarea id='dupl1'></textarea><br /><span id='lbl6' class='badge'></span></td>
+        <td><textarea id='dupl2'></textarea><br /><span id='lbl7' class='badge'></span></td>
+	</tr>
+  <tr>
+	<td><b>Common</b></td>
+        <td colspan=2>
+		<div style='text-align:center'><textarea id='common' style='width:50% !important'></textarea><br />
+		<span id='lbl5' class='badge'></span></div></td>
+	</tr>
+</table>
+
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <b>Note</b>: Numerical items are converted to strings and compared/sorted as strings.<br />
+		Time estimate for 80K items lists on Intel i5 processor is ~2 minutes.<br />
+		Please do not interrupt when Compare button is <span style='color:#FF5555'>red</span>, browser is still working.<br />
+		If prompted, select <i>Wait</i> or <i>Continue</i> for processing to complete.
+    </div>
+    <div class="col-md-4">
+		If you like and use the application, please 
+		<br /><br /> 
+		<form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
+		<input type='hidden' name='cmd' value='_s-xclick'> <input type='hidden' name='hosted_button_id' value='6KJJ8ZPZZQSCJ'> 
+		<input type='image' src='../img/btn_donate_SM.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!'> 
+		<!--<img alt='' border='0' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif' width='1' height='1'>-->
+		</form> 
+    </div>
+  </div>
+</div>
+
+<br />
+<div class='tcenter'>&copy; helgasoft.com</div>
+
+</div>
 
 <script type='text/javascript'>
 // Copyright ©  Helgasoft.com   All Rights Reserved
@@ -141,138 +281,5 @@ function readText(filePath, tarea) {
 	return true;
 }
 </script>
-
-<style>
-	/* body { font: normal 16px Calibri, Verdana, Arial, sans-serif; }  */
-	td { vertical-align:top; }
-	table {
-	    border-collapse: separate;
-	    border-spacing: 10px;
-	}
-	.txt {font-size:small}
-	.rslt {
-	    display: table-cell;
-	    border: solid #55A 1px;
-	    border-style: solid none none none;
-	    /* background-color:#AAF; */
-	}
-	button { margin-right: 20px; }
-	button:active { border: solid #F55 2px; background:#FBB;}
-	table.CoreTable
-	{
-	    border-collapse: collapse;
-	    width: 90%;
-	    text-align: center;
-	}
-	textarea { 
-	    resize:both; max-height:500px; min-height:100px; 
-	    /* border: none; */
-	    width: 94%;
-	    margin: 8px;
-	    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
-	       -moz-box-sizing: border-box; /* FF1+ */
-	            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
-	}
-	p { margin: 30px; }
-	span { border-radius: 10px !important; }
-	.notext{
-	 	color: transparent;
-	}
-	.blk { display:inline-block; }
-</style>
-</head>
-
-<body>
-        
-	<!--========== BEGIN HEADER ==========-->
-	<header id='header' class='header-main' style='height:98px;'>
-	
-	<!-- Begin Navbar -->
-	<nav id='main-navbar' class='navbar navbar-default navbar-fixed-top' role='navigation'>
-	
-	  <div class='container'>
-	
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class='navbar-header'>
-	      <a class='navbar-brand page-scroll' href='../'></a>
-	    </div>
-	
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-	        <ul class='nav navbar-nav navbar-right'>
-	            <li><a class='page-scroll' href='../#portfolio-section'>Back</a></li>
-		</ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container -->
-	</nav>
-	<!-- End Navbar -->
-	
-	</header>
-	<!-- ========= END HEADER =========-->
-
-
-<div style='text-align:center'>
-	<h5 style='display:inline;margin-right:30px'>Compare Lists</h5> 
-</div>
-
-<table border='0' class='CoreTable'>
-  <tr>
-	<td width='14%'><b>Input Lists</b></td>
-	<td width='43%'><div class='blk'><b>First</b> &nbsp; &nbsp; &nbsp; type or </div> 
-		<div class='blk'><input type='file' onchange="readText(this, 'TextBox1')" class='notext' /></div>  <br />
-		<textarea id='TextBox1' onchange="leni(this,'lbl1')" tabindex=1 placeholder="paste one item per line"></textarea>
-		<br /><span id="lbl1" class='badge'></span></td>
-	<td><div class='blk'><b>Second</b> &nbsp; &nbsp; &nbsp; type or </div> 
-		<div class='blk'><input type='file' onchange="readText(this, 'TextBox2')" class='notext' /></div> <br />
-		<textarea id='TextBox2' onchange="leni(this,'lbl2')" tabindex=2 placeholder="paste one item per line"></textarea>
-		<br /><span id='lbl2' class='badge'></span></td>
-    	</tr>
-  <tr>
-	<td>&nbsp;</td>
-	<td colspan=2 style='text-align:center; padding:10;'>
-		<button onclick='sorta()' >sort all</button>
-		<button onclick='deldup(this)' >delete duplicates</button>
-		<button onclick='compir()' tabindex=3 id='btnGo'><b>Compare</b></button>
-		<br /><div id='timer' class='txt'></div>
-	</td>
-	</tr>
-  <tr>
-	<td>&nbsp;</td>
-	<td colspan=2 class='rslt'></td></tr>
-  <tr>
-	<td><b>Unique</b> </td>
-        <td><textarea id='uniq1'></textarea><br /><span id='lbl3' class='badge'></span></td>
-        <td><textarea id='uniq2'></textarea><br /><span id='lbl4' class='badge'></span></td></tr>
-  <tr>
-	<td><b>Duplicated</b><br /><div class='txt'>once or more</div> </td>
-        <td><textarea id='dupl1'></textarea><br /><span id='lbl6' class='badge'></span></td>
-        <td><textarea id='dupl2'></textarea><br /><span id='lbl7' class='badge'></span></td>
-	</tr>
-  <tr>
-	<td><b>Common</b></td>
-        <td colspan=2>
-		<div style='text-align:center'><textarea id='common' style='width:50% !important'></textarea><br />
-		<span id='lbl5' class='badge'></span></div></td>
-	</tr>
-</table>
-
-<p>&nbsp;<br />
-<table border='0' class='CoreTable'>
-  <tr>
-	<td>
-<b>Note</b>: Numerical items are converted to strings and compared/sorted as strings.<br />
-Time estimate for 80K items lists on Intel i5 processor is ~2 minutes.<br />
-Please do not interrupt when Compare button is <span style='color:#FF5555'>red</span>, browser is still working.<br />
-If prompted, select <i>Wait</i> or <i>Continue</i> for processing to complete.
-	</td><td>
-If you like and use the application, please 
-<br /><br /> 
-<form action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_top'>
-<input type='hidden' name='cmd' value='_s-xclick'> <input type='hidden' name='hosted_button_id' value='6KJJ8ZPZZQSCJ'> <input type='image' src='../img/btn_donate_SM.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online!'> <img alt='' border='0' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif' width='1' height='1'>
-</form> 
-	</td></tr>
-</table>
-</p>
-
 </body>
 </html>
