@@ -3,31 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Helgasoft - software solutions</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="canonical" href="https://helgasoft.com" />
-	<meta name="description" content="Expert Software Outsourcing">
-	<meta name="keywords" content="visualization, R, Shiny, Javascript, C#, SQL Server, PostgreSQL, Leaflet, GIS, GPX, geospatial, coding, software, database, integration, data modeling, outsourcing, contractor, contract" />
+	<meta name="description" content="Expert Software Outsourcing in R">
+	<meta name="keywords" content="visualization, R, Shiny, Javascript, ECharts, SQL Server, PostgreSQL, Leaflet, GIS, GPX, geospatial, coding, software, database, integration, data modeling, outsourcing, contractor, contract" />
 	<meta name="author" content="helgasoft.com">
 	<meta name="google-site-verification" content="cCRbeVYsPWoQ86eN5CjokjMP9c1t3NZrMdN3kYy96l0" />
-        
-<!--	<link rel="stylesheet" href="css/fonts.css">-->
-
-		<!-- Libs and Plugins CSS -->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">-->
-<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">-->
-<!--	 NOT working  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-<!-- works <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-<!--	<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">-->
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	<link rel="stylesheet" href="inc/animations/css/animate.min.css">
-	<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> 
+	<link rel="stylesheet" href="inc/font-awesome/css/all.min.css"> 
 	<link rel="stylesheet" href="inc/owl-carousel/css/owl.carousel.css">
 	<link rel="stylesheet" href="inc/owl-carousel/css/owl.theme.css">
 
 	<!-- Theme CSS -->
-<!--   	<link rel="stylesheet" href="css/reset.css"> -->
+	<!--   	<link rel="stylesheet" href="css/reset.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/mobile.css">
 
@@ -37,8 +28,8 @@
 </head>
 
 <body data-spy="scroll" data-target="#main-navbar">
-     <div class="page-loader"></div>  <!-- Display loading image while page loads -->
-    	<div class="body">
+    <div class="page-loader"></div>  <!-- Display loading image while page loads -->
+    <div class="body">
         
 	<!--========== BEGIN HEADER ==========-->
 	<header id="header" class="header-main">
@@ -64,9 +55,9 @@
 	    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 	        <ul class="nav navbar-nav navbar-right">
 	            <li><a class="page-scroll" href="#text-carousel-intro-section">Home</a></li>
-	            <li><a class="page-scroll" href="#about-section">About</a></li>
 	            <li><a class="page-scroll" href="#tech-section">Technologies</a></li>
 	            <li><a class="page-scroll" href="#portfolio-section">Portfolio</a></li>
+	            <li><a class="page-scroll" href="#about-section">About</a></li>
 	            <li><a class="page-scroll" href="#contact-section">Contact</a></li>
 	        </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -78,53 +69,12 @@
 	</header>
 	<!-- ========= END HEADER =========-->
             
-            
-            
-            
+                     
 	<!-- Begin text carousel intro section -->
 	<section id="text-carousel-intro-section" class="parallax" style="background-image: url(img/slider-bg.jpg);">
 		
 		<div class="container">
 			<div class="caption text-center text-white">
-
-<!--		https://www.w3schools.com/bootstrap/bootstrap_ref_js_carousel.asp
-	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-	    <ol class="carousel-indicators">
-	      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-	      <li data-target="#myCarousel" data-slide-to="1"></li>
-	      <li data-target="#myCarousel" data-slide-to="2"></li>
-	    </ol>
-	
-	    <div class="carousel-inner" role="listbox">
-	
-					<div class="item active">
-						<h1>Software Solutions</h1>
-						<p>crafted with passion</p>
-                			<div class="extra-space-l"></div>
-					</div>
-					<div class="item" valign="top">
-						<img src=img/logo-r.png width="128" height="128"/> &nbsp; &nbsp;
-						<img src=img/shiny-logo.png width="110" height="128"/>
-						<p>Data analysis and visualization</p>
-						<div class="extra-space-l"></div>
-					</div>
-					<div class="item">
-						<h1>C# &nbsp; SQL &nbsp; LINQ</h1>
-						<p>Desktop and web applications with database support</p>
-						<div class="extra-space-l"></div>
-					</div>
-	    </div>
-	
-	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-	      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	      <span class="sr-only">Previous</span>
-	    </a>
-	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-	      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	      <span class="sr-only">Next</span>
-	    </a>
-	  </div>
--->
 
 				<div id="owl-intro-text" class="owl-carousel">
 					<div class="item">
@@ -133,16 +83,15 @@
                 				<div class="extra-space-l"></div>
 					</div>
 					<div class="item" valign="top">
+						<h2>Data analysis and visualization</h2>
 						<img src=img/logo-r.png width="128" height="128"/> &nbsp; &nbsp;
 						<img src=img/shiny-logo.png width="110" height="128"/> &nbsp; &nbsp;
 						<img src=img/js-logo.png width="113" height="128"/>
-						<p>Data analysis and visualization</p>
+						<!-- <p>Data analysis and visualization</p> -->
 						<div class="extra-space-l"></div>
 					</div>
 					<div class="item">
-						<h1>C# &nbsp; SQL &nbsp; LINQ</h1>
-						<p>Desktop and web applications with database support</p>
-						<div class="extra-space-l"></div>
+						<img src=img/gofig.png />
 					</div>
 				</div>
 
@@ -151,75 +100,9 @@
 		</div> <!-- /.container -->
 
 	</section>
-	<!-- End text carousel intro section -->
-                
-                
-                
-                
-	<!-- Begin about section -->
-	<section id="about-section" class="page bg-style1">
-                <!-- Begin page header-->
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
-                      <h2>About</h2>
-                            <div class="devider"></div>
-                            <!-- <p class="subtitle">Some general information</p> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End page header-->
-
-                <!-- Begin rotate box-1 -->
-                <div class="rotate-box-1-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
-                                    <span class="rotate-box-icon"><i class="fa fa-users"></i></span>
-                                    <div class="rotate-box-info">
-                                  <h4>Who We Are?</h4>
-                                        <p>A contract software provider located in San Diego, California.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
-                                    <span class="rotate-box-icon"><i class="fa fa-wrench"></i></span>
-                                    <div class="rotate-box-info">
-                                  <h4>What We Do?</h4>
-                                        <p>We build reliable and cost-effective software applications for customers globally.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
-                                    <span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
-                                    <div class="rotate-box-info">
-                                  <h4>Why We Do It?</h4>
-                                        <p>Expand knowledge and interests by constantly exploring and implementing innovative solutions for our customers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.6s">
-                                    <span class="rotate-box-icon"><i class="fa fa-clock-o"></i></span>
-                                    <div class="rotate-box-info">
-                                  <h4>Since When?</h4>
-                                        <p>20 years and counting...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-	        	</div> <!-- /.row -->
-	    	  </div> <!-- /.container -->
-		</div>
-		<!-- End rotate box-1 -->
-	</section>     
-	<div class="extra-space-l"></div>
+	<!-- End text carousel intro section -->    
+    
+    
 
 	<!-- Begin Technologies -->
 	<section id="tech-section" class="page text-center">
@@ -242,10 +125,20 @@
 		
 		            <div class="col-md-3 col-sm-6">
 		                <div class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0.2s">
-		                    <span class="rotate-box-icon"><i class="fa fa-bar-chart"></i></span>
+		                    <span class="rotate-box-icon"><i class="fa fa-chart-bar"></i></span>
 		                    <div class="rotate-box-info">
 		                        <h4>Data & Visualization</h4>
-		                        <p>R language and libraries<br />Javascript and libraries<br />interactive charts & maps</p>
+		                        <p>R language and libraries<br />Javascript and libraries<br />interactive charts in 2D/3D</p>
+		                    </div>
+		                </div>
+		            </div>
+		
+		            <div class="col-md-3 col-sm-6">
+		                <div class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
+		                    <span class="rotate-box-icon"><i class="fa fa-map-marked-alt"></i></span>
+		                    <div class="rotate-box-info">
+		                        <h4>Maps & GIS</h4>
+		                        <p>Leaflet, Mapbox, Google<br />gpx, geoJson, shape, 3D</p>
 		                    </div>
 		                </div>
 		            </div>
@@ -255,17 +148,7 @@
 		                    <span class="rotate-box-icon"><i class="fa fa-cloud"></i></span>
 		                    <div class="rotate-box-info">
 		                        <h4>Online</h4>
-		                        <p>Shiny, openCPU<br />web data extraction,<br />quantitative financial apps</p>
-		                    </div>
-		                </div>
-		            </div>
-		
-		            <div class="col-md-3 col-sm-6">
-		                <div class="rotate-box-2 square-icon text-center wow zoomIn" data-wow-delay="0">
-		                    <span class="rotate-box-icon"><i class="fa fa-desktop"></i></span>
-		                    <div class="rotate-box-info">
-		                        <h4>Desktop</h4>
-		                        <p>C#, XAML, WCF,<br />Entity Framwork (EF)</p>
+		                        <p>Web data extraction,<br />ShinyProxy, openCPU<br />GitHub, AWS, Docker</p>
 		                    </div>
 		                </div>
 		            </div>
@@ -288,117 +171,178 @@
 	</section>
 	<!-- End Technologies -->
 
-            <section id="portfolio-section" class="page bg-style1">
-            	<div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="portfolio">
-                                
-                                <div class="page-header-wrapper">
-                                    <div class="container">
-                                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                      <h2>Portfolio</h2>
-                                            <div class="devider"></div>
-                                            <p class="subtitle">Below are some samples of our work</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="portfolio_content_area" >
-                                    <div class="portfolio_menu">
+	<section id="portfolio-section" class="page bg-style1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portfolio">
+						
+						<div class="page-header-wrapper">
+							<div class="container">
+								<div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+				<h2>Portfolio</h2>
+									<div class="devider"></div>
+									<p class="subtitle">Some samples of our work</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="portfolio_content_area" >
+							<div class="portfolio_menu">
 
-                                        <ul>
-    <li><a href='tools/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />Biotech <div class='fsm'>R, Shiny</div></a></li>
-    <li><a href='tools/stock.html'><img src='img/stockapp.png' width='200px' /><br />Stock Market <div class='fsm'>R, Shiny, quantmod</div></a></li>
-    <li><a href='tools/leaflet.html'><img src='img/truntrac.png' width='200px' /><br />Mapping <div class='fsm'>R, Shiny, leaflet</div></a></li>
-		 <br /><br />
-    <li><a href='tools/sdfishing.html'><img src='img/f.propo.png' width='200px' /><br />Charts <div class='fsm'>R, ggplot</div></a></li>
-    <li><a href='tools/gold.html'><img src='img/graphs.gif' width='200px' /><br />Graphs <div class='fsm'>R & JS</div></a></li>
-    <li><a href='tools/fr.visa.html'><img src='img/geospatial.png' width='200px' /><br />Geocoding <div class='fsm'>R, JS, leaflet</div></a></li>
-		 <br /><br />
-    <li><a href='https://helgasoft.github.io/Chrome-Ext-Gvoice/'><div style="margin:10px">Chrome Extension <div class='fsm'>JS</div></div></a></li>
-    <li><a href='tools/licomp.html'><div style="margin:10px">Compare Lists <div class='fsm'>JS &nbsp; &nbsp; <font color='red'>LIVE</font></div></div></a></li>
-    <li><a href='tools/migration.html'><div style="margin:10px">PostgreSQL migration <div class='fsm'>report</div></div></a></li>
-    <li><a href='tools/misc.html'><div><span><b>More</b></span> <img src='img/spin4.gif'/></div></a></li>
-                                        </ul>
-                                    </div>
+								<ul>
+<li><a href='visu/svzr.html'><img src='img/svzr.jpg' width='200px' /><br />
+Biotech <div class='fsm'>R, Shiny</div></a></li>
+<li><a href='visu/stock.html'><img src='img/stockapp.png' width='200px' /><br />
+Stock Market <div class='fsm'>R, Shiny, quantmod</div></a></li>
+<li><a href='visu/leaflet.html'><img src='img/truntrac.png' width='200px' /><br />
+Mapping <div class='fsm'>R, Shiny, leaflet</div></a></li>
+	<br /><br />
+<li><a href='visu/sdfishing.html'><img src='img/f.propo.png' width='200px' /><br />
+Charts <div class='fsm'>R, ggplot</div></a></li>
+<li><a href='visu/gold.html'><img src='img/graphs.gif' width='200px' /><br />
+Graphs <div class='fsm'>R & JS</div></a></li>
+<li><a href='visu/gis.html'><img src='img/geospatial.png' width='200px' /><br />
+GIS, geocoding <div class='fsm'>R, JS, leaflet</div></a></li>
+	<br /><br />
+<li><a href='https://helgasoft.github.io/echarty/'><img src='img/echarty.png' />
+<div style="margin:8px"><strong>echarty</strong> is an R library, wrapper for ECharts</span></div></a></li>
+<li><a href='visu/misc.html'><div><img src='img/spin4.gif'/> 
+<span><b>and more</b></span> <img src='img/spin4.gif'/></div></a></li>
+								</ul>
+							</div>
 
-                                </div>
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End resources -->
-
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     
-            <!-- Begin contact section -->
-            <section id="contact-section" class="page text-white parallax">
-            	<div class="cover"></div>
-            
-                 <!-- Begin page header-->
-                <div class="page-header-wrapper">
-                    <div class="container">
-                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                      <h2>Contact</h2>
-                            <div class="devider"></div>
-                            <p class="subtitle">Thank you for your interest</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End page header-->
-                
-                <div class="contact wow bounceInRight" data-wow-delay="0.4s">
-                    <div class="container">
-                    	<div class="row">
-                        
-                            <div class="col-sm-6 text-center">
-                                <div class="contact-info imp-links">
+	<!-- Begin about section -->
+	<section id="about-section" class="page bg-style1">
+		<!-- Begin page header-->
+		<div class="page-header-wrapper">
+			<div class="container">
+				<div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+			  <h2>About</h2>
+					<div class="devider"></div>
+					<!-- <p class="subtitle">Some general information</p> -->
+				</div>
+			</div>
+		</div>
+		<!-- End page header-->
+
+		<!-- Begin rotate box-1 -->
+		<div class="rotate-box-1-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0">
+							<span class="rotate-box-icon"><i class="fa fa-users"></i></span>
+							<div class="rotate-box-info">
+						  <h4>Who We Are?</h4>
+								<p>A contract software provider located in San Diego, California.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.2s">
+							<span class="rotate-box-icon"><i class="fa fa-wrench"></i></span>
+							<div class="rotate-box-info">
+						  <h4>What We Do?</h4>
+								<p>We build reliable and cost-effective software applications for customers globally.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<div class="rotate-box-1 square-icon wow zoomIn" data-wow-delay="0.4s">
+							<span class="rotate-box-icon"><i class="fa fa-heart"></i></span>
+							<div class="rotate-box-info">
+						  <h4>Why We Do It?</h4>
+								<p>Explore<br>
+								Discover<br>
+								Find solutions<br>
+								Expand knowledge</p>
+							</div>
+						</div>
+					</div>
+					
+		</div> <!-- /.row -->
+	  </div> <!-- /.container -->
+</div>
+<!-- End rotate box-1 -->
+	</section>     
+    <!-- End about section -->
+
+	<!-- Begin contact section -->
+	<section id="contact-section" class="page text-white parallax">
+		<div class="cover"></div>
+	
+			<!-- Begin page header-->
+		<div class="page-header-wrapper">
+			<div class="container">
+				<div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+				<h2>Contact</h2>
+					<div class="devider"></div>
+					<p class="subtitle">Thank you for your interest</p>
+				</div>
+			</div>
+		</div>
+		<!-- End page header-->
+		
+		<div class="contact wow bounceInRight" data-wow-delay="0.4s">
+			<div class="container">
+				<div class="row">
+				
+					<div class="col-sm-6 text-center">
+						<div class="contact-info imp-links">
 <!--                            		<ul class="imp-links">
-		                            <li> --> <a href="mailto:contact@helgasoft.com?subject=Contact%20from%20website">
-						<h4>Email</h4> <i class="fa fa-envelope"></i> &nbsp; contact@helgasoft.com</a> <!-- </li>
-		                        </ul> -->
-                                </div>
-                            </div>
-                            <div class="col-sm-6 text-center">
-                                <div class="contact-info imp-links">
+							<li> --> <a href="mailto:contact@helgasoft.com?subject=Contact%20from%20website">
+				<h4>Email</h4> <i class="fa fa-envelope"></i> &nbsp; contact@helgasoft.com</a> <!-- </li>
+						</ul> -->
+						</div>
+					</div>
+					<div class="col-sm-6 text-center">
+						<div class="contact-info imp-links">
 <!--                            		<ul class="imp-links">
-		                            <li> --><a href='https://github.com/helgasoft' target=_blank>
-						<h4>GitHub</h4>
-								<img src='img/GitHub-Mark-Light-64px.png' alt='GitHub' /></a> <!-- </li>
-		                        </ul> -->
-                                </div>
-                            </div>
-                                                                                
-                        </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-                </div>
+							<li> --><a href='https://github.com/helgasoft' target=_blank>
+				<h4>GitHub</h4>
+						<img src='img/GitHub-Mark-Light-64px.png' alt='GitHub' /></a> <!-- </li>
+						</ul> -->
+						</div>
+					</div>
+																		
+				</div> <!-- /.row -->
+			</div> <!-- /.container -->
+		</div>
 
-            </section>
-            <!-- End contact section -->
+	</section>
+	<!-- End contact section -->
 
 
-            <!-- Begin footer -->
-            <footer class="text-off-white">
-                
-                <div class="footer">
-                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
-                        <p class="copyright">Copyright &copy; Helgasoft. All rights reserved.</p>
-                    </div>
-                </div>
+	<!-- Begin footer -->
+	<footer class="text-off-white">
+		
+		<div class="footer">
+			<div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+				<p class="copyright">Copyright &copy; Helgasoft. All rights reserved.</p>
+			</div>
+		</div>
 
-            </footer>
-            <!-- End footer -->
+	</footer>
+	<!-- End footer -->
 
-            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
-                                              
-        </div><!-- body ends -->
+	<a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+										
+</div><!-- body ends -->
 
 
         <!-- Plugins JS NEW -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <!--	<script src="inc/bootstrap/js/bootstrap.min.js"></script>-->
 	<script src="inc/animations/js/wow.min.js"></script>
@@ -408,21 +352,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
-
-        <!-- Plugins JS --
-	<scr ipt src="inc/jquery/jquery-1.11.1.min.js"></script>
-	<scr ipt src="inc/bootstrap/js/bootstrap.min.js"></script>
-	<scr ipt src="inc/owl-carousel/js/owl.carousel.min.js"></script>
-	<scr ipt src="inc/animations/js/wow.min.js"></script>
-	<scr ipt src="inc/waypoints.min.js"></script>
-	<scr ipt src="inc/isotope.pkgd.min.js"></script>
-	<scr ipt src="inc/classie.js"></script>
-	<scr ipt src="inc/jquery.easing.min.js"></script>
-	<scr ipt src="inc/jquery.counterup.min.js"></script>
-	<scr ipt src="inc/smoothscroll.js"></script> 
-	<scr ipt src="inc/stellar/js/jquery.stellar.min.js"></script> -->
 
 	<!-- Theme JS -->
 	<script src="js/theme.js"></script>

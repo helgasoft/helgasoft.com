@@ -18,7 +18,8 @@
 	.msection { margin-top: 35px; margin-bottom:25px; }
 	.imag { margin:15px; width: 90%; height: auto;}
 	#containerm { float:left }
-	marquee { width:60% } 
+	marquee { width:60% }
+	a {font-weight: bold;}
 </style>
 
 </head>
@@ -51,13 +52,14 @@
 	
 	</header>
 	<!-- ========= END HEADER =========-->
-<div class="container">
-<p>&nbsp;<br />&nbsp;<br />&nbsp;<br /></p>
 
-<h2>Various completed projects</h2>
+
+<div class="container" style='margin-top: 50px;'>
+
+<h2>Various projects</h2>
 
 <div class='msection'>
-<h4>Shiny UI for distribution modeling app</h4>
+<h3>Shiny UI for distribution modeling app</h3>
 &bull; upload shapefiles in .csv, .zip or (.dbf,.shp,.shx,.prj) format<br />
 &bull; field and parameter selection and validation<br />
 &bull; run preparation and modeling, display results as plots/tables, download<br />
@@ -65,16 +67,17 @@
 <img src='../img/mod.proj2.png' alt='modeling GUI' class='imag' style='max-width:931px;' /></img>
 
 <div class='msection'>
-<h4>Build and maintain a Javascript library for offline maps on GitHub</h4>
-	<a href='https://github.com/helgasoft/leaflet.dexie' target=_blank>leaflet.dexie</a> is a Leaflet plugin for saving maps in local storage using library Dexie.js.<br />
-	The <a href='https://helgasoft.github.io/leaflet.dexie/index.html' target=_blank>demo</a> implements creation and deletion of maps and can simulate offline map display.
+<h3>Offline Maps</h3>
+	<a href='https://github.com/helgasoft/leaflet.dexie' target=_blank><strong>leaflet.dexie</strong></a> is a Leaflet plugin for saving maps in local storage using library Dexie.js.<br />
+	Implements creation (and deletion) of maps for offline viewing, with <a href='https://helgasoft.github.io/leaflet.dexie/index.html' target=_blank>demo</a> hosted on Github.<br />
 	<a href='https://helgasoft.github.io/leaflet.dexie/index.html' target=_blank><img src='../img/ldexie-demo.png' /></a>
 </div>	
 
 <div class='msection'>
-<h4>Progress of Southern California cities weekly layoffs</h4>
-	WARN notices for temporary/permanent layoffs by effective date<br />
-	<div id="containerm">ETL of <a href='https://www.edd.ca.gov'>EDD data</a> with R, dplyr, leaflet, geocoding. &nbsp; &nbsp; </div>
+<h3>Weekly layoffs, COVID related</h3>
+	Shows progress in SoCal cities in March/May 2020.<br />
+	<a href='https://www.edd.ca.gov'>EDD data</a> is WARN notices for temporary/permanent layoffs by effective date<br />
+	<div id="containerm">ETL with R, dplyr, leaflet, geocoding. &nbsp; &nbsp; </div>
 	<marquee behavior="alternate" direction="right" scrollamount=2" scrolldelay="2"> 
 		<i>Click on side arrows (&laquo; &raquo;) below for weekly slides.</i> </marquee>
 </div>	
@@ -97,15 +100,25 @@
 	</div>
 
 <div class='msection'>
-<h4>San Diego County COVID map by zipcode</h4> 
-<div>below is a smartphone demo of the app</div>
+	<h3>San Diego County COVID map by zipcode</h3> 
+	<div>below is a smartphone demo of the app</div>
 </div>
-	<video id="video1" preload="auto" loop="loop" src="../img/sd-covid-map3.mp4" type="video/mp4" muted="muted">
-	  San Diego Covid cases by zip code
+	<video id="video1" preload="auto" loop="loop" 
+		src="../img/sd-covid-map3.mp4" type="video/mp4" muted="muted" controls>
+		Your browser does not support the video tag.
 	</video>
 
 <div class='msection'>
-	<h4>California fishing maps</h4>
+	<h3>R, Shiny and <a href='https://helgasoft.github.io/echarty/'>echarty</a></h3> 
+	<div>a dashboard with map and charts linked on hover</div>
+</div>
+	<video id="video2" preload="auto" loop="loop" 
+		src="../img/hover.link.mp4" type="video/mp4" muted="muted" controls>
+		Your browser does not support the video tag.
+	</video>
+	
+<div class='msection'>
+	<h3>California fishing maps</h3>
 	<i>Live</i> interactive Leaflet maps with feature filtering, an ETL project
 </div>
 <ul>
@@ -114,15 +127,23 @@
 	<li><i>Load</i> - build web page and maps with overlays, load data from files or inserts, solve CORS issues.</li>
 </ul>
 <blockquote>
-	<a href='fresh.html'><img src='../img/brook.png' /> &nbsp; &nbsp;<b>Rivers & Lakes</b></a>
-	<br /><a href='ocean.html'><img src='../img/tuna_fish.png' /> &nbsp; &nbsp;<b>Ocean</b></a>  &nbsp; &nbsp; 
-	<br /><a href='sharks.html'><img src='../img/shark.png' width='64px' height='64px' /> &nbsp; &nbsp;<b>Shark Attacks</b></a>
+		  <a href='fresh.html'><img src='../img/brook.png' /> &nbsp; &nbsp;Rivers & Lakes</a>
+	<br /><a href='ocean.html'><img src='../img/tuna_fish.png' /> &nbsp; &nbsp;Ocean</a>
+	<br /><a href='sharks.html'><img src='../img/shark.png' width='64px' height='64px' /> &nbsp; &nbsp;Shark Attacks</a>
 </blockquote>
+<br />
+<h3>Chrome Extension</h3>
+	an <a href='https://helgasoft.github.io/Chrome-Ext-Gvoice/'>extension</a> for Chrome browser for efficient download of photos
+<h3>Lists Compare</h3>
+    comparison analysis of two long data lists, in JavaScript - <a href='../tools/licomp.html'>LIVE</a>
+<h3>PostgreSQL migration</h3> 
+	a <a href='../tools/migration.html'>report</a> of database migration from SQL Server to PostgreSQL
 
 <div class='msection'>
 	<h2>Software Notes</h2>
-	<a href='prnotes.html'>solutions to common problems</a> in R, Javascript, Windows.
+	<a href='prnotes.html'>Solutions</a> to common problems in R, Javascript, Windows.
 </div>
+
 <div class='tcenter'>&copy; helgasoft.com</div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -185,6 +206,8 @@
 	  });
 	}
 	var videoElement = document.querySelector("#video1");
+	createObserver();
+	videoElement = document.querySelector("#video2");
 	createObserver();
 	</script>
 

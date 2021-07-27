@@ -55,36 +55,8 @@
 <div class="container">
 <p>&nbsp;</p>
 
-<h3>Put me on a map!</h3>
-<p>
-Have you seen web pages screeming for a map? <!-- https://visa.lafrenchtech.com/10/find-your-future-employer-in-france-french-tech-visa -->
-One of them was <a href='https://lafrenchtech.com/en/how-france-helps-startups/french-tech-visa/visa-for-employees/'>French Tech Visa</a>. There was company info and search by area, but no map. <br />
-Below is a <b>live</b> geocoded map for the same page which could be used for location search. (data as of Dec 2017)
-</p>
-
-	<div class='cblock'>
-		<div id='map'></div>
-	</div>
-	<div class="row" id='company' style='font-style: italic;'>
-	    <div class="col-md-6 col-xs-12"><br /><b>Click on a map marker <img src='../img/coq.png' width=27px height=38px /> to see details here</b></div>
-	    <div class="col-md-6 col-xs-12"><img src='https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png' width='300' height='169' /></div>
-	</div>
-<br />
-Luckily, all the data was inside the page source in JSON format. To clean and use it in R, one could simply copy and assign it to a variable, then <i>source</i> it in RStudio to fix any errors. Then it can be converted to a <i>data.frame</i>.
-<pre><code>products <- '[ { "Company_Name": "1001 Pharmacies",... } ]'
-companies <- jsonlite::fromJSON(products)</code></pre>
-Next step was to extract the addresses (<i>companies[1:100,]$Adresse</i>), clean them of special characters and try a <a href='https://www.doogal.co.uk/BatchGeocoding.php'>batch geocode online</a>. From the KML output file, one could extract the lon/lat coordinates and match them to the companies by address.
-As a result, the <i>companies</i> data frame gets two more columns - latitude and longitude. We saved this geocoded data in a second JSON file.<br />
-<pre><code>xjson <- jsonlite::toJSON(companies, pretty=T)
-out <- file('french.json', encoding="UTF-8")
-write(xjson, file=out)
-</code></pre>
-Used Javascript next to recode the data from JSON to <i>geojson</i> format. You can see the file <a href='../img/french.geojson'>raw</a>, or <a href='http://bl.ocks.org/d/d49dcfb74b289852b8c8a0c5379c6741'>here</a> on a map. Finally we read this same geojson file and present it on a <a href='http://leafletjs.com/'>Leaflet</a> map with clustering - here below. Clicking on a company marker will show the details just below the map. Et voilà!
-
-	<p>&nbsp;</p>
-
-	<hr><h3>Photos on a map</h3>
-	Below is a demo clip of another Leaflet map. Hover mouse on (green) markers will show related images. Images could be dragged over the map, zoomed along with the map, or closed by double-click.
+<hr><h3>Google StreetView photos on a map</h3>
+	Below is a demo clip of Leaflet map. Hover mouse on green markers pops a StreetView image for the location. Images could be dragged over the map, zoomed along with the map, or closed by double-click.
 	<p>&nbsp;</p>
 	<div class="embed-responsive embed-responsive-4by3">
 		<video class="embed-responsive-item vfit" controls autoplay muted>
@@ -123,6 +95,32 @@ Used Javascript next to recode the data from JSON to <i>geojson</i> format. You 
 	</div>
 
 	<p>&nbsp;</p><p>&nbsp;</p>
+	
+<hr><h3>Geocoding</h3>
+<p>
+Retrofit a web page with location data to a <b>live map</b>.<br />
+The data (circa Dec 2017) was inside the page source in JSON format. To clean and use it in R, one could simply copy and assign it to a variable, then <i>source</i> it in RStudio to fix any errors. Then it can be converted to a <i>data.frame</i>.
+<pre><code>products <- '[ { "Company_Name": "1001 Pharmacies",... } ]'
+companies <- jsonlite::fromJSON(products)</code></pre>
+Next step was to extract the addresses (<i>companies[1:100,]$Adresse</i>), clean them of special characters and try a <a href='https://www.doogal.co.uk/BatchGeocoding.php'>batch geocode online</a>. From the KML output file, one could extract the lon/lat coordinates and match them to the companies by address.
+As a result, the <i>companies</i> data frame gets two more columns - latitude and longitude. Saved this geocoded data in a second JSON file.<br />
+<pre><code>xjson <- jsonlite::toJSON(companies, pretty=T)
+out <- file('french.json', encoding="UTF-8")
+write(xjson, file=out)
+</code></pre>
+Used Javascript next to recode the data from JSON to <i>geojson</i> format (see <a href='../img/french.geojson'>file</a>). Finally this same geojson file is presented on a <a href='http://leafletjs.com/'>Leaflet</a> map with clustering. Clicking on a company marker will show company details just below the map.
+</p>
+
+	<div class='cblock'>
+		<div id='map'></div>
+	</div>
+	<div class="row" id='company' style='font-style: italic;'>
+	    <div class="col-md-6 col-xs-12"><br /><b>Click on a map marker <img src='../img/coq.png' width=27px height=38px /> to see details here</b></div>
+	    <div class="col-md-6 col-xs-12"><img src='https://2268e15ae1206fc04954-76b466cd72f6b3a6e7219a8a02851d8e.ssl.cf1.rackcdn.com/files/5a2696d7ff39355f1aaa0897/size_3_picture.png' width='300' height='169' /></div>
+	</div>
+
+	<p>&nbsp;</p>
+
 </div>
 <div class='ctr'>&copy; helgasoft.com</div>
 <p>&nbsp;</p>
