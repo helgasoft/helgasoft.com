@@ -34,14 +34,15 @@
   <div class='clearer'></div>
 
 <div class='meat'><br />
-	<span><img src=../img/shark.png width='36px;' height='36px;' /> &nbsp; <h2 style='display:inline;'>Shark Attacks Map, US Pacific Coast, 2000-2019</h2>
+	<span><img src=../img/shark.png width='36px;' height='36px;' /> &nbsp; <h2 style='display:inline;'>Shark Attacks Map, US Pacific Coast, 2000-2024</h2>
 	</span>
 	<div id="map"></div>
 	<p>Map only includes confirmed, unprovoked shark attacks that resulted in injury or fatality. GPS locations are approximate.</p>
 </div>
 <div class='ctr'>Data Sources:  &nbsp; &nbsp;
 	<a href='http://www.sharkresearchcommittee.com' target=_blank>SharkResearchCommittee</a> &nbsp; &nbsp;
-	<a href='http://www.sharkattackfile.net' target=_blank>SharkAttackFile</a>
+	<a href='http://www.sharkattackfile.net' target=_blank>SharkAttackFile</a> &nbsp; &nbsp;
+	<a href='https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=203224&inline' target=_blank>dfg.ca.gov</a>
 </div>
 <div id='kw'>On this page you can find info about shark attack locations in inshore waters of the Pacific Ocean. Many have survived. A few attacks from great white were fatal. These are shark encounters while surfing, swimming, diving, kayaking. </div>
 <div class='ctr'>&copy; helgasoft.com</div>
@@ -163,9 +164,31 @@ var sharkdata = 'Date,Victim,Activity,Location,Outcome,lon,lat,media\r\n' +
 '2019-10-25,D. Z.,Kayaking,"North of Leffingwell Landing, Cambria, CA",Survived,-121.12156391143799,35.5803720010423,\r\n' +
 '2019-12-21,A. C.,Surfing,"Northwest  Santa Rosa Island, Santa Barbara, CA",Survived,-120.23300170898438,34.022502265437836,http://www.sharkattackfile.net/spreadsheets/pdf_directory/2019.12.21-Coons.pdf\r\n' +
 '2020-03-27,A. V.,Paddleboard,"Opal Cliff near Pleasure Point, Santa Cruz, CA",Survived,-121.961472,36.961406,https://www.ksbw.com/article/shark-takes-bite-of-sup-board-in-santa-cruz/31964860#\r\n' +
-'2020-04-29,?. ?.,Surfing,"South of Moonlight Beach, Encinitas, CA",Survived,-117.298740,33.047849,https://www.trackingsharks.com/shark-interaction-in-california/\r\n' +
+'2020-04-29,?. ?.,Surfing,"South of Moonlight Beach, Encinitas, CA",Survived,-117.3004112706074,33.04506882800106,https://www.trackingsharks.com/shark-interaction-in-california/\r\n' +
 '2020-05-01,M. B.,Swimming,"near Padaro Lane, Carpinteria, CA",Survived,-119.56189,34.413114,https://www.trackingsharks.com/possible-shark-bite-in-california/\r\n' +
-'2020-05-09,B. K.,Surfing,"Manresa Main State Beach, Santa Cruz, CA",Fatal,-121.863774,36.931886,https://sanfrancisco.cbslocal.com/2020/05/09/shark-attack-reported-off-sand-dollar-beach-in-santa-cruz-county/';
+'2020-05-09,B. K.,Surfing,"Manresa Main State Beach, Santa Cruz, CA",Fatal,-121.863774,36.931886,https://sanfrancisco.cbslocal.com/2020/05/09/shark-attack-reported-off-sand-dollar-beach-in-santa-cruz-county/\r\n' +
+'2020-05-25,M. T.,Kayaking,"Shelter Cove, Humboldt County, CA",Survived,-124.05750787850097,40.018544869292434,\r\n' +
+'2020-08-28,D. A.,Kayaking,"Shelter Cove, Humboldt County, CA",Survived,-124.04931113968503,40.017418313085926,\r\n' +
+'2020-12-06,C. H.,Surfing,"Seaside Cove, OR",Survived,-123.94552114607559,45.979029079947495,\r\n' +
+'2020-12-30,P. G.,Swimming,"Coronado, San Diego, CA",Survived,-117.1861861088067,32.6798963150732,https://coronadotimes.com/news/2021/04/02/coronado-white-shark-attack-details-from-december-30-2020/\r\n'+
+'2021-06-26,N. S.,Swimming,"Gray Whale Beach, CA",Survived,-122.51887749332,37.56413513645726,\r\n' +
+'2021-06-30,E. C.,Kayaking,"Parsons Landing, Catalina Island, CA",Survived,-118.55025286418076,33.4752938646,https://abc7.com/shark-attack-catalina-island-bite-parsons-landing/10847625\r\n' +
+'2021-07-23,J. R.,Surfing,"Capitola Beach, CA",Survived,-121.949813643106,36.96899574425638,\r\n' +
+'2021-10-03,E. S.,Surfing,"Salmon Creek Beach, CA",Survived,-123.07393279326105,38.35716309340849,\r\n' +
+'2021-12-24,T. B.,Surfing,"Morro Beach, Morro Bay, CA",Fatal,-120.87126329757919,35.383823662144685,https://www.latimes.com/california/story/2022-01-02/fatal-morro-bay-shark-attack-devastates-family-alarms-surfers\r\n' +
+'2022-02-26,? ?,Diving,"San Miguel lsland, Santa Barbara, CA",Survived,-120.34397189049788,34.05643361828617,\r\n' +
+'2022-06-22,S. B.,Swimming,"Lover`s Point, Pacific Grove, Monterey, CA",Survived,-121.91240741321764,36.626705704287176,\r\n' +
+'2022-08-10,D. S.,Paddleboard,"Lover`s Point, Pacific Grove, Monterey, CA",Survived,-121.90620130074218,36.624549120767476,\r\n' +
+'2022-10-02,M. T.,Surfing,"Centerville Beach south of Eureka, CA",Survived,-124.35894515797813,40.57784541786518,\r\n' +
+'2022-10-31,J. A.,Surfing,"Lover`s Point, Pacific Grove, Monterey, CA",Survived,-121.90891922998101,36.627559775536724,\r\n' +
+'2022-11-04,L. J.,Swimming,"Del Mar Beach, Del Mar, CA",Survived,-117.27546581003693,32.965988061046986,https://sharkstewards.org/shark-bites-san-diego-swimmer-8th-in-california-in-2022/\r\n' +
+'2023-08-22,? ?,Kayaking,"Pebble Beach, CA",Survived,-121.95013370815049,36.55936597056149,\r\n' +
+'2023-10-01,F. NJ.,Swimming,"Wildcat Beach, Marin County, CA",Fatal,-122.79157420973077,37.9626173878605,https://sfstandard.com/2023/10/02/shark-attack-point-reyes-wildcat-beach/\r\n' +
+'2023-10-13,Male,Surfing,"Linda Mar Beach, Pacifica, CA",Survived,-122.50726314138991,37.602436708448316,\r\n' +
+'2024-04-03,? ?,Surfing,"San Luis Obispo, Montana de Oro State Park, CA",Survived,-120.90075170966597,35.249325226281854\r\n' +
+'2024-05-26,? ?,Surfing,"Orange T-Street, San Clemente, CA",Survived,-117.6253747437893,33.41166167518744,https://www.foxla.com/news/aggressive-shark-behavior-reported-san-clemente-waters\r\n' +
+'2024-06-02,Male 46,Swimming,"Del Mar Beach near 17th St, Del Mar, CA",Survived,-117.2708364366,32.962868503258434,https://www.cbs8.com/article/news/local/del-mar-shark-attack-beach-closed/509-f0b2e0fa-932d-4aac-91d7-ba392d3ec8c8\r\n' +
+'2024-07-03,A. R.,Kayaking,"Gaviota Beach, W of Campground, Santa Barbara, CA",Survived,-120.24485157,34.457369,https://keyt.com/news/santa-barbara-s-county/2024/07/02/local-kayak-fisherman-survives-shark-encounter/\r\n';
 
     var map = L.map('map', {
 	  minZoom: 2,

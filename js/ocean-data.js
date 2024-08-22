@@ -1,57 +1,94 @@
 var buoycam = "id|Latitude|Longitude|name\r\n" +
-"41001|34.502|-72.522|EAST HATTERAS - 150 NM East of Cape Hatteras\r\n" +
-"41004|32.501|-79.099|EDISTO - 41 NM Southeast of Charleston, SC\r\n" +
-"41008|31.4|-80.868|GRAYS REEF - 40 NM Southeast of Savannah, GA\r\n" +
+"41001|34.703|-72.242|EAST HATTERAS - 150 NM East of Cape Hatteras\r\n" +
+"41002|31.759|-74.936|SOUTH HATTERAS - 225 NM South of Cape Hatteras\r\n" +
+"41004|32.502|-79.099|EDISTO - 41 NM Southeast of Charleston, SC\r\n" +
+"41008|31.400|-80.866|GRAYS REEF - 40 NM Southeast of Savannah, GA\r\n" +
 "41009|28.508|-80.185|CANAVERAL 20 NM East of Cape Canaveral, FL\r\n" +
-"41010|28.878|-78.485|CANAVERAL EAST - 120NM East of Cape Canaveral\r\n" +
-"41013|33.436|-77.743|Frying Pan Shoals, NC\r\n" +
-"41025|35.025|-75.363|Diamond Shoals, NC\r\n" +
-"41040|14.554|-53.045|NORTH EQUATORIAL ONE- 470 NM East of Martinique\r\n" +
-"41044|21.582|-58.63|NE ST MARTIN - 330 NM NE St Martin Is\r\n" +
-"41046|23.822|-68.384|EAST BAHAMAS - 335 NM East of San Salvador Is,  Bahamas \r\n" +
-"41047|27.514|-71.494|NE BAHAMAS - 350 NM ENE of Nassau, Bahamas\r\n" +
-"41048|31.838|-69.585|WEST BERMUDA - 240 NM West of Bermuda\r\n" +
-"41049|27.49|-62.938|SOUTH BERMUDA - 300 NM SSE of Bermuda\r\n" +
-"42001|25.961|-89.65|MID GULF - 180 nm South of Southwest Pass, LA\r\n" +
-"42003|25.925|-85.615|East GULF - 208 NM West of Naples, FL\r\n" +
-"42012|30.064|-87.551|ORANGE BEACH - 44 NM SE of Mobile, AL\r\n" +
-"42020|26.968|-96.693|CORPUS CHRISTI, TX - 60NM SSE of Corpus Christi, TX\r\n" +
-"42035|29.232|-94.413|GALVESTON,TX -  22 NM East of Galveston, TX\r\n" +
-"42036|28.501|-84.516|WEST TAMPA  - 112 NM WNW of Tampa, FL\r\n" +
-"42039|28.788|-86.008|PENSACOLA - 115NM SSE of Pensacola, FL\r\n" +
-"42040|29.208|-88.226|LUKE OFFSHORE TEST PLATFORM - 63 NM South of Dauphin Island, AL\r\n" +
-"42056|19.812|-84.946| Yucatan Basin - 120 NM ESE of Cozumel, MX\r\n" +
-"42057|16.908|-81.422|Western Caribbean - 195 NM WSW of Negril, Jamaica\r\n" +
-"42058|14.775|-74.56|Central Caribbean - 210 NM SSE of Kingston, Jamaica\r\n" +
-"42059|15.252|-67.483|Eastern Caribbean Sea - 180 NM SSW of Ponce, PR\r\n" +
-"44008|40.504|-69.248|NANTUCKET 54 NM Southeast of Nantucket\r\n" +
-"44011|41.07|-66.588|GEORGES BANK 170 NM East of Hyannis, MA\r\n" +
-"44017|40.693|-72.049|MONTAUK POINT - 23 NM SSW of Montauk Point, NY\r\n" +
-"44020|41.493|-70.279|NANTUCKET SOUND\r\n" +
+"41013|33.441|-77.764|Frying Pan Shoals, NC\r\n" +
+"41025|35.010|-75.454|Diamond Shoals, NC\r\n" +
+"41040|14.541|-53.137|NORTH EQUATORIAL ONE- 470 NM East of Martinique\r\n" +
+"41043|21.026|-64.793|NE PUERTO RICO - 170 NM NNE of San Juan, PR\r\n" +
+"41044|21.582|-58.630|NE ST MARTIN - 330 NM NE St Martin Is\r\n" +
+"41046|23.822|-68.393|EAST BAHAMAS - 335 NM East of San Salvador Is,  Bahamas \r\n" +
+"41047|27.465|-71.452|NE BAHAMAS - 350 NM ENE of Nassau, Bahamas\r\n" +
+"41048|31.831|-69.573|WEST BERMUDA - 240 NM West of Bermuda\r\n" +
+"41049|27.545|-63.012|SOUTH BERMUDA - 300 NM SSE of Bermuda\r\n" +
+"42001|25.926|-89.662|MID GULF - 180 nm South of Southwest Pass, LA\r\n" +
+"42002|26.055|-93.646|WEST GULF - 207 NM East of Brownsville, TX\r\n" +
+"42003|25.925|-85.616|East GULF - 208 NM West of Naples, FL\r\n" +
+"42012|30.060|-87.548|ORANGE BEACH - 44 NM SE of Mobile, AL\r\n" +
+"42020|26.955|-96.687|CORPUS CHRISTI, TX - 60NM SSE of Corpus Christi, TX\r\n" +
+"42035|29.237|-94.404|GALVESTON,TX -  22 NM East of Galveston, TX\r\n" +
+"42036|28.501|-84.508|WEST TAMPA  - 112 NM WNW of Tampa, FL\r\n" +
+"42039|28.787|-86.007|PENSACOLA - 115NM SSE of Pensacola, FL\r\n" +
+"42040|29.207|-88.237|LUKE OFFSHORE TEST PLATFORM - 63 NM South of Dauphin Island, AL\r\n" +
+"42055|22.140|-94.112|BAY OF CAMPECHE - 214 NM NE of Veracruz, MX\r\n" +
+"42056|19.820|-84.945| Yucatan Basin - 120 NM ESE of Cozumel, MX\r\n" +
+"42057|16.973|-81.575|Western Caribbean - 195 NM WSW of Negril, Jamaica\r\n" +
+"42058|14.844|-75.061|Central Caribbean - 210 NM SSE of Kingston, Jamaica\r\n" +
+"42059|15.300|-67.483|Eastern Caribbean Sea - 180 NM SSW of Ponce, PR\r\n" +
+"42060|16.434|-63.329|Caribbean Valley - 63 NM WSW of Montserrat\r\n" +
+"44005|43.201|-69.127|GULF OF MAINE - 78 NM East of Portsmouth, NH\r\n" +
+"44007|43.525|-70.140|PORTLAND - 12 NM Southeast of Portland,ME\r\n" +
+"44008|40.496|-69.250|NANTUCKET 54 NM Southeast of Nantucket\r\n" +
+"44009|38.460|-74.692|DELAWARE BAY 26 NM Southeast of Cape May, NJ\r\n" +
+"44011|41.093|-66.562|GEORGES BANK 170 NM East of Hyannis, MA\r\n" +
+"44013|42.346|-70.651|BOSTON 16 NM East of Boston, MA\r\n" +
+"44014|36.603|-74.837|VIRGINIA BEACH 64 NM East of Virginia Beach, VA\r\n" +
+"44018|42.203|-70.154|CAPE COD - 9 NM North of Provincetown, MA\r\n" +
+"44020|41.497|-70.283|NANTUCKET SOUND\r\n" +
+"44025|40.251|-73.164|LONG ISLAND - 30 NM South of Islip, NY\r\n" +
+"44027|44.283|-67.300|Jonesport, ME - 20 NM SE of Jonesport, ME\r\n" +
+"44065|40.369|-73.703|New York Harbor Entrance - 15 NM SE of Breezy Point, NY\r\n" +
 "44066|39.618|-72.644|Texas Tower #4 - 75 NM East of Long Beach, NJ\r\n" +
-"45001|48.061|-87.793|MID SUPERIOR- 60 NM North Northeast Hancock, MI\r\n" +
 "45002|45.344|-86.411|NORTH MICHIGAN- Halfway between North Manitou and Washington Islands.\r\n" +
+"45003|45.351|-82.84|NORTH HURON - 32NM Northeast of Alpena, MI\r\n" +
 "45004|47.585|-86.585|EAST SUPERIOR -70 NM NE Marquette, MI\r\n" +
 "45005|41.677|-82.398|WEST ERIE - 16 NM NW of Lorain, OH\r\n" +
+"45006|47.335|-89.793|WEST SUPERIOR - 30NM NE of Outer Island, WI\r\n" +
 "45007|42.674|-87.026|SOUTH MICHIGAN - 43NM East Southeast of Milwaukee, WI\r\n" +
 "45008|44.283|-82.416|SOUTH HURON - 43NM East of Oscoda, MI\r\n" +
-"45012|43.621|-77.399|EAST Lake Ontario  - 20NM North Northeast of Rochester, NY\r\n" +
-"46006|40.782|-137.397|SOUTHEAST PAPA - 600NM West of Eureka, CA\r\n" +
-"46013|38.238|-123.307|BODEGA BAY - 48NM NW of San Francisco, CA\r\n" +
-"46014|39.231|-123.974|PT ARENA - 19NM North of Point Arena, CA\r\n" +
-"46025|33.763|-119.053|Santa Monica Basin - 33NM WSW of Santa Monica, CA\r\n" +
-"46047|32.404|-119.506|TANNER BANK - 121 NM West of San Diego, CA\r\n" +
-"46050|44.677|-124.515|STONEWALL BANK - 20NM West of Newport, OR\r\n" +
-"46053|34.252|-119.853|EAST SANTA BARBARA  - 12NM Southwest of Santa Barbara, CA\r\n" +
-"46054|34.265|-120.477|WEST SANTA BARBARA  38 NM West of Santa Barbara, CA\r\n" +
-"46059|38.094|-129.951|WEST CALIFORNIA - 357NM West of San Francisco, CA\r\n" +
+"45012|43.621|-77.401|EAST Lake Ontario  - 20NM North Northeast of Rochester, NY\r\n" +
+"46001|56.300|-148.018|WESTERN GULF OF ALASKA  - 175NM SE of Kodiak, AK\r\n" +
+"46002|42.662|-130.507|WEST OREGON - 275NM West of Coos Bay, OR\r\n" +
+"46005|46.134|-131.079|WEST WASHINGTON - 300NM West of Aberdeen, WA\r\n" +
+"46011|34.936|-120.998|SANTA MARIA - 21NM NW of Point Arguello, CA\r\n" +
+"46013|38.235|-123.317|BODEGA BAY - 48NM NW of San Francisco, CA\r\n" +
+"46014|39.225|-123.980|PT ARENA - 19NM North of Point Arena, CA\r\n" +
+"46025|33.755|-119.045|Santa Monica Basin - 33NM WSW of Santa Monica, CA\r\n" +
+"46026|37.754|-122.839|SAN FRANCISCO - 18NM West of San Francisco, CA\r\n" +
+"46027|41.840|-124.382|ST GEORGES - 8 NM NW of Crescent City, CA\r\n" +
+"46028|35.770|-121.903|CAPE SAN MARTIN - 55NM West NW of Morro Bay, CA\r\n" +
+"46029|46.163|-124.487|COLUMBIA RIVER BAR - 20NM West of Columbia River Mouth\r\n" +
+"46041|47.352|-124.739|CAPE ELIZABETH - 45NM NW of Aberdeen, WA\r\n" +
+"46042|36.785|-122.396|MONTEREY - 27NM WNW of Monterey, CA\r\n" +
+"46047|32.388|-119.525|TANNER BANK - 121 NM West of San Diego, CA\r\n" +
+"46050|44.669|-124.546|STONEWALL BANK - 20NM West of Newport, OR\r\n" +
+"46053|34.241|-119.839|EAST SANTA BARBARA  - 12NM Southwest of Santa Barbara, CA\r\n" +
+"46054|34.274|-120.468|WEST SANTA BARBARA  38 NM West of Santa Barbara, CA\r\n" +
+"46059|38.069|-129.976|WEST CALIFORNIA - 357NM West of San Francisco, CA\r\n" +
+"46066|52.765|-155.009|SOUTH KODIAK - 310NM SSW of Kodiak, AK\r\n" +
 "46069|33.677|-120.213|SOUTH SANTA ROSA IS. CA\r\n" +
-"46085|55.888|-142.847|CENTRAL GULF OF ALASKA -  265NM West of Cape Ommaney, AK\r\n" +
+"46070|55.052| 175.255|SOUTHWEST BERING SEA - 142NM NNE OF ATTU IS, AK\r\n" +
+"46071|51.022| 179.784|WESTERN ALEUTIANS - 14NM SOUTH OF AMCHITKA IS, AK \r\n" +
+"46072|51.666|-172.114|CENTRAL ALEUTIANS 230 NM SW Dutch Harbor\r\n" +
+"46073|55.008|-172.012|SOUTHEAST BERING SEA - 205 NM WNW of Dutch Harbor, AK\r\n" +
+"46075|53.969|-160.794|SHUMAGIN ISLANDS - 85NM South of Sand Point, AK\r\n" +
+"46076|59.471|-148.009|CAPE CLEARE - 17 NM South of Montague Is,  AK\r\n" +
+"46078|55.561|-152.599|ALBATROSS BANK - 104NM South of Kodiak Is., AK\r\n" +
+"46080|57.916|-150.133|PORTLOCK BANK - 76 NM ENE of Kodiak, AK\r\n" +
+"46082|59.670|-143.353|Cape Suckling - 35 NM SE of Kayak Is, AK\r\n" +
+"46084|56.614|-136.040|CAPE EDGECUMBE - 25NM SSW of Cape Edgecumbe, AK\r\n" +
 "46086|32.499|-118.052|SAN CLEMENTE BASIN - 27NM SE Of San Clemente Is, CA\r\n" +
-"51001|24.453|-162|NORTHWESTERN HAWAII ONE - 188 NM NW of Kauai Island, HI\r\n" +
-"51003|19.172|-160.662|WESTERN  HAWAII - 205 NM SW of Honolulu, HI\r\n" +
-"51004|17.604|-152.364|SOUTHEAST HAWAII - 205 NM Southeast of Hilo, HI\r\n" +
-"51101|24.361|-162.075|NORTHWESTERN HAWAII TWO - 186 NM NW of Kauai Is., HI";
+"46087|48.493|-124.727|Neah Bay - 6 NM North of Cape Flattery, WA (Traffic Separation Lighted Buoy)\r\n" +
+"46088|48.332|-123.179|NEW DUNGENESS - 17 NM NE of Port Angeles, WA\r\n" +
+"46089|45.936|-125.793|TILLAMOOK, OR - 85 NM WNW of Tillamook, OR\r\n" +
+"51000|23.528|-153.792|NORTHERN HAWAII ONE - 245NM NE of Honolulu HI\r\n" +
+"51001|24.451|-162.008|NORTHWESTERN HAWAII ONE - 188 NM NW of Kauai Island, HI\r\n" +
+"51002|17.042|-157.746|SOUTHWEST HAWAII - 215NM SSW of Hilo, HI\r\n" +
+"51003|19.196|-160.639|WESTERN  HAWAII - 205 NM SW of Honolulu, HI\r\n" +
+"51004|17.538|-152.230|SOUTHEAST HAWAII - 205 NM Southeast of Hilo, HI\r\n" +
+"51101|24.359|-162.081|NORTHWESTERN HAWAII TWO - 186 NM NW of Kauai Is., HI";
 
 
 var kelps = "Name,Latitude,Longitude\r\n" +
